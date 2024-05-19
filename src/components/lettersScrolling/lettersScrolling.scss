@@ -9,8 +9,14 @@
   }
 }
 
-.rollAnim{
+.rollXAnim{
   .letter{
     transform: rotateX(360deg);
+  }
+}
+
+.rollYAnim{
+  .letter{
+    transform: rotateY(360deg);
   }
 }

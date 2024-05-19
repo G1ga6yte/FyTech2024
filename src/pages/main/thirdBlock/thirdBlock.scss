@@ -1,33 +1,66 @@
 
-.thirdBlock{
+.thirdBlock {
   background-color: white;
   padding: 200px 50px 200px;
 
 
-  .firstBlock{
+  .firstBlock {
     position: relative;
     width: 100%;
     display: flex;
     align-items: end;
     justify-content: space-between;
     margin-bottom: 100px;
-    &:nth-child(2){
-      .sideTextC{
-        .sideTextBlock{
-          margin-bottom: 20px;
+
+    &:nth-child(2) {
+      .sideTextC {
+        .sideTextBlock {
           align-items: start;
           text-align: start;
         }
       }
     }
 
-    .videoC{
+    .videoC {
       position: relative;
       max-width: 45%;
       width: 100%;
       height: 550px;
 
-      .videoCont{
+      .slideTextBlock{
+        position: absolute;
+        z-index: 10;
+        left: -20%;
+        top: 0;
+        overflow: hidden;
+
+
+        .grayLine{
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #6B6B6B;
+          font-size: 100px;
+          text-transform: uppercase;
+          font-family: 'Trap-Bold', sans-serif;
+          line-height: 100%;
+
+          color: transparent;
+          animation: textSlide 10s linear infinite ;
+        }
+
+        .orangeLine{
+          font-size: 100px;
+          text-transform: uppercase;
+          font-family: 'Trap-Bold', sans-serif;
+          line-height: 100%;
+          color: #FF6C2C;
+          animation: textSlide 10s linear infinite ;
+        }
+
+
+
+      }
+
+      .videoCont {
         position: absolute;
         left: 0;
         top: 0;
@@ -35,20 +68,21 @@
         width: 100%;
         transition: 1s ease-in-out all;
         opacity: 0;
-        .videoBlock{
+
+        .videoBlock {
           width: 100%;
           height: 100%;
           overflow: hidden;
           border-radius: 24px;
 
-          video{
+          video {
             scale: 1.01;
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
 
-          img{
+          img {
             scale: 1.01;
             width: 100%;
             height: 100%;
@@ -58,49 +92,50 @@
 
       }
 
-      .activeContentAnim{
+      .activeContentAnim {
         animation: YAnim 4s linear;
       }
-      .passiveContentAnim{
+
+      .passiveContentAnim {
         animation: XAnim 0.5s linear
       }
 
-      .activeContentAnim2{
+      .activeContentAnim2 {
         animation: YAnim2 4s linear;
 
       }
 
-      .passiveContentAnim2{
+      .passiveContentAnim2 {
         animation: XAnim2 0.5s linear
       }
 
-      .passiveContentAnim3{
+      .passiveContentAnim3 {
         animation: XAnim3 0.5s linear
       }
 
     }
 
-    .comeFromLeft{
+    .comeFromLeft {
       animation: fromLeft 0.5s linear;
     }
-    .comeFromDown{
+
+    .comeFromDown {
       animation: fromDown 0.5s linear;
     }
-    .comeFromRight{
+
+    .comeFromRight {
       animation: fromRight 0.5s linear;
     }
 
 
-
-
-    .underText{
+    .underText {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: 10px;
 
-      .grayText{
+      .grayText {
         font-size: 20px;
         font-family: 'Trap-Medium', sans-serif;
         color: #6e6e6e;
@@ -109,8 +144,112 @@
       }
     }
 
-    .sideTextC{
-      .sideTextBlock{
+    .shakeAnim {
+      animation: shakeAnim 10s linear infinite;
+
+    }
+
+
+    .sideTextC {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      position: relative;
+
+      .roller {
+        position: absolute;
+        left: 0;
+        transform: translateX(-150px);
+        opacity: 0;
+        transition: 0.5s ease-in-out all;
+
+        .pill {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 240px;
+          width: 25px;
+          rotate: 0deg;
+          transition: 0.5s ease-in-out all;
+
+          .oval {
+            height: 120px;
+            width: 25px;
+            background-color: #131312;
+            border-radius: 35px;
+
+          }
+        }
+      }
+
+      .activeRoller {
+        opacity: 1;
+        transform: translateX(0) !important;
+
+        .pill {
+          &:nth-child(1) {
+            transition: 0.5s ease-in-out all;
+            rotate: 0deg;
+          }
+
+          &:nth-child(2) {
+            transition: 0.5s ease-in-out all;
+            rotate: 45deg;
+          }
+
+          &:nth-child(3) {
+            transition: 0.7s ease-in-out all;
+            rotate: 90deg;
+          }
+
+          &:nth-child(4) {
+            transition: 0.9s ease-in-out all;
+            rotate: 135deg;
+          }
+
+          &:nth-child(5) {
+            transition: 1.1s ease-in-out all;
+            rotate: 180deg;
+          }
+        }
+      }
+
+      .firstTextBlock{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: end;
+      }
+
+      .sideTextBlockC1 {
+        transform: translateX(-100%);
+        opacity: 0;
+        scale: 0.8;
+        transition: 0.8s ease-in-out all;
+      }
+
+      .sideTextBlockC2 {
+        transform: translateX(100%);
+        opacity: 0;
+        scale: 0.8;
+        transition: 0.8s ease-in-out all;
+      }
+
+      .sideTextBlockC3{
+        transform: translateX(100%);
+        opacity: 0;
+        scale: 1.2;
+        transition: 0.8s ease-in-out all;
+      }
+
+      .activeTextBlock {
+        transform: translateX(0);
+        opacity: 1;
+        scale: 1;
+      }
+
+
+      .sideTextBlock {
         position: relative;
         z-index: 1;
         text-align: end;
@@ -119,17 +258,63 @@
         color: #6e6e6e;
         line-height: 130%;
         text-transform: uppercase;
-        margin-bottom: 140px;
         display: flex;
         flex-direction: column;
         align-items: end;
 
       }
 
+      .sideBlackTextBlock{
+        position: relative;
+        z-index: 1;
+        text-align: start;
+        font-size: 40px;
+        font-family: 'Trap-Bold', sans-serif;
+        color: #1D1D1D;
+        line-height: 100%;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+
+
+
+      .highText {
+        font-size: 140px;
+        text-transform: uppercase;
+        font-family: 'Trap-Bold', sans-serif;
+        color: #1D1D1D;
+        line-height: normal;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+
+      .highText2 {
+        font-size: 140px;
+        text-transform: uppercase;
+        font-family: 'Trap-Bold', sans-serif;
+        color: #1D1D1D;
+        line-height: normal;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+
+      }
+
+
+      .activeHighText {
+        transform: translateX(0);
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+
+
     }
 
 
-    .backgroundImage1{
+    .backgroundImage1 {
       position: absolute;
       z-index: 2;
       right: 0;
@@ -137,7 +322,7 @@
       width: 55%;
     }
 
-    .backgroundImage2{
+    .backgroundImage2 {
       position: absolute;
       z-index: 2;
       left: 0;
@@ -149,52 +334,50 @@
   }
 
 
-
-
 }
 
 
 @keyframes YAnim {
-  0%{
+  0% {
     transform: translateY(100%);
     opacity: 0;
     scale: 0.9;
   }
-  25%{
+  25% {
     transform: translateY(0);
     opacity: 1;
     scale: 0.925;
   }
-  100%{
+  100% {
     scale: 1;
     opacity: 1;
   }
 }
 
 @keyframes YAnim2 {
-  0%{
+  0% {
     transform: translateX(-100%);
     opacity: 0;
     scale: 0.9;
   }
-  25%{
+  25% {
     transform: translateX(0);
     opacity: 1;
     scale: 0.925;
   }
-  100%{
+  100% {
     scale: 1;
     opacity: 1;
   }
 }
 
 @keyframes XAnim {
-  0%{
+  0% {
     transform: translateX(0);
     opacity: 1;
     scale: 1;
   }
-  100%{
+  100% {
     transform: translateX(-50%);
     opacity: 0;
     scale: 0.8;
@@ -202,12 +385,12 @@
 }
 
 @keyframes XAnim2 {
-  0%{
+  0% {
     transform: translateY(0);
     opacity: 1;
     scale: 1;
   }
-  100%{
+  100% {
     transform: translateY(-100%);
     opacity: 0;
     scale: 0.8;
@@ -215,12 +398,12 @@
 }
 
 @keyframes XAnim3 {
-  0%{
+  0% {
     transform: translateX(0);
     opacity: 1;
     scale: 1;
   }
-  100%{
+  100% {
     transform: translateX(50%);
     opacity: 0;
     scale: 1.4;
@@ -228,11 +411,11 @@
 }
 
 @keyframes fromLeft {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-50%);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
@@ -240,11 +423,11 @@
 }
 
 @keyframes fromRight {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(50%);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
@@ -252,13 +435,118 @@
 }
 
 @keyframes fromDown {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(50%);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 
+}
+
+@keyframes shakeAnim {
+  0% {
+    transform: translateX(50px);
+  }
+  50% {
+    transform: translateX(0);
+
+  }
+  100% {
+    transform: translateX(50px);
+
+  }
+}
+
+@keyframes textSlide1 {
+  0%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(-200%);
+  }
+  75%{
+    transform: translateY(-200%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlide2 {
+  0%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(-200%);
+  }
+  75%{
+    transform: translateY(-300%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlide3 {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-100%);
+  }
+  40%{
+    transform: translateY(-200%);
+  }
+  60%{
+    transform: translateY(-300%);
+  }
+  80%{
+    transform: translateY(-400%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlide{
+  0%{
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  20%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(-100%);
+  }
+  45%{
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(-200%);
+  }
+  70%{
+    transform: translateY(-200%);
+  }
+  75%{
+    transform: translateY(-300%);
+  }
+  95%{
+    transform: translateY(-300%);
+  }
+  100%{
+    transform: translateY(-400%);
+  }
 }
