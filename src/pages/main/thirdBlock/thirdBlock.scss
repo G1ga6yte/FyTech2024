@@ -460,63 +460,6 @@
   }
 }
 
-@keyframes textSlide1 {
-  0%{
-    transform: translateY(0);
-  }
-  25%{
-    transform: translateY(-100%);
-  }
-  50%{
-    transform: translateY(-200%);
-  }
-  75%{
-    transform: translateY(-200%);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-
-@keyframes textSlide2 {
-  0%{
-    transform: translateY(0);
-  }
-  25%{
-    transform: translateY(-100%);
-  }
-  50%{
-    transform: translateY(-200%);
-  }
-  75%{
-    transform: translateY(-300%);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-
-@keyframes textSlide3 {
-  0%{
-    transform: translateY(0);
-  }
-  20%{
-    transform: translateY(-100%);
-  }
-  40%{
-    transform: translateY(-200%);
-  }
-  60%{
-    transform: translateY(-300%);
-  }
-  80%{
-    transform: translateY(-400%);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-
 @keyframes textSlide{
   0%{
     transform: translateY(0);

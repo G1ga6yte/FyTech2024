@@ -318,7 +318,7 @@ function ThirdBlock() {
            
            </div>
            
-           <div className="slideTextBlock">
+           <div className="slideTextBlock shakeAnim">
              <div className="grayLine">DIGITAL</div>
              <div className="grayLine">AGENCY</div>
              <div className="grayLine">MADE</div>
