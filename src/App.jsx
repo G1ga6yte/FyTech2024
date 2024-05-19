@@ -1,24 +1,36 @@
 import React from "react";
 import './App.scss';
-import Nav from "./pages/nav/nav";
 import Footer from "./pages/footer/footer";
 import {Routes, Route} from "react-router-dom";
 import Main from "./pages/main/main";
+import Lenis from "@studio-freight/lenis";
+
+import backgroundImage from "./background.png"
+
 
 function App() {
-  
+  const lenis = new Lenis()
+  lenis.on('scroll', (e) => {})
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
   
   return (
-    <div className="App">
+    <div style={{backgroundImage: `url("${backgroundImage}")`}} className="App">
       
-      <Nav/>
-      
+  
+  
+  
       <Routes>
         <Route exact={true} path="/" element={<Main/>}/>
         <Route path="/home" element={<Main/>}/>
       </Routes>
       
-      <Footer/>
+      
+      
+      {/*<Footer/>*/}
     
     </div>
   );
