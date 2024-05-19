@@ -1,6 +1,6 @@
 
 .App{
-  background-color: #121212;
+  background-color: #101010;
   position: relative;
   height: max-content;
   width: 100%;
@@ -11,6 +11,26 @@
 
 
 
+  .loadingBlock{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #121212;
+    transition: 1s ease-in-out all;
+
+
+    .loadingSvg{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1px;
+      animation: loadingAnim 7s linear infinite;
+    }
+  }
 
 
 }
@@ -18,5 +38,14 @@
 *{
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@keyframes loadingAnim {
+  0%{
+    width: 1px;
+  }
+  100%{
+    width: 3000px;
   }
 }

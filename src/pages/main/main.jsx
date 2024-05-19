@@ -4,11 +4,13 @@ import HeadBlock from "./headBlock/headBlock";
 import NavBlock from "./navBlock/navBlock";
 import SecondBlock from "./secondBlock/secondBlock";
 import {useCartContext} from "../../CartContext";
+import backgroundImg from "../../background.png";
+import ThirdBlock from "./thirdBlock/thirdBlock";
+import ThirdHeader from "./thirdHeader/thirdHeader";
 
 function Main() {
-  const {scrollPaused1, setScrollPaused1, myRef1, visible1, myRef2, visible2, visible3} = useCartContext();
+  const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3} = useCartContext();
   const [step, setStep] = useState(1);
-  const [underContent1, setUnderContent1] = useState(false);
   const secondBlockRef = useRef(null);
   const [headBlock, setHeadBlock] = useState(0)
   const [fixed, setFixed] = useState(false)
@@ -24,11 +26,14 @@ function Main() {
     setFixed(false)
   }, [visible3])
   
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  }, [])
+  
   
   
   function ScrollDetection() {
     const [scrolling, setScrolling] = useState(false);
-    const [scrollToSecondBlock, setScrollToSecondBlock] = useState(false)
     
     useEffect(() => {
       const handleScroll = (event) => {
@@ -41,10 +46,7 @@ function Main() {
               if (step < 4) {
                 setTimeout(()=>{
                   setStep(prev => prev + 1);
-                  console.log(step);
-                  if (step >= 3){
-                    setUnderContent1(true);
-                  }
+                  
                 }, 500)
                 
               } else {
@@ -61,25 +63,20 @@ function Main() {
                 if (step > 2){
                   setTimeout(()=>{
                     setStep(prev => prev - 1);
-                    console.log(step);
-                    // if (step <= 2){
-                    //   console.log(headBlock);
-                    //   window.scrollTo(0, 945)
-                    // }
-      
                   }, 500)
                   setFixed(false)
   
                 } else if (step === 2) {
                   setFixed(true)
   
-                  setTimeout(()=>{
-                    setStep(1)
-                  }, 500)
+                    setTimeout(()=>{
+                      setStep(1)
+                    }, 500)
+                    setTimeout(()=>{
+                      window.scrollTo(0, headBlock)
+                    }, 500)
   
-                  setTimeout(()=>{
-                    window.scrollTo(0, headBlock)
-                  }, 500)
+                  
                 } else {
                   setFixed(false)
                 }
@@ -87,37 +84,31 @@ function Main() {
               
             }
             
-            console.log("Scrolled up");
           }
           setScrolling(true);
         }
       };
       
-      // Add scroll event listener when component mounts
       window.addEventListener("wheel", handleScroll);
       
-      // Clean up event listener when component unmounts
       return () => {
         window.removeEventListener("wheel", handleScroll);
       };
-    }, [scrolling]); // Re-run effect when scrolling state changes
+    }, [scrolling]);
     
-    // Reset scrolling state after a short delay
     useEffect(() => {
       const resetScrolling = () => {
         setScrolling(false);
       };
       
-      const timeout = setTimeout(resetScrolling, 1000); // Adjust timeout duration as needed
+      const timeout = setTimeout(resetScrolling, 1500);
       return () => clearTimeout(timeout);
     }, [scrolling]);
     
     
     
     return (
-       <div className="content">
-         {/* Your content goes here */}
-       </div>
+       <div className="content"></div>
     );
   }
   
@@ -132,20 +123,22 @@ function Main() {
             <div></div>
           </div>
        }
-       
-          <div ></div>
-       <div style={{minHeight: `100vh`}}>
+  
+       <div className="secondContent" style={{minHeight: `100vh`, backgroundImage: `url("${backgroundImg}")`}}>
          <SecondBlock style={fixed} ref={secondBlockRef} step={step}/>
-
+  
        </div>
        <div ref={myRef1}></div>
-       
-       
+  
+  
        {step === 4 &&
-          <div style={{height: `200vh`}} className="">
-          
+          <div  className="thirdCont">
+            <div style={{height: `200px`}}></div>
+            <ThirdHeader/>
+            <ThirdBlock/>
           </div>
        }
+       
      </div>
   );
 }

@@ -5,7 +5,7 @@ import "./headBlock.scss";
 function HeadBlock() {
   return (
      <div className="HeadBlock">
-       <HeadSpline/>
+       {/*<HeadSpline/>*/}
        
        <div className="centerTextBlock no-select">
          <div className="upBlockText">

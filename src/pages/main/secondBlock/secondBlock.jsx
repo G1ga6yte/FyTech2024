@@ -35,7 +35,6 @@ function SecondBlock({step, ref, style}) {
     }
     
   ]
-  
   const data2 = [
     {
       name: "IT Consulting & Strategy",
@@ -60,7 +59,6 @@ function SecondBlock({step, ref, style}) {
     }
   
   ]
-  
   const data3 = [
     {
       name: "Big Data & Analytics",
@@ -82,6 +80,9 @@ function SecondBlock({step, ref, style}) {
   ]
   
   const [changeableData, setChangeableData] = useState(data1)
+  useEffect(()=>{
+    setChangeableData(data1)
+  }, [])
   
   const {myRef2} = useCartContext()
   
@@ -90,17 +91,19 @@ function SecondBlock({step, ref, style}) {
       if (changeableData !== data1){
         setChangeableData(data1)
       } else {
-        setChangeableData(data3)
       }
     } else if (step === 3) {
-    
+      if (changeableData !== data3){
+        setChangeableData(data3)
+      } else {
+      }
     }
   }, [step])
   
   return (
-     <div  style={{backgroundImage: `url("${backgroundImg}")`, position: style ? "fixed" : "relative"}} ref={ref} id="secondBlock" className="SecondBlock">
-       <HomeSpinnerSpline1/>
-       <HomeSpinnerSpline2/>
+     <div  style={{backgroundImage: `url("${backgroundImg}")`, position: style ? "fixed" : "relative"}} ref={ref} id="secondBlock" className="SecondBlock no-select">
+       {/*<HomeSpinnerSpline1/>*/}
+       {/*<HomeSpinnerSpline2/>*/}
        <div ref={myRef2}></div>
        
        <div className="mainBlock">
@@ -127,6 +130,45 @@ function SecondBlock({step, ref, style}) {
              </div>
              <div className="line1"></div>
              <div className="line2"></div>
+             
+             <div className={`contentCont ${step === 4 && "noVisible"}`}>
+               <div className={`contentBlock ${step === 2 && "activeContent"}`}>
+                 <div className="insideBlock">
+                   <p className="contentHeader">{data2[0].name}</p>
+                   {data2[0].items.map((el, index)=>{
+                     return(<p key={index} className="contentPrg">{el}</p>)
+                   })}
+                 </div>
+               </div>
+               <div className={`contentBlock ${step === 1 ? "activeContent" : step === 3 ? "activeContent" : ""}`}>
+                 <div className="insideBlock">
+                   <p className="contentHeader">{changeableData[0].name}</p>
+                   {changeableData[0].items.map((el, index)=>{
+                     return(<p key={index} className="contentPrg">{el}</p>)
+                   })}
+                 </div>
+               </div>
+               <div className={`contentBlock ${step === 1 ? "activeContent" : step === 3 ? "activeContent" : ""}`}>
+                 <div className="insideBlock"
+                  style={{maxWidth: step !== 1 ? "75%" : "100%"}}
+                 >
+                   <p className="contentHeader">{changeableData[1].name}</p>
+                   {changeableData[1].items.map((el, index)=>{
+                     return(<p key={index} className="contentPrg">{el}</p>)
+                   })}
+                 </div>
+               </div>
+               <div className={`contentBlock ${step === 2 && "activeContent"}`}>
+                 <div className="insideBlock">
+                   <p className="contentHeader">{data2[1].name}</p>
+                   {data2[1].items.map((el, index)=>{
+                     return(<p key={index} className="contentPrg">{el}</p>)
+                   })}
+                 </div>
+               </div>
+               
+               
+             </div>
 
             
 
