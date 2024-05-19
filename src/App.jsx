@@ -10,7 +10,10 @@ import loaderGIF from "./images/loadingVideo.gif"
 import loaderImg from "./images/loadingImage.png"
 
 function App() {
-  const lenis = new Lenis()
+  const lenis = new Lenis({
+    duration: 1.5,
+    wheelMultiplier: 0.4
+  })
   lenis.on('scroll', (e) => {})
   function raf(time) {
     lenis.raf(time)

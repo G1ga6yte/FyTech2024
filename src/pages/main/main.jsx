@@ -7,6 +7,7 @@ import {useCartContext} from "../../CartContext";
 import backgroundImg from "../../background.png";
 import ThirdBlock from "./thirdBlock/thirdBlock";
 import ThirdHeader from "./thirdHeader/thirdHeader";
+import ThirdWhiteEnd from "./thirdWhiteEnd/thirdWhiteEnd";
 
 function Main() {
   const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3} = useCartContext();
@@ -136,7 +137,13 @@ function Main() {
             <div style={{height: `200px`}}></div>
             <ThirdHeader/>
             <ThirdBlock/>
+            <ThirdWhiteEnd/>
+            
+            
+            
+            <div style={{height: `200vh`}}></div>
           </div>
+          
        }
        
      </div>

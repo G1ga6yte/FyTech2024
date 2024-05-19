@@ -4,10 +4,9 @@ import "./navBlock.scss"
 import {useCartContext} from "../../../CartContext";
 
 function NavBlock (){
-  const {myRef3, visible3} = useCartContext()
   
   return(
-     <div ref={myRef3} className="NavBlock">
+     <div  className="NavBlock">
        
        <Link to="/" className="linkToHome no-select" >Fytechnology LTD</Link>
        

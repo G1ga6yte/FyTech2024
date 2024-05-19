@@ -1,0 +1,16 @@
+
+.word{
+  display: flex;
+  .letter{
+    display: block;
+  }
+  .space{
+    width: 12px;
+  }
+}
+
+.rollAnim{
+  .letter{
+    transform: rotateX(360deg);
+  }
+}

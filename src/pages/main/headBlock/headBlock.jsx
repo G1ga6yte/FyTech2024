@@ -1,11 +1,15 @@
 import React from "react";
 import HeadSpline from "../../../models/homeHeadSpline/headSpline";
 import "./headBlock.scss";
+import {useCartContext} from "../../../CartContext";
 
 function HeadBlock() {
+  
+  const {myRef3, visible3} = useCartContext()
+  
   return (
-     <div className="HeadBlock">
-       {/*<HeadSpline/>*/}
+     <div  className="HeadBlock">
+       <HeadSpline/>
        
        <div className="centerTextBlock no-select">
          <div className="upBlockText">
@@ -26,7 +30,7 @@ function HeadBlock() {
        
        <div className="bottomBlock">
         
-        <div className="bottomHeader no-select">
+        <div ref={myRef3} className="bottomHeader no-select">
           <div className="textBlock">
             <span>Made</span>
             <span>easy </span>
