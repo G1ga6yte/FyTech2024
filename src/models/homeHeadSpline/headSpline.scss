@@ -1,0 +1,10 @@
+.scene{
+  height: max-content;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+  overflow: hidden;
+  canvas{
+    opacity: 0.9;
+  }
+}

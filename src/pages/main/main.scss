@@ -1,0 +1,18 @@
+@import "../../source/styles/mixin.scss";
+
+.MainCont{
+  position: relative;
+
+  .NavBlock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+
+  .topCont{
+    position: relative;
+    z-index: 5;
+  }
+
+}
