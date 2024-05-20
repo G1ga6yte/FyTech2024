@@ -1,6 +1,7 @@
 .thirdWhiteEnd{
   width: 100%;
   background-color: white;
+  position: relative;
   .endImg{
 
     width: 100%;
@@ -14,7 +15,7 @@
     height: 800px;
     top: 0;
     position: absolute;
-    padding-bottom: 350px;
+    padding-bottom: 450px;
     left: 0;
 
     path {
@@ -57,15 +58,15 @@
       }
 
       &:nth-child(8) {
-        transform: translate(-1000px, 5px) rotate(40deg);
+        transform: translate(1000px, 5px) rotate(40deg);
       }
 
       &:nth-child(9) {
-        transform: translate(-1200px, 140px) rotate(20deg);
+        transform: translate(1200px, 140px) rotate(20deg);
       }
 
       &:nth-child(10) {
-        transform: translate(-1300px, 240px) rotate(30deg);
+        transform: translate(1300px, 240px) rotate(30deg);
       }
 
       &:nth-child(11) {
