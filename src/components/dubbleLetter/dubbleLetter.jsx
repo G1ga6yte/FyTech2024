@@ -5,17 +5,17 @@ function DubbleLetter ({text, state}){
   const arr = text.split('')
   
   return(
-     <div className={`word ${state ? "activeWord" : ""}`}>
-        <div className="wordLine">
+     <div className={`word2 ${state ? "activeWord2" : ""}`}>
+        <div className="wordLine2">
           {arr.map((el, index)=>{
             let tr = 0.1*(index+1)
-            return <span style={{transition: `${tr}s ease-in-out`}} className="letter" key={index}>{el}</span>
+            return <span style={{transition: `${tr}s ease-in-out`}} className="letter2" key={index}>{el}</span>
           })}
         </div>
-       <div className="wordLine">
+       <div className="wordLine2">
          {arr.map((el, index)=>{
            let tr = 0.1*(index+1)
-           return <span style={{transition: `${tr}s ease-in-out`}} className="letter" key={index}>{el}</span>
+           return <span style={{transition: `${tr}s ease-in-out`}} className="letter2" key={index}>{el}</span>
          })}
        </div>
      </div>
