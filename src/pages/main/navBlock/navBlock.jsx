@@ -28,7 +28,6 @@ function NavBlock() {
           const delta = event.deltaY;
           setActiveMenu(false);
           
-          console.log(window.scrollY);
           if (window.scrollY > 50) {
             setMenu2(true)
           } else {

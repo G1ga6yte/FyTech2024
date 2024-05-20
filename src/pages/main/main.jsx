@@ -53,6 +53,7 @@ function Main() {
         if (!scrolling) {
           const delta = event.deltaY;
           if (delta > 0) {
+            console.log(delta);
             setFixed(false)
   
             if (scrollPaused1) {
@@ -60,7 +61,7 @@ function Main() {
                 setTimeout(()=>{
                   setStep(prev => prev + 1);
                   
-                }, 500)
+                }, 800)
                 
               } else {
               
@@ -76,7 +77,7 @@ function Main() {
                 if (step > 2){
                   setTimeout(()=>{
                     setStep(prev => prev - 1);
-                  }, 500)
+                  }, 800)
                   setFixed(false)
   
                 } else if (step === 2) {
@@ -84,10 +85,10 @@ function Main() {
   
                     setTimeout(()=>{
                       setStep(1)
-                    }, 500)
+                    }, 800)
                     setTimeout(()=>{
                       window.scrollTo(0, headBlock)
-                    }, 500)
+                    }, 800)
   
                   
                 } else {
