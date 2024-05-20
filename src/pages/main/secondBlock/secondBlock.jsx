@@ -4,9 +4,10 @@ import HomeSpinnerSpline1 from "../../../models/homeSpinnerSpline1/homeSpinnerSp
 import HomeSpinnerSpline2 from "../../../models/homeSpinnerSpline2/homeSpinnerSpline2";
 import {Images} from "./images/images";
 import {useCartContext} from "../../../CartContext";
-
 import backgroundImg from "../../../background.png"
 import {useInView} from "react-intersection-observer";
+
+
 function SecondBlock({step, ref, style}) {
   const data1 = [
     {
@@ -49,13 +50,10 @@ function SecondBlock({step, ref, style}) {
     {
       name: "Software Testing & Quality Assurance ",
       items: [
-        "Application development",
-        "Web development",
-        "Mobile app development",
-        "Custom software development",
-        "Legacy system modernization",
-        "DevOps and cloud migration",
-        "VR/AR developing"
+        "Payment Method Testing",
+        "Website & App QA Testing",
+        "User Experience Testing ",
+        "Localization Testing"
       ]
     }
   
@@ -131,15 +129,15 @@ function SecondBlock({step, ref, style}) {
   
   return (
      <div  style={{backgroundImage: `url("${backgroundImg}")`, position: style ? "fixed" : "relative"}} ref={ref} id="secondBlock" className="SecondBlock no-select">
-       {/*<HomeSpinnerSpline1/>*/}
-       {/*<HomeSpinnerSpline2/>*/}
+       <HomeSpinnerSpline1/>
+       <HomeSpinnerSpline2/>
        <div ref={myRef2}></div>
        
        <div className="mainBlock">
          
          <div ref={myRef1} className="headerBlock">
            <div className="flexGrow"></div>
-           <div className="underLinedText no-select">
+           <div className={`underLinedText no-select ${visible1 ? "underLinedTextAnim" :""}`}>
              <p>what we do</p>
              <div className="line"></div>
            </div>

@@ -30,9 +30,19 @@ export const CartProvider = ({children}) => {
   const [loaded, setLoaded] = useState(false)
   
   
+  
+  
+  ///////////////// nav
+  const [activeMenu, setActiveMenu] = useState(false);
+  const [menu2, setMenu2] = useState(false)
+  
+ 
+  
+  
   return (<CartContext.Provider value={{
     scrollPaused1, setScrollPaused1, myRef1, visible1, myRef2, visible2, myRef3, visible3,
-    loaded, setLoaded, step, setStep
+    loaded, setLoaded, step, setStep,
+    activeMenu, setActiveMenu, menu2, setMenu2
   }}>
     {children}
   </CartContext.Provider>);

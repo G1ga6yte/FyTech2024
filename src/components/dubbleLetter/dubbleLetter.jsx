@@ -15,7 +15,7 @@ function DubbleLetter ({text, state, trns}){
             if (el === " "){
               return <span style={{transition: `${tr}s ease-in-out`}} className="space2" key={index}></span>
             } else {
-              return <span style={{transition: `${tr}s ease-in-out`}} className="letter2" key={index}>{el}</span>
+              return <span style={{transition: `${tr}s ease-in-out`}} className="letter2 letter22" key={index}>{el}</span>
             }
           })}
         </div>

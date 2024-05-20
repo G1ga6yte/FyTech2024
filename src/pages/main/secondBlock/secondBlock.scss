@@ -201,6 +201,16 @@
             margin: 0 !important;
             padding: 0 !important;
             height: max-content !important;
+            &:nth-child(1){
+              .contentHeader{
+                margin-bottom: 60px;
+              }
+            }
+            &:nth-child(2){
+              .contentHeader{
+                margin-bottom: 20px;
+              }
+            }
             .insideBlock{
               margin: 0 !important;
               padding: 0 !important;
