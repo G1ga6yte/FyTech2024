@@ -4,6 +4,7 @@ const CartContext = createContext();
 export const CartProvider = ({children}) => {
   
   const [scrollPaused1, setScrollPaused1] = useState(false)
+  const [step, setStep] = useState(1);
   
   const { ref: myRef1, inView: visible1 } = useInView();
   const { ref: myRef2, inView: visible2 } = useInView();
@@ -31,7 +32,7 @@ export const CartProvider = ({children}) => {
   
   return (<CartContext.Provider value={{
     scrollPaused1, setScrollPaused1, myRef1, visible1, myRef2, visible2, myRef3, visible3,
-    loaded, setLoaded
+    loaded, setLoaded, step, setStep
   }}>
     {children}
   </CartContext.Provider>);

@@ -5,7 +5,7 @@ import {useCartContext} from "../../CartContext";
 import "./loadingBlock.scss";
 
 function LoadingBlock() {
-  const {setLoaded} = useCartContext();
+  const {setLoaded, setStep} = useCartContext();
   const [showFullLoader, setShowFullLoader] = useState(false);
   const [loaderOpacity, setLoaderOpacity] = useState(false);
   const [textTransform, setTextTransform] = useState(false)
@@ -17,7 +17,6 @@ function LoadingBlock() {
     const timer = setTimeout(() => {
       setShowFullLoader(true);
       setLoaded(true)
-      
     }, 7500);
     
     return () => clearTimeout(timer);
@@ -26,6 +25,7 @@ function LoadingBlock() {
   useEffect(() => {
     const timer2 = setTimeout(() => {
       setLoaderOpacity(true);
+      setStep(1)
     }, 4000);
     
     return () => clearTimeout(timer2);
@@ -43,7 +43,7 @@ function LoadingBlock() {
     const timer4 = setTimeout(() => {
       setTextSlide(true);
       setLoaderOpacity2(true);
-      window.scrollTo(0, 0)
+      window.scrollTo(-100, 0)
     }, 6500);
     
     return () => clearTimeout(timer4);

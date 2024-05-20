@@ -11,8 +11,7 @@ import ThirdWhiteEnd from "./thirdWhiteEnd/thirdWhiteEnd";
 import LoadingBlock from "../../components/loadingBlock/loadingBlock";
 
 function Main() {
-  const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3} = useCartContext();
-  const [step, setStep] = useState(1);
+  const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3, step, setStep} = useCartContext();
   const secondBlockRef = useRef(null);
   const [headBlock, setHeadBlock] = useState(0)
   const [fixed, setFixed] = useState(false)

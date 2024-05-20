@@ -106,7 +106,7 @@ function SecondBlock({step, ref, style}) {
   
   ]
   
-  const { ref: myRef4, inView: visible4 } = useInView();
+  const { ref: myRef1, inView: visible1 } = useInView();
   
   const [changeableData, setChangeableData] = useState(data1)
   useEffect(()=>{
@@ -131,13 +131,13 @@ function SecondBlock({step, ref, style}) {
   
   return (
      <div  style={{backgroundImage: `url("${backgroundImg}")`, position: style ? "fixed" : "relative"}} ref={ref} id="secondBlock" className="SecondBlock no-select">
-       <HomeSpinnerSpline1/>
-       <HomeSpinnerSpline2/>
+       {/*<HomeSpinnerSpline1/>*/}
+       {/*<HomeSpinnerSpline2/>*/}
        <div ref={myRef2}></div>
        
        <div className="mainBlock">
          
-         <div ref={} className="headerBlock">
+         <div ref={myRef1} className="headerBlock">
            <div className="flexGrow"></div>
            <div className="underLinedText no-select">
              <p>what we do</p>
