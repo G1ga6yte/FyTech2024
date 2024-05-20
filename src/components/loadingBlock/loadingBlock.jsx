@@ -17,10 +17,11 @@ function LoadingBlock() {
     const timer = setTimeout(() => {
       setShowFullLoader(true);
       setLoaded(true)
-    }, 8000);
+      
+    }, 7500);
     
     return () => clearTimeout(timer);
-  }, [8000]);
+  }, [7500]);
   
   useEffect(() => {
     const timer2 = setTimeout(() => {
@@ -42,6 +43,7 @@ function LoadingBlock() {
     const timer4 = setTimeout(() => {
       setTextSlide(true);
       setLoaderOpacity2(true);
+      window.scrollTo(0, 0)
     }, 6500);
     
     return () => clearTimeout(timer4);

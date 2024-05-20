@@ -24,11 +24,6 @@
       display: flex;
       width: 100%;
 
-
-
-
-
-
     }
 
     .circleCont{
@@ -94,10 +89,11 @@
           position: absolute;
           left: 50%;
           top: 0;
+          transition: 0.5s ease-in-out all;
         }
         .noVisible{
           opacity: 0 !important;
-          transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out all;
         }
         .contentCont{
           width: 100%;
@@ -107,7 +103,7 @@
           justify-content: center;
           align-items: center;
           opacity: 1;
-          transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out all;
 
 
           .contentBlock{
@@ -191,6 +187,29 @@
 
 
 
+        }
+
+        .contentCont2{
+          position: absolute;
+          left: 0;
+          top: 0;
+          .contentBlock{
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: max-content !important;
+            .insideBlock{
+              margin: 0 !important;
+              padding: 0 !important;
+              justify-content: center !important;
+              .contentHeader{
+                text-align:  center !important;
+              }
+            }
+          }
         }
 
 

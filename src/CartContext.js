@@ -9,6 +9,7 @@ export const CartProvider = ({children}) => {
   const { ref: myRef2, inView: visible2 } = useInView();
   const { ref: myRef3, inView: visible3 } = useInView();
   
+  
   useEffect(()=>{
     if (visible1){
       setScrollPaused1(true)

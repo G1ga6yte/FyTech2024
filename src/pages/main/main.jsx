@@ -16,7 +16,6 @@ function Main() {
   const secondBlockRef = useRef(null);
   const [headBlock, setHeadBlock] = useState(0)
   const [fixed, setFixed] = useState(false)
-  
   useEffect(()=>{
     let headBlock = document.getElementById("headBlock")
     setHeadBlock(headBlock.offsetHeight)
@@ -31,6 +30,7 @@ function Main() {
   useEffect(()=>{
     window.scrollTo(0, 0)
   }, [])
+  
   
   
   
@@ -118,24 +118,26 @@ function Main() {
      <div className="MainCont G-Container">
        <ScrollDetection/>
        
+       <LoadingBlock/>
   
        {step === 1 &&
-          <div id="headBlock" className="topCont">
+          <div  id="headBlock" className="topCont">
             <NavBlock/>
             <HeadBlock/>
             <div></div>
           </div>
        }
   
-       <div className="secondContent" style={{minHeight: `100vh`, backgroundImage: `url("${backgroundImg}")`}}>
+       <div  className="secondContent" style={{minHeight: `100vh`, backgroundImage: `url("${backgroundImg}")`}}>
          <SecondBlock style={fixed} ref={secondBlockRef} step={step}/>
   
        </div>
        <div ref={myRef1}></div>
   
   
-       {step === 4 &&
-          <div  className="thirdCont">
+          <div style={{
+            height: step === 4 ? "max-content" : "0px"
+          }} className="thirdCont">
             <div style={{height: `200px`}}></div>
             <ThirdHeader/>
             <ThirdBlock/>
@@ -146,7 +148,6 @@ function Main() {
             <div style={{height: `200vh`}}></div>
           </div>
           
-       }
        
      </div>
   );

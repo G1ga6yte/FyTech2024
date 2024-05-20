@@ -6,6 +6,7 @@ import {Images} from "./images/images";
 import {useCartContext} from "../../../CartContext";
 
 import backgroundImg from "../../../background.png"
+import {useInView} from "react-intersection-observer";
 function SecondBlock({step, ref, style}) {
   const data1 = [
     {
@@ -78,6 +79,34 @@ function SecondBlock({step, ref, style}) {
     }
   
   ]
+  const data4 = [
+    {
+      name: "Advance Services",
+      items: [
+        "Artificial intelligence and machine learning*",
+        "Internet of Things (IoT) - Cloud computing*",
+        "DevOps - Agile development*",
+        "Customer experience (CX) management*"
+      ]
+    },
+    {
+      name: "Web 3.0",
+      items: [
+        "Smart Contract Development",
+        "Decentralized Application (DApp) Development",
+        "Blockchain Data Management and Analytics",
+        "Blockchain Consultation",
+        "Smart Contract Security Development and Audit",
+        "Integration with Distributed Ledger Technology (DLT)",
+        "Cryptocurrency Wallet Development and Maintenance",
+        "Testing and Quality Assurance",
+        "Technical Support and Maintenance"
+      ]
+    }
+  
+  ]
+  
+  const { ref: myRef4, inView: visible4 } = useInView();
   
   const [changeableData, setChangeableData] = useState(data1)
   useEffect(()=>{
@@ -108,7 +137,7 @@ function SecondBlock({step, ref, style}) {
        
        <div className="mainBlock">
          
-         <div className="headerBlock">
+         <div ref={} className="headerBlock">
            <div className="flexGrow"></div>
            <div className="underLinedText no-select">
              <p>what we do</p>
@@ -129,7 +158,7 @@ function SecondBlock({step, ref, style}) {
                <span className={`count ${step === 4 && "activeSection"}`}>4</span>
              </div>
              <div className="line1"></div>
-             <div className="line2"></div>
+             <div style={{opacity: step === 4 ? 0 : 1}} className="line2"></div>
              
              <div className={`contentCont ${step === 4 && "noVisible"}`}>
                <div className={`contentBlock ${step === 2 && "activeContent"}`}>
@@ -169,8 +198,30 @@ function SecondBlock({step, ref, style}) {
                
                
              </div>
+  
+             <div className={`contentCont contentCont2 ${step !== 4 && "noVisible"}`}>
+               <div className={`contentBlock ${step === 4 && "activeContent"}`}>
+                 <div className="insideBlock">
+                   <p className="contentHeader">{data4[0].name}</p>
+                   {data4[0].items.map((el, index)=>{
+                     return(<p key={index} className="contentPrg">{el}</p>)
+                   })}
+                 </div>
+               </div>
+               
+               
+               <div className={`contentBlock ${step === 4 && "activeContent"}`}>
+                 <div className="insideBlock">
+                   <p className="contentHeader">{data4[1].name}</p>
+                   {data4[1].items.map((el, index)=>{
+                     return(<p key={index} className="contentPrg">{el}</p>)
+                   })}
+                 </div>
+               </div>
+  
+  
+             </div>
 
-            
 
            </div>
            
