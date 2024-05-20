@@ -35,6 +35,7 @@ function HeadBlock() {
      <div className="HeadBlock">
        <HeadSpline/>
        
+       
        <div className={`centerTextBlock no-select ${loaded ? visible1 ? "activeContentBlock" : "" : ""}`}>
              <div className={`upBlockText ${loaded ? visible1 ? "activeUpBlockText" : "" : ""}`}>
                <p className="text">We are</p>
