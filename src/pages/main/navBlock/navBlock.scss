@@ -101,13 +101,23 @@
       text-transform: uppercase;
       line-height: 0.4;
 
+      svg{
+        transform: rotateX(0deg);
+        transition: 0.5s ease-in-out all;
+      }
+
       &:hover{
         filter: brightness(1.2);
         gap: 28px;
         padding: 14px 20px;
 
+        svg{
+          transform: rotateX(360deg);
+        }
 
       }
+
+
 
       span{
         transition: 0.3s ease-in-out all;

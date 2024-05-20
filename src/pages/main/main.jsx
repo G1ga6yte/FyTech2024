@@ -8,6 +8,7 @@ import backgroundImg from "../../background.png";
 import ThirdBlock from "./thirdBlock/thirdBlock";
 import ThirdHeader from "./thirdHeader/thirdHeader";
 import ThirdWhiteEnd from "./thirdWhiteEnd/thirdWhiteEnd";
+import LoadingBlock from "../../components/loadingBlock/loadingBlock";
 
 function Main() {
   const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3} = useCartContext();
@@ -116,6 +117,7 @@ function Main() {
   return (
      <div className="MainCont G-Container">
        <ScrollDetection/>
+       
   
        {step === 1 &&
           <div id="headBlock" className="topCont">

@@ -12,25 +12,25 @@ export const CartProvider = ({children}) => {
   useEffect(()=>{
     if (visible1){
       setScrollPaused1(true)
-    }else {
-    
     }
-  
   }, [visible1])
   
   // useEffect(()=>{
   //   if (visible2){
   //     setScrollPaused1(false)
-  //   }else {
-  //
   //   }
-  //
   // }, [visible2])
   
   
   
+  
+  //////////////// loadingBlock
+  const [loaded, setLoaded] = useState(false)
+  
+  
   return (<CartContext.Provider value={{
-    scrollPaused1, setScrollPaused1, myRef1, visible1, myRef2, visible2, myRef3, visible3
+    scrollPaused1, setScrollPaused1, myRef1, visible1, myRef2, visible2, myRef3, visible3,
+    loaded, setLoaded
   }}>
     {children}
   </CartContext.Provider>);
