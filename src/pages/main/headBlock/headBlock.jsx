@@ -33,7 +33,7 @@ function HeadBlock() {
   
   return (
      <div className="HeadBlock">
-       {/*<HeadSpline/>*/}
+       <HeadSpline/>
        
        
        <div className={`centerTextBlock no-select ${loaded ? visible1 ? "activeContentBlock" : "" : ""}`}>

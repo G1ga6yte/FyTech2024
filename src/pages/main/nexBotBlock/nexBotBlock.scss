@@ -1,0 +1,15 @@
+
+.nexBotBlock{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background: #121212;
+}
+
+.activeBlock{
+  transition: 2s ease-in-out all !important;
+  transform: translateX(0);
+}

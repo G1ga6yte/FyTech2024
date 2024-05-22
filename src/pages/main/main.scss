@@ -14,14 +14,14 @@
 }
 
 .topCont {
-  position: relative;
-  z-index: 1;
+  position: relative !important;
+  z-index: 1 !important;
   padding: 0 10px;
 }
 
 .secondContent {
-  position: relative;
-  z-index: 150;
+  position: relative !important;
+  z-index: 150 !important;
   background-color: #141414;
   background-repeat: no-repeat;
   background-size: cover;

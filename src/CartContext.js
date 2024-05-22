@@ -36,6 +36,9 @@ export const CartProvider = ({children}) => {
   const [activeMenu, setActiveMenu] = useState(false);
   const [menu2, setMenu2] = useState(false)
   
+  
+  ///////////////// SWITCH TO LEFT
+  
  
   
   
