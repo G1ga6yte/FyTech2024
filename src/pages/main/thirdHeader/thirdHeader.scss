@@ -128,6 +128,14 @@
       opacity: 1;
     }
 
+    .headerInsideBlock{
+      display: flex;
+      justify-content: end;
+      max-width: 1270px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
     .header {
       max-width: max-content;
       flex-grow: 4;
@@ -186,15 +194,13 @@
 
     }
 
-    .flexGrowHere {
-      flex-grow: 2;
-    }
+    //.flexGrowHere {
+    //  flex-grow: 3;
+    //  width: max-content;
+    //}
 
 
-    .flexBlock {
-      flex-grow: 1;
 
-    }
   }
 
 

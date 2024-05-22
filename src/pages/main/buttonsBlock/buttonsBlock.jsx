@@ -46,69 +46,6 @@ function ButtonsBlock (){
     return () => clearInterval(intervalId);
   }, [currentState2]);
   
-  // useEffect(() => {
-  //   if (visible8) {
-  //     const timeoutId = setTimeout(() => {
-  //       setChangeView(true);
-  //     }, 2000);
-  //
-  //     return () => clearTimeout(timeoutId); // Очистить таймер при размонтировании компонента или при изменении state1
-  //   }
-  // }, [visible8]);
-  
-  
-  // function ScrollDetection() {
-  //   const [scrolling, setScrolling] = useState(false);
-  //
-  //   useEffect(() => {
-  //     const handleScroll = (event) => {
-  //       if (!scrolling) {
-  //         const delta = event.deltaY;
-  //
-  //         if (delta > 0) {
-  //           if (visible8){
-  //             setTimeout(()=>{
-  //               setChangeView(true)
-  //             }, 500)
-  //             setTimeout(()=>{
-  //               setAvailableBack(true)
-  //             }, 1000)
-  //           }
-  {/*        } else if (delta < 0) {*/}
-  {/*          if(availableBack){*/}
-  {/*           setTimeout(()=>{*/}
-  {/*              setChangeView(false)*/}
-  //            }, 500)
-  //             setAvailableBack(false)
-  //
-  {/*            setTimeout(()=>{*/}
-  //               window.scrollTo(0, 7000)
-  {/*            }, 1000)*/}
-  {/*          }*/}
-  {/*        }*/}
-  {/*      }*/}
-  {/*    };*/}
-  {/*    */}
-  {/*    window.addEventListener("wheel", handleScroll);*/}
-  {/*    */}
-  {/*    return () => {*/}
-  {/*      window.removeEventListener("wheel", handleScroll);*/}
-  {/*    };*/}
-  //   }, [scrolling]);
-  //
-  //   useEffect(() => {
-  {/*    const resetScrolling = () => {*/}
-  //       setScrolling(false);
-  //     };
-  //
-  //     const timeout = setTimeout(resetScrolling, 1500);
-  //     return () => clearTimeout(timeout);
-  //   }, [scrolling]);
-  //
-  //   return (
-  //      <div className="content"></div>
-  //   );
-  // }
   
   
   return(
@@ -120,10 +57,10 @@ function ButtonsBlock (){
        <div  className={`buttonsContC no-select`}>
          <div >
            <div className="headerBlock">
-             <span ref={myRef1} className={`headerLine ${visible1 ? "fromRight1" : ""}`} ><LettersScrolling text={"WITH EMOTION"} state={"X"} visible={currentState} /></span>
-             <span ref={myRef2} className={`headerLine ${visible2 ? "fromRight1" : ""}`} ><LettersScrolling text={"Innovation, we push"} state={"Y"} visible={currentState} /></span>
-             <span ref={myRef3} className={`headerLine ${visible3 ? "fromRight1" : ""}`} ><LettersScrolling text={"the boundaries of digital"} state={"X"} visible={currentState} /></span>
-             <span ref={myRef4} className={`headerLine ${visible4 ? "fromRight1" : ""}`} ><LettersScrolling text={"creativity."} state={"Y"} visible={currentState} /></span>
+             <span ref={myRef1} className={`headerLine ${visible1 ? "fromRight1" : ""}`} ><LettersScrolling text={"WITH EMOTION"} state={"X"} visible={visible1} /></span>
+             <span ref={myRef2} className={`headerLine ${visible2 ? "fromRight1" : ""}`} ><LettersScrolling text={"Innovation, we push"} state={"Y"} visible={visible1} /></span>
+             <span ref={myRef3} className={`headerLine ${visible3 ? "fromRight1" : ""}`} ><LettersScrolling text={"the boundaries of digital"} state={"X"} visible={visible1} /></span>
+             <span ref={myRef4} className={`headerLine ${visible4 ? "fromRight1" : ""}`} ><LettersScrolling text={"creativity."} state={"Y"} visible={visible1} /></span>
            </div>
          </div>
   
@@ -177,11 +114,11 @@ function ButtonsBlock (){
       
              <div className="prg2Cont">
                <div ref={myRef6} className={`prg1Block ${visible6 ? "fromLeftAnim" : ""}`} >
-                 <div className="textLine"><DubbleLetter text={"every brand has a story, from, startups finding"} state={currentState} trns={0.05} /></div>
-                 <div className="textLine"><DubbleLetter text={"there voice to titans refining their legacy. "} state={currentState} trns={0.1} /></div>
-                 <div className="textLine"><DubbleLetter text={"we ensure that tale shines brilliantly. WITH A BLEND"} state={currentState} trns={0.05} /></div>
-                 <div className="textLine"><DubbleLetter text={"OF RAPID ITERATION AND COLLABORATIVE SPIRIT, WE"} state={currentState} trns={0.05} /></div>
-                 <div className="textLine"><DubbleLetter text={"EMPOWER YOU TO RESHAPE YOUR DIGITAL NARRATIVE."} state={currentState} trns={0.1} /></div>
+                 <div className="textLine"><DubbleLetter text={"every brand has a story, from, startups finding"} state={visible6} trns={0.1} /></div>
+                 <div className="textLine"><DubbleLetter text={"there voice to titans refining their legacy. "} state={visible6} trns={0.05} /></div>
+                 <div className="textLine"><DubbleLetter text={"we ensure that tale shines brilliantly. WITH A BLEND"} state={visible6} trns={0.1} /></div>
+                 <div className="textLine"><DubbleLetter text={"OF RAPID ITERATION AND COLLABORATIVE SPIRIT, WE"} state={visible6} trns={0.05} /></div>
+                 <div className="textLine"><DubbleLetter text={"EMPOWER YOU TO RESHAPE YOUR DIGITAL NARRATIVE."} state={visible6} trns={0.1} /></div>
                </div>
              </div>
            </div>
@@ -190,7 +127,6 @@ function ButtonsBlock (){
        
        <div ref={myRef8} ></div>
   
-       <NexBotBlock />
        
      </div>
   )

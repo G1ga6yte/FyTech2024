@@ -1,0 +1,220 @@
+
+
+.AfterRobotThird{
+  width: 100%;
+  min-height: 200vh;
+  position: relative;
+  z-index: 5;
+  background-color: #121212;
+
+  .headerBlock{
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    position: relative;
+    z-index: 7;
+    justify-content: space-between;
+    padding-top: 30px;
+    height: 150px;
+
+
+
+    .strokeText{
+      position: absolute;
+      top: 0;
+      transform: translate(25%, 0);
+      right: 20%;
+      z-index: 20;
+      font-size: 96px;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(255, 255, 255, 0.50);
+      color: rgba(0, 0, 0, 0.00);
+      text-transform: uppercase;
+      font-family: 'Trap-Regular', sans-serif;
+    }
+  }
+
+  .mone1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 1200px;
+  }
+
+  .mone2{
+    position: absolute;
+    left: -20px;
+    top: 0;
+    rotate: -10deg;
+  }
+
+  .mainBlock{
+    height: 1000px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    .skillsBlock{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(50px, -50%) !important;
+
+      .skillPrg{
+        font-size: 16px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        text-transform: uppercase;
+        color: #454545;
+        line-height: normal;
+        margin-bottom: 16px;
+      }
+
+    }
+
+    .prgBlock{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translate(-100px, -200px);
+      font-size: 16px;
+      font-family: 'Trap-SemiBold', sans-serif;
+      color: #454545;
+      text-transform: uppercase;
+      line-height: normal;
+    }
+
+
+    .circleBlock{
+      width: 676px;
+      height: 676px;
+      position: relative;
+
+      .circleImg{
+        position: absolute;
+        z-index: 2;
+        width: 36px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: 1s ease-in-out all;
+        &:before{
+          font-size: 24px;
+          color: #454545;
+          font-family: 'Trap-SemiBold', sans-serif;
+          line-height: 100%;
+        }
+
+        &:nth-child(1){
+          right: 0;
+          top: 50%;
+          transform: translate(50%, -50%);
+          &:before{
+            content: 'ORPETRON';
+            position: absolute;
+            bottom: 50%;
+            left: 40px;
+            transform: translateY(60%);
+          }
+        }
+        &:nth-child(2){
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, -50%);
+          &:before{
+            content: 'AWWWARD';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &:nth-child(3){
+          left: 50%;
+          bottom: 0;
+          transform: translate(-50%, 50%);
+          &:before{
+            white-space: nowrap;
+            content: 'CSS DESIGN AWARD';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &:nth-child(4){
+          left: 0;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          &:before{
+            content: 'FWA';
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-40%);
+          }
+        }
+
+      }
+
+      .circleSVG{
+        animation: rotate 12s linear infinite;
+      }
+
+      .insideCircle{
+        height: 430px;
+        width: 430px;
+        background: rgba(41, 41, 41, 0.25);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .spline{
+          width: 100%;
+          height: 100%;
+          opacity: 0.8;
+        }
+      }
+
+
+    }
+  }
+
+
+
+  .lenta{
+    width: 100%;
+    height: 68px;
+    background-color: #FF6C2C;
+  }
+
+  .backgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 500vh;
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+
+
+}
+
+@keyframes rotate {
+  0%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}

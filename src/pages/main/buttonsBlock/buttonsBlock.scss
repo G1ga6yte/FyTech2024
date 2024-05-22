@@ -25,7 +25,6 @@
     font-family: 'Trap-Bold', sans-serif;
     line-height: normal;
     text-transform: uppercase;
-    animation: shakeAnim 15s linear infinite;
 
     .headerLine {
       animation: lightningAnim 12s linear infinite;
@@ -242,7 +241,6 @@
 
       .prg1Cont {
         overflow: hidden;
-        animation: shakeAnim 20s linear infinite;
 
         .prg1Block {
           .textLine {
@@ -263,7 +261,6 @@
 
       .prg2Cont {
         margin-left: 5%;
-        animation: shakeAnim 10s linear infinite;
 
         .prg1Block {
           margin-top: 40px;

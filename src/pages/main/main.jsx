@@ -14,6 +14,8 @@ import LettersScrolling from "../../components/lettersScrolling/lettersScrolling
 import {Images} from "./navBlock/images/images";
 import DubbleLetter from "../../components/dubbleLetter/dubbleLetter";
 import ButtonsBlock from "./buttonsBlock/buttonsBlock";
+import NexBotBlock from "./nexBotBlock/nexBotBlock";
+import AfterRobotMain from "./afterRobotMain/afterRobotMain";
 
 function Main() {
   const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3, step, setStep, activeMenu, setActiveMenu, menu2, setMenu2} = useCartContext();
@@ -228,8 +230,12 @@ function Main() {
          <ThirdBlock/>
          <ThirdWhiteEnd/>
          <ButtonsBlock/>
+         <NexBotBlock />
          
          
+         <AfterRobotMain/>
+
+
        </div>
      
      

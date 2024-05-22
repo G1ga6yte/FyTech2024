@@ -41,18 +41,20 @@ function ThirdHeader (){
          </p>
          
          <div className="flexGrowHere"></div>
-         <div  className="header">
-           
-           <div ref={myRef1} className={`underLinedText ${visible1 ? "underLinedTextAnim" : ""}`}>
-             <p>projects</p>
-             <div className="line"></div>
+         <div className="headerInsideBlock">
+           <div  className="header">
+    
+             <div ref={myRef1} className={`underLinedText ${visible1 ? "underLinedTextAnim" : ""}`}>
+               <p>projects</p>
+               <div className="line"></div>
+             </div>
+    
+             <button onMouseLeave={()=>setBtn1(false)} onMouseOver={()=>setBtn1(true)} ref={myRef2} className={`seeMoreBtn ${visible2 ? "activeBtn" : ""}`}><LettersScrolling text={"see more"} state={"Y"} visible={btn1}/></button>
+  
            </div>
-           
-           <button onMouseLeave={()=>setBtn1(false)} onMouseOver={()=>setBtn1(true)} ref={myRef2} className={`seeMoreBtn ${visible2 ? "activeBtn" : ""}`}><LettersScrolling text={"see more"} state={"Y"} visible={btn1}/></button>
-           
+  
+           <div className="flexBlock"></div>
          </div>
-         
-         <div className="flexBlock"></div>
        </div>
        
      </div>

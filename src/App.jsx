@@ -13,7 +13,8 @@ import LoadingBlock from "./components/loadingBlock/loadingBlock";
 function App() {
   const lenis = new Lenis({
     duration: 1.5,
-    wheelMultiplier: 0.4
+    wheelMultiplier: 0.4,
+    
   })
   lenis.on('scroll', (e) => {})
   function raf(time) {
@@ -21,7 +22,6 @@ function App() {
     requestAnimationFrame(raf)
   }
   requestAnimationFrame(raf)
-  
   
   
   
