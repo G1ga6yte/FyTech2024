@@ -37,15 +37,28 @@ export const CartProvider = ({children}) => {
   const [menu2, setMenu2] = useState(false)
   
   
-  ///////////////// SWITCH TO LEFT
+  ///////////////// robotView
+  const { ref: myRefRobot, inView: visibleRobot } = useInView();
+  const [robotAnim, setRobotAnim] = useState(false)
+  const [forthBlock, setForthBlock] = useState(false)
+  useEffect(()=>{
+    if(visibleRobot){
+      setRobotAnim(true)
+      setTimeout(()=>{
+        setForthBlock(true)
+      }, 5000)
+    }
+  }, [visibleRobot])
   
- 
+  
+  
   
   
   return (<CartContext.Provider value={{
     scrollPaused1, setScrollPaused1, myRef1, visible1, myRef2, visible2, myRef3, visible3,
     loaded, setLoaded, step, setStep,
-    activeMenu, setActiveMenu, menu2, setMenu2
+    activeMenu, setActiveMenu, menu2, setMenu2,
+    robotAnim, myRefRobot, visibleRobot, setRobotAnim, forthBlock
   }}>
     {children}
   </CartContext.Provider>);

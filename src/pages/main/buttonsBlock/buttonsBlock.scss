@@ -3,6 +3,20 @@
   padding: 100px 50px 0;
   width: 100%;
   position: relative;
+  background-color: #121212;
+  overflow: hidden;
+
+    .backgroundImage2{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 500vh;
+      z-index: 2;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
 
   .buttonsContC{
@@ -51,7 +65,7 @@
 
   .backgroundImage {
     position: absolute;
-    top: 100px;
+    top: 0;
     right: 50px;
   }
 

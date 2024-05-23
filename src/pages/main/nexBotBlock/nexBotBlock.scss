@@ -2,19 +2,30 @@
 .nexBotBlock{
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
   left: 0;
   top: 0;
-  z-index: 200;
+  z-index: 20;
   background: #121212;
   overflow: auto;
   max-width: 100%;
 
 
+  .Cont{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
 
 }
 
 .activeBlock{
   transition: 2s ease-in-out all !important;
   transform: translateX(0);
+}
+
+.spline{
+  transition: 0.5s ease-in-out all;
 }

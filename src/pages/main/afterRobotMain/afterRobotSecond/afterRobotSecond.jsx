@@ -2,7 +2,9 @@ import React from "react";
 import "./afterRobotSecond.scss";
 import {useInView} from "react-intersection-observer";
 import {Images} from "./images/images";
-import cardSvg from "./card.svg"
+import cardSvg1 from "./card1.svg"
+import cardSvg2 from "./card2.svg"
+import cardSvg3 from "./card3.svg"
 
 function AfterRobotSecond() {
   const {ref: myRef1, inView: visible1} = useInView();
@@ -26,11 +28,10 @@ function AfterRobotSecond() {
        <img src={Images.backgroundImage} alt="" className="backgroundImage"/>
        <img src={Images.bubble4} className="bubbleImage4" alt=""/>
        <img src={Images.bubble5} className="bubbleImage5" alt=""/>
-       <img src={Images.glassImg} className="glassImage" alt=""/>
        
        <div className="cardsCont">
          <div ref={myRef2} className={`cardBlock ${visible2 ? "activeCardBlock" : ""}`}>
-           <img src={cardSvg} className="stand" alt=""/>
+           <img src={cardSvg1} className="stand" alt=""/>
            
            <p className="underText">
              <span>We strive to create products of</span>
@@ -42,7 +43,7 @@ function AfterRobotSecond() {
          </div>
   
          <div ref={myRef3} className={`cardBlock ${visible3 ? "activeCardBlock" : ""}`}>
-           <img src={cardSvg} className="stand" alt=""/>
+           <img src={cardSvg2} className="stand" alt=""/>
     
            <p className="underText">
              <span>We are always looking for new</span>
@@ -53,7 +54,7 @@ function AfterRobotSecond() {
          </div>
   
          <div ref={myRef4} className={`cardBlock ${visible4 ? "activeCardBlock" : ""}`}>
-           <img src={cardSvg} className="stand" alt=""/>
+           <img src={cardSvg3} className="stand" alt=""/>
     
            <p className="underText">
              <span>We work closely with our clients</span>

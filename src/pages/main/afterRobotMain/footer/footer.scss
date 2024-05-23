@@ -1,0 +1,136 @@
+
+
+.Footer{
+  min-height: 430px;
+  background-color: white;
+
+  .FooterBlock{
+    border-radius: 50px 50px 0 0;
+    background: #0E0E0E;
+    min-height: 430px;
+    width: 100%;
+
+  }
+
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    .mainText{
+      max-width: 800px;
+      font-size: 64px;
+      line-height: 120%;
+      font-family: 'Trap-SemiBold', sans-serif;
+      color: white;
+      text-transform: uppercase;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: 1s ease-in-out all;
+      .getInTouchBtn{
+        margin: 0 20px;
+        pointer-events: auto !important;
+        border-radius: 60px;
+        border: 1px solid #FF6429;
+        padding: 30px 50px;
+        height: max-content;
+        line-height: 100%;
+        font-size: 40px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        transition: 1s ease-in-out all;
+        transform: translate(100px, -10px);
+        &:hover{
+          border: 1px solid white;
+        }
+        .word2{
+          margin-bottom: -5px;
+        }
+
+        .letter22{
+          color:  #FF6C2C;
+        }
+      }
+
+    }
+
+    .mainTextActive{
+      transform: translateY(0);
+      opacity: 1;
+
+      .getInTouchBtn{
+        transform: translate(0, -10px);
+      }
+    }
+
+    .LinksCont{
+      max-width: 350px;
+      display: flex;
+      gap: 50px;
+
+      .linksBlock{
+        display: flex;
+        flex-direction: column;
+        .link{
+          display: block;
+          font-size: 32px;
+          font-family: 'Trap-Regular', sans-serif;
+          line-height: 100%;
+          color: #FF6C2C;
+          margin-bottom: 12px;
+          padding: 6px;
+          text-decoration: none;
+          transition: 1s ease-in-out all;
+
+          .letter22{
+            color: white;
+          }
+        }
+        .link1{
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        .link2{
+          transform: translateX(100px);
+          opacity: 0;
+        }
+        .activeLink{
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
+  .termsCont{
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 25px;
+
+    .termsText{
+      font-size: 16px;
+      color: #c2c2c2;
+      font-family: 'Trap-Medium', sans-serif;
+      line-height: normal;
+      text-decoration: none;
+      display: block;
+      &:nth-child(1){
+        margin-right: 50px;
+      }
+    }
+
+
+  }
+
+}

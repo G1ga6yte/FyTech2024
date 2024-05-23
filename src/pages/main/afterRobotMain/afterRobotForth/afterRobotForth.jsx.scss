@@ -1,0 +1,152 @@
+
+.AfterRobotForth {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #121212;
+  z-index: 6;
+  overflow: hidden;
+  padding: 200px 0 0;
+
+  .backgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 500vh;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .svgAngel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 25%;
+  }
+
+  .svgBullets {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 25%;
+    z-index: 3;
+  }
+
+  .headerBlock {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 3;
+
+  }
+
+  .underHeader {
+    display: flex;
+    justify-content: end;
+    width: 90%;
+    margin: 100px auto 0;
+    gap: 135px;
+    position: relative;
+    z-index: 3;
+
+    .underText {
+      font-size: 100px;
+      color: rgba(255, 255, 255, 0.05);
+      font-family: 'Trap-Regular', sans-serif;
+      line-height: 100%;
+      text-transform: uppercase;
+
+      .letter22 {
+        color: rgba(255, 108, 44, 0.2);
+      }
+    }
+  }
+
+  .backText {
+    font-size: 450px;
+    position: relative;
+    z-index: 2;
+    color: rgba(255, 108, 44, 0.05);
+    font-family: 'Trap-Regular', sans-serif;
+    text-transform: uppercase;
+    line-height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: 1s ease-in-out all;
+    opacity: 0;
+    transform: translateX(200px);
+
+  }
+
+  .backText2 {
+    transform: translateX(-200px);
+  }
+
+  .activeBackText {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+
+  .ourWorksCont {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    .worksBlock {
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .workBlock {
+        position: relative;
+        max-width: max-content;
+        max-height: max-content;
+        width: 20%;
+        transform: translateY(30%);
+        opacity: 0;
+        transition: 1s ease-in-out all !important;
+
+        .logoBack{
+          width: 100%;
+        }
+
+
+        .logo{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 75%;
+        }
+
+      }
+
+      .activeBlock{
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+  .underLine{
+    height: 5px;
+    width: 95%;
+    margin: 0 auto 100px;
+    background-color: #FF6C2C;
+    opacity: 0.1;
+  }
+
+}

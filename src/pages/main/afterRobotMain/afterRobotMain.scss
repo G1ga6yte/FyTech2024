@@ -1,3 +1,22 @@
 .AfterRobotMain{
   width: 100%;
+  transform: translateY(100vh);
+  position: relative;
+
+  z-index: 21;
+  transition: 2s ease-in-out all;
+}
+
+.activeRobotMain{
+  transform: translateY(0) ;
+  animation: comming 0.55s linear;
+}
+
+@keyframes comming {
+  0%{
+    transform: translateY(100vh);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }

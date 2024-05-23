@@ -4,6 +4,9 @@ import "./afterRobotThird.scss"
 import {Images} from "./images/images";
 import LettersScrolling from "../../../../components/lettersScrolling/lettersScrolling";
 import Spline from "@splinetool/react-spline";
+import backgroundImage from "../afterRobotSecond/images/background.png"
+
+
 function AfterRobotThird (){
   const { ref: myRef1, inView: visible1 } = useInView();
   const { ref: myRef2, inView: visible2 } = useInView();
@@ -13,11 +16,14 @@ function AfterRobotThird (){
   const { ref: myRef6, inView: visible6 } = useInView();
   const { ref: myRef7, inView: visible7 } = useInView();
   const { ref: myRef8, inView: visible8 } = useInView();
+  const { ref: myRef9, inView: visible9 } = useInView();
   
   
-  
+  const [rotation, setRotation] = useState(true)
   
   const [currentState, setCurrentState] = useState(1);
+  
+  const [splineModel, setSplineModel] = useState(1)
   
   
   useEffect(() => {
@@ -26,7 +32,14 @@ function AfterRobotThird (){
         setCurrentState(prev => prev + 1);
       } else {
         setCurrentState(1);
+        setRotation(prev=>!prev)
       }
+      if(currentState === 1){
+        setSplineModel(1)
+      } else if (currentState === 3) {
+        setSplineModel(2)
+      }
+  
     }, 3000);
     
     return () => clearInterval(intervalId);
@@ -35,7 +48,8 @@ function AfterRobotThird (){
   return(
      <div className="AfterRobotThird">
   
-       
+       <img src={backgroundImage} alt="" className="backgroundImage"/>
+  
        <div ref={myRef1} className="headerBlock">
          <div className="flexGrow"></div>
          <div className={`underLinedText no-select ${visible1 ? "underLinedTextAnim" :""}`}>
@@ -71,7 +85,7 @@ function AfterRobotThird (){
   
            
   
-           <svg className="circleSVG" width="676" height="676" viewBox="0 0 676 676" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <svg className={`circleSVG ${rotation ? "rotate" : "rotate"}`} width="676" height="676" viewBox="0 0 676 676" fill="none" xmlns="http://www.w3.org/2000/svg">
              <circle cx="338" cy="338" r="337.5" stroke="url(#paint0_linear_80_2206)"/>
              <defs>
                <linearGradient id="paint0_linear_80_2206" x1="119.5" y1="94.5" x2="262" y2="231" gradientUnits="userSpaceOnUse">
@@ -82,8 +96,11 @@ function AfterRobotThird (){
            </svg>
            
            <div className="insideCircle">
-             <div className="spline">
+             <div style={{opacity: splineModel === 1 ? 0.8 : 0}} className="spline">
                <Spline scene={"https://prod.spline.design/MENtgbdXHq0BhsKS/scene.splinecode"}/>
+             </div>
+             <div style={{opacity: splineModel === 2 ? 0.8 : 0}} className="spline">
+               <Spline scene={"https://prod.spline.design/5rmnAO5QfaBt4WAC/scene.splinecode"}/>
              </div>
            </div>
            
@@ -97,8 +114,95 @@ function AfterRobotThird (){
        </div>
        
        
-       <div className="lenta">
-       
+       <div ref={myRef9} className="lenta">
+          <div className="lentaLine line1">
+            <div className="lentaItem">
+              <p className="lentaPrg"><LettersScrolling text={"Analytics"} state={"X"} visible={visible9}/></p>
+              <span className="countSpan">(6)</span>
+              <img src={Images.star6} alt=""/>
+            </div>
+  
+            <div className="lentaItem">
+              <p className="lentaPrg"><LettersScrolling text={"IT Consulting"} state={"X"} visible={visible9}/></p>
+              <span className="countSpan">(4)</span>
+              <img src={Images.star6} alt=""/>
+            </div>
+  
+            <div className="lentaItem">
+              <p className="lentaPrg"><LettersScrolling text={"Strategy"} state={"X"} visible={visible9}/></p>
+              <span className="countSpan">(9)</span>
+              <img src={Images.star6} alt=""/>
+            </div>
+  
+            <div className="lentaItem">
+              <p className="lentaPrg"><LettersScrolling text={"Design"} state={"X"} visible={visible9}/></p>
+              <span className="countSpan">(45)</span>
+              <img src={Images.star6} alt=""/>
+            </div>
+  
+            <div className="lentaItem">
+              <p className="lentaPrg"><LettersScrolling text={"Branding"} state={"X"} visible={visible9}/></p>
+              <span className="countSpan">(15)</span>
+              <img src={Images.star6} alt=""/>
+            </div>
+  
+            <div className="lentaItem">
+              <p className="lentaPrg"><LettersScrolling text={"Advance Services"} state={"X"} visible={visible9}/></p>
+              <span className="countSpan">(20)</span>
+              <img src={Images.star6} alt=""/>
+            </div>
+  
+            <div className="lentaItem">
+              <p className="lentaPrg"><LettersScrolling text={"Software Testing "} state={"X"} visible={visible9}/></p>
+              <span className="countSpan">(15)</span>
+              <img src={Images.star6} alt=""/>
+            </div>
+          </div>
+  
+         <div className="lentaLine line2">
+           <div className="lentaItem">
+             <p className="lentaPrg"><LettersScrolling text={"Analytics"} state={"X"} visible={visible9}/></p>
+             <span className="countSpan">(6)</span>
+             <img src={Images.star6} alt=""/>
+           </div>
+    
+           <div className="lentaItem">
+             <p className="lentaPrg"><LettersScrolling text={"IT Consulting"} state={"X"} visible={visible9}/></p>
+             <span className="countSpan">(4)</span>
+             <img src={Images.star6} alt=""/>
+           </div>
+    
+           <div className="lentaItem">
+             <p className="lentaPrg"><LettersScrolling text={"Strategy"} state={"X"} visible={visible9}/></p>
+             <span className="countSpan">(9)</span>
+             <img src={Images.star6} alt=""/>
+           </div>
+    
+           <div className="lentaItem">
+             <p className="lentaPrg"><LettersScrolling text={"Design"} state={"X"} visible={visible9}/></p>
+             <span className="countSpan">(45)</span>
+             <img src={Images.star6} alt=""/>
+           </div>
+    
+           <div className="lentaItem">
+             <p className="lentaPrg"><LettersScrolling text={"Branding"} state={"X"} visible={visible9}/></p>
+             <span className="countSpan">(15)</span>
+             <img src={Images.star6} alt=""/>
+           </div>
+    
+           <div className="lentaItem">
+             <p className="lentaPrg"><LettersScrolling text={"Advance Services"} state={"X"} visible={visible9}/></p>
+             <span className="countSpan">(20)</span>
+             <img src={Images.star6} alt=""/>
+           </div>
+    
+           <div className="lentaItem">
+             <p className="lentaPrg"><LettersScrolling text={"Software Testing "} state={"X"} visible={visible9}/></p>
+             <span className="countSpan">(15)</span>
+             <img src={Images.star6} alt=""/>
+           </div>
+         </div>
+         
        </div>
      </div>
   )

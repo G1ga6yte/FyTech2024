@@ -18,7 +18,7 @@ import NexBotBlock from "./nexBotBlock/nexBotBlock";
 import AfterRobotMain from "./afterRobotMain/afterRobotMain";
 
 function Main() {
-  const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3, step, setStep, activeMenu, setActiveMenu, menu2, setMenu2} = useCartContext();
+  const {scrollPaused1, setScrollPaused1, myRef1, visible2, visible3, step, setStep, activeMenu, setActiveMenu, menu2, setMenu2, robotAnim, myRefRobot, visibleRobot} = useCartContext();
   const secondBlockRef = useRef(null);
   const [headBlock, setHeadBlock] = useState(0)
   const [fixed, setFixed] = useState(false)
@@ -230,10 +230,12 @@ function Main() {
          <ThirdBlock/>
          <ThirdWhiteEnd/>
          <ButtonsBlock/>
-         <NexBotBlock />
-         
-         
-         <AfterRobotMain/>
+         <div className="forthCont">
+           <NexBotBlock />
+  
+  
+           <AfterRobotMain/>
+         </div>
 
 
        </div>
@@ -242,5 +244,5 @@ function Main() {
      </div>
   );
 }
-
+// robotAnim, myRefRobot, visibleRobot
 export default Main;

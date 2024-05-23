@@ -2,10 +2,23 @@
 
 .AfterRobotThird{
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   position: relative;
-  z-index: 5;
+  z-index: 6;
   background-color: #121212;
+  overflow: hidden;
+
+  .backgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 500vh;
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   .headerBlock{
     margin: 0 auto;
@@ -160,7 +173,7 @@
 
       }
 
-      .circleSVG{
+      .rotate{
         animation: rotate 12s linear infinite;
       }
 
@@ -175,9 +188,19 @@
         transform: translate(-50%, -50%);
 
         .spline{
+          position: absolute;
+          left: 0;
+          top:0;
           width: 100%;
           height: 100%;
-          opacity: 0.8;
+          transition: 0.8s ease-in-out all;
+          canvas{
+            width: 100% !important;
+            height: 100% !important;
+          }
+          &:nth-child(2){
+            scale: 0.9;
+          }
         }
       }
 
@@ -191,6 +214,51 @@
     width: 100%;
     height: 68px;
     background-color: #FF6C2C;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+
+    .lentaLine{
+      width: 110%;
+      min-width: 110%;
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+
+    }
+    .line1{
+      animation: lenta1 50s linear infinite;
+    }
+    .line2{
+      animation: lenta2 50s linear infinite;
+
+    }
+
+
+    .lentaItem{
+      width: max-content;
+      display: flex;
+      align-items: start;
+      .lentaPrg{
+        font-size: 20px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        color: #1D1D1D;
+        text-transform: uppercase;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .countSpan{
+        font-size: 14px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        color: #868686;
+        line-height: normal;
+      }
+      img{
+        margin: 2px 20px;
+      }
+    }
   }
 
   .backgroundImage {
@@ -212,9 +280,37 @@
 
 @keyframes rotate {
   0%{
-    rotate: 0deg;
+    rotate: -20deg;
   }
   100%{
-    rotate: 360deg;
+    rotate: 340deg;
+  }
+}
+
+@keyframes  lenta1 {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-100%);
+  }
+  50.0001%{
+    transform: translateX(100%);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes  lenta2 {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(-200%);
   }
 }

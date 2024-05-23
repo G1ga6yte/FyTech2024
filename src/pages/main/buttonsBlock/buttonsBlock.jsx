@@ -6,6 +6,7 @@ import DubbleLetter from "../../../components/dubbleLetter/dubbleLetter";
 import backgroundImage from "./backgroundImage.png"
 import hashBackground from "./hashBackground.png"
 import NexBotBlock from "../nexBotBlock/nexBotBlock";
+import {Images} from "../afterRobotMain/afterRobotFirst/images/images";
 function ButtonsBlock (){
   const [currentState, setCurrentState] = useState(false);
   const [currentState2, setCurrentState2] = useState(false);
@@ -51,7 +52,7 @@ function ButtonsBlock (){
   return(
      <div className="ButtonsBlock">
        {/*<ScrollDetection/>*/}
-  
+       <img src={Images.backgroundImage} className="backgroundImage2" alt=""/>
        
        
        <div  className={`buttonsContC no-select`}>
