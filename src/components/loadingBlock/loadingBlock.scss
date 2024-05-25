@@ -1,4 +1,4 @@
-
+@import "../../source/styles/mixin.scss";
 
 .loadingCont{
   width: 100vw;
@@ -51,6 +51,17 @@
       transition: 0.5s ease-in-out all;
       transform: translate(0, 0);
       opacity: 1;
+      @include screen($wide-l){
+        margin-right: 200px;
+      }
+      @include screen($tablet-l){
+        transform: translateY(120%);
+        margin-right: 80px;
+      }
+      @include screen($tablet){
+        transform: translate(0);
+        margin: 0 auto;
+      }
       .text1{
         font-family: 'Trap-Black', sans-serif;
         font-size: 48px;
@@ -58,6 +69,21 @@
         line-height: 100%;
         transition: 0.6s ease-in-out all;
         transform: translateY(20%);
+        @include screen($wide-l){
+          font-size: 40px;
+        }
+        @include screen($tablet-l){
+          font-size: 36px;
+        }
+        @include screen($tablet){
+          font-size: 32px;
+        }
+        @include screen($mobile-l){
+          font-size: 28px;
+        }
+        @include screen($mobile-m){
+          font-size: 24px;
+        }
         &:nth-child(1){
           color: #FF6C2C;
         }
@@ -76,7 +102,15 @@
       align-items: end;
       height: 200px;
       overflow: hidden;
-
+      @include screen($tablet-l){
+        height: 160px;
+      }
+      @include screen($tablet){
+        height: 110px;
+      }
+      @include screen($mobile-m){
+        height: 80px;
+      }
       .text2Block{
         position: relative;
         overflow: hidden;
@@ -85,6 +119,13 @@
         transition: 0.5s ease-in-out all;
         transform: translate(0, 0);
         opacity: 1;
+        height: max-content;
+        @include screen($tablet-l){
+          margin-left: 150px;
+        }
+        @include screen($tablet){
+          margin: 0 auto;
+        }
         .text1{
           font-family: 'Trap-Regular', sans-serif;
           font-size: 250px;
@@ -92,6 +133,21 @@
           line-height: 100%;
           transition: 0.6s ease-in-out all;
           transform: translateY(20%);
+          @include screen($wide-l){
+            font-size: 200px;
+          }
+          @include screen($tablet-l){
+            font-size: 140px;
+          }
+          @include screen($tablet){
+            font-size: 100px;
+          }
+          @include screen($mobile-l){
+            font-size: 80px;
+          }
+          @include screen($mobile-m){
+            font-size: 64px;
+          }
           &:nth-child(1){
             color: white;
           }
@@ -118,6 +174,23 @@
           line-height: 100%;
           transition: 0.6s ease-in-out all;
           transform: translateY( 20%);
+          @include screen($wide-l){
+            font-size: 200px;
+          }
+          @include screen($tablet-l){
+            font-size: 140px;
+            transform: translate(0);
+          }
+          @include screen($tablet){
+            margin: 0 auto;
+            font-size: 100px;
+          }
+          @include screen($mobile-l){
+            font-size: 80px;
+          }
+          @include screen($mobile-m){
+            font-size: 64px;
+          }
           &:nth-child(1){
             color: white;
           }
@@ -140,6 +213,16 @@
         transition: 0.5s ease-in-out all;
         transform: translate(0, 0);
         opacity: 1;
+        @include screen($wide-l){
+          margin-left: -30px;
+        }
+        @include screen($tablet-l){
+          margin-left: -10px;
+          margin-bottom: 40px;
+        }
+        @include screen($mobile-l){
+          margin-bottom: 20px;
+        }
         .text1{
           font-family: 'Trap-Black', sans-serif;
           font-size: 48px;
@@ -147,6 +230,21 @@
           line-height: 100%;
           transition: 0.6s ease-in-out all;
           transform: translateY(20%);
+          @include screen($wide-l){
+            font-size: 40px;
+          }
+          @include screen($tablet-l){
+            font-size: 36px;
+          }
+          @include screen($tablet){
+            font-size: 32px;
+          }
+          @include screen($mobile-l){
+            font-size: 28px;
+          }
+          @include screen($mobile-m){
+            font-size: 24px;
+          }
           &:nth-child(1){
             color: #FF6C2C;
 
@@ -195,7 +293,7 @@
     width: 1px;
   }
   100%{
-    width: 3000px;
+    width: 200%;
   }
 }
 

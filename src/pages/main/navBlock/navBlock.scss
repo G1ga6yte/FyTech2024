@@ -1,4 +1,4 @@
-
+@import "../../../source/styles/mixin.scss";
 .NavBlock {
   padding: 60px 50px 0;
   display: flex;
@@ -8,6 +8,9 @@
   z-index: 190;
   width: 100%;
   background-color: transparent;
+  @include screen($tablet-w){
+    padding: 40px 20px 0;
+  }
 
   .content{
     position: absolute;
@@ -26,6 +29,11 @@
     transition: 0.6s ease-in-out all;
     transform: translateY(-100%);
     opacity: 0;
+    @include screen($tablet-m){
+      position: absolute;
+      left: 20px;
+      top: 50px;
+    }
 
 
 
@@ -64,6 +72,9 @@
     gap: 50px;
     position: relative;
     z-index: 200;
+    @include screen($tablet-w){
+      gap: 20px;
+    }
 
 
 
@@ -88,6 +99,9 @@
       line-height: 0.4;
       transform: translateX(100%);
       opacity: 0;
+      @include screen($tablet-w){
+        display: none;
+      }
 
       svg{
         transform: rotateX(0deg);

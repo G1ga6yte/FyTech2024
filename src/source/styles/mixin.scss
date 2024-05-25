@@ -50,6 +50,12 @@
   }
 };
 
+@mixin screen ($mobile-l) {
+  @media(max-width: $mobile-l) {
+    @content
+  }
+};
+
 @mixin screen ($mobile-m) {
   @media(max-width: $mobile-m) {
     @content

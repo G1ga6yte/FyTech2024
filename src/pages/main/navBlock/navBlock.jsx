@@ -66,6 +66,7 @@ function NavBlock() {
        <Link to="/" className={`linkToHome no-select ${loaded ? "comeFromUp2" : ""}`}><DubbleLetter
           text={"Fytechnology LTD"} trns={0.08} state={loaded}/></Link>
        
+       <div></div>
        <div className="buttonsBlock no-select">
          
          <div className={`menuCont ${loaded ? "comeFromDown2" : ""} ${menu2 ? "menuBtnAway" : ""}`}>
@@ -152,6 +153,7 @@ function NavBlock() {
            </svg>
          </Link>
        
+         
        
        </div>
      

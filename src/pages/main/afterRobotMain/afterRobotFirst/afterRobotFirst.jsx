@@ -160,6 +160,7 @@ function AfterRobotFirst (){
          <div ref={myRef10} className={`paragraph ${visible10 ? "activeParagraph" : ""}`}>
            <LettersScrolling text={"Our team operates in more than 10 countries"} state={"X"} visible={visible10}/>
            <LettersScrolling text={"In 8 time zone"} state={"X"} visible={visible10}/>
+           <span>Our team operates in more than 10 countries. In 8 time zone</span>
          </div>
   
          <div ref={myRef11} className={`paragraph ${visible11 ? "activeParagraph" : ""}`}>

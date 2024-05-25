@@ -1,8 +1,9 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useMemo, useRef, useState} from "react";
 import "./thirdBlock.scss";
 import {Images} from "./images/images";
 import {useInView} from "react-intersection-observer";
 import LettersScrolling from "../../../components/lettersScrolling/lettersScrolling";
+import PhoneLink from "./PhoneLink";
 
 function ThirdBlock() {
   const {ref: myRef1, inView: visible1} = useInView();
@@ -34,6 +35,19 @@ function ThirdBlock() {
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
   const videoRef3 = useRef(null);
+  
+  const PhoneLinks = [
+    {name: "IT Consulting", count: 4},
+    {name: "Strategy", count: 9},
+    {name: "Software development", count: 20},
+    {name: "Design", count: 45},
+    {name: "Branding", count: 15},
+    {name: "Software Testing ", count: 15},
+    {name: "Web 3.0", count: 40},
+    {name: "Advance Services", count: 20},
+    {name: "Analytics", count: 6},
+    {name: "Big Data", count: 8}
+  ]
   
   
   useEffect(() => {
@@ -123,8 +137,16 @@ function ThirdBlock() {
   }, [currentState4]);
   
   
+  
+  
   return (
      <div className="thirdBlock no-select">
+       
+       <div className="phoneLinks">
+         {PhoneLinks.map((el,index)=>{
+           return <PhoneLink text={el.name} count={el.count} index={index}/>
+         })}
+       </div>
        
        <div className="firstBlock">
          
@@ -187,6 +209,9 @@ function ThirdBlock() {
            <div className="shakeAnim">
              <p ref={myRef13} className={`highText ${currentState3 === 1 && "activeHighText"}`}><LettersScrolling
                 text={"IT"} visible={currentState3 === 1 ? visible13 : false} state={"Y"}/></p>
+  
+             <p ref={myRef14} className={`highText highTextTablet ${currentState3 === 1 && "activeHighText"}`}><LettersScrolling
+                text={"IT CONSULTING"} visible={currentState3 === 1 ? visible13 : false} state={"Y"}/></p>
            </div>
            
            <div className={`roller ${currentState3 === 2 && "activeRoller"}`}>

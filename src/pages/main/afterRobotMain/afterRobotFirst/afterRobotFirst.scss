@@ -1,4 +1,4 @@
-
+@import "../../../../source/styles/mixin.scss";
 .AfterRobotFirst {
   width: 100%;
   position: relative;
@@ -6,7 +6,10 @@
   overflow: hidden;
   height: max-content;
   margin: 0 auto;
-  padding: 150px 0 350px;
+  padding: 50px 10px 350px;
+  @include screen($tablet-w){
+    padding: 50px 10px 200px;
+  }
   .backgroundImage{
     position: absolute;
     left: 0;
@@ -40,6 +43,10 @@
       transform: translateX(-200px);
       transition: 1.5s ease-in-out all;
       opacity: 0;
+      @include screen($wide){
+        font-size: 28px;
+        max-width: 450px;
+      }
     }
 
     .fromLeft {
@@ -57,6 +64,10 @@
     justify-content: end;
     position: relative;
     z-index: 3;
+    @include screen($wide){
+      scale: 0.8;
+      transform: translate(150px, 60px);
+    }
     .inViewBlock {
 
       .textBlock {
@@ -221,16 +232,18 @@
     position: absolute;
     left: 0;
     z-index: 1;
-    top: 0;
+    top: -200px;
     opacity: 0.4;
+    width: 45%;
   }
 
   .bubbleImage2{
     position: absolute;
     right: 0;
     z-index: 1;
-    top: 0;
+    top: -100px;
     opacity: 0.4;
+    width: 45%;
   }
 
   .bubbleImage3{
@@ -238,8 +251,9 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    top: 0;
+    top: 50%;
     opacity: 0.4;
+    width: 55%;
   }
 
   .statisticCont{
@@ -248,20 +262,70 @@
     align-items: center;
     position: relative;
     z-index: 3;
-    width: max-content;
+    width: 100%;
     margin: 350px auto 0;
+    @include screen($tablet-w){
+      flex-direction: column;
+      margin: 200px 0 0;
+      gap: 30px;
+
+    }
 
 
     .staticBlock{
+      width: max-content;
       opacity: 0;
       transition: 0.5s ease-in-out all;
       transform: translateY(100px);
+      @include screen($tablet-w){
+        position: relative !important;
+        left: unset !important;
+        right: unset !important;
+        top: unset !important;
+        bottom: unset !important;
+        &:nth-child(1){
+          position: absolute !important;
+          left: 0 !important;
+          top: -150px !important;
+        }
+        &:nth-child(2){
+
+        }
+        &:nth-child(3){
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+        }
+        &:nth-child(4){
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+        }
+        &:nth-child(5){
+
+        }
+        &:nth-child(6){
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+        }
+
+      }
       .countText{
         color: white;
         font-size: 96px;
         font-family: 'Trap-SemiBold', sans-serif;
         line-height: normal;
         text-transform: uppercase;
+        @include screen($wide-l){
+          font-size: 72px;
+        }
+        @include screen($wide){
+          font-size: 64px;
+        }
       }
       .prgBlock{
         .prg{
@@ -269,6 +333,12 @@
           font-family: 'Trap-Regular', sans-serif;
           line-height: normal;
           color: #727272;
+          @include screen($wide-l){
+            font-size: 20px;
+          }
+          @include screen($wide){
+            font-size: 16px;
+          }
         }
       }
 
@@ -285,28 +355,41 @@
       }
       &:nth-child(2){
         position: absolute;
-        left: -120%;
-        top: -180%;
+        left: 20%;
+        top: -300px;
       }
       &:nth-child(3){
         position: absolute;
-        left: -150%;
-        top: -20%;
+        left: 10%;
+        top: -50px;
+        @include screen($wide){
+          left: 5%;
+        }
+        @include screen($tablet-w){
+          top: -150px;
+          left: 2%;
+        }
       }
       &:nth-child(4){
         position: absolute;
-        left: 5%;
-        top: 180%;
+        left: 40%;
+        top: 250px;
       }
       &:nth-child(5){
         position: absolute;
-        right: -150%;
-        top: 50%;
+        right: 10%;
+        top: 150px;
+        @include screen($wide){
+          right: 5%;
+        }
       }
       &:nth-child(6){
         position: absolute;
-        right: -120%;
-        top: -120%;
+        right: 15%;
+        top: -200px;
+        @include screen($wide){
+          right: 5%;
+        }
       }
 
     }
@@ -338,6 +421,20 @@
         align-items: center;
         font-size: 20px;
         font-family: 'Trap-Regular', sans-serif;
+        @include screen($wide-l){
+          font-size: 18px;
+          right: 2%;
+        }
+        @include screen($tablet-w){
+          font-size: 16px;
+          top: -400px;
+          max-width: 150px;
+          right: 5%;
+          .word{
+            display: none;
+          }
+
+        }
       }
       &:nth-child(2){
         position: absolute;
@@ -345,6 +442,14 @@
         top: 100px;
         font-size: 24px;
         font-family: 'Trap-SemiBold', sans-serif;
+        @include screen($wide-l){
+          font-size: 20px;
+          left: 10%;
+        }
+        @include screen($tablet-w){
+          font-size: 16px;
+          top: -50px;
+        }
       }
       &:nth-child(3){
         text-transform: uppercase;
@@ -353,15 +458,27 @@
         top: 280px;
         font-size: 24px;
         font-family: 'Trap-Regular', sans-serif;
+        @include screen($wide-l){
+          font-size: 20px;
+        }
+        @include screen($tablet-w){
+          top: 50px;
+        }
       }
     }
 
     .fytechBlock{
-      transform: translate(-20%, -300%) rotate(-90deg);
+      transform: translate(-20%, 0) rotate(-90deg);
       overflow: hidden;
       position: relative;
       width: max-content;
       padding: 10px;
+      @include screen($wide){
+        transform: translate(-20%, 100%) rotate(-90deg);
+      }
+      @include screen($tablet-w){
+        display: none;
+      }
       p{
         transition: 1s ease-in-out all;
         transform: translateX(250px);

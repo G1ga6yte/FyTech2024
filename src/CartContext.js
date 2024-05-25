@@ -12,6 +12,7 @@ export const CartProvider = ({children}) => {
   
   
   useEffect(()=>{
+    console.log("hello !");
     if (visible1){
       setScrollPaused1(true)
     }

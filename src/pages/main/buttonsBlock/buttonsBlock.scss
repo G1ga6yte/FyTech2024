@@ -1,10 +1,16 @@
-
+@import "../../../source/styles/mixin.scss";
 .ButtonsBlock {
   padding: 100px 50px 0;
   width: 100%;
   position: relative;
   background-color: #121212;
   overflow: hidden;
+  @include screen($wide-l){
+    padding: 80px 30px 0;
+  }
+  @include screen($tablet-w){
+    padding: 60px 10px 0;
+  }
 
     .backgroundImage2{
       position: absolute;
@@ -39,6 +45,21 @@
     font-family: 'Trap-Bold', sans-serif;
     line-height: normal;
     text-transform: uppercase;
+    @include screen($tablet-l){
+      font-size: 42px;
+    }
+    @include screen($tablet){
+      font-size: 32px;
+    }
+    @include screen($tablet-w){
+      font-size: 28px;
+    }
+    @include screen($mobile-l){
+      font-size: 24px;
+    }
+    @include screen($mobile-m){
+      font-size: 20px;
+    }
 
     .headerLine {
       animation: lightningAnim 12s linear infinite;
@@ -67,11 +88,20 @@
     position: absolute;
     top: 0;
     right: 50px;
+    @include screen($tablet){
+      width: 100%;
+    }
   }
 
   .buttonsCont {
     display: flex;
     justify-content: space-between;
+    @include screen($wide-l){
+      width: 100%;
+      position: relative;
+      justify-content: end;
+      min-height: 600px;
+    }
 
     .buttonsBlock {
       transform: translateY(-100px);
@@ -81,6 +111,20 @@
       height: 600px;
       padding: 50px 50px 0;
       position: relative;
+      @include screen($wide-l){
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      @include screen($tablet){
+        scale: 0.8;
+        left: 50%;
+        transform: translate(-62.5%, 50px);
+      }
+      @include screen($mobile-l){
+        scale: 0.6;
+        transform: translate(-87.5%, 100px);
+      }
 
       .flex {
         display: flex;
@@ -252,17 +296,34 @@
       width: 50%;
       max-width: 50%;
       flex-grow: 2;
+      @include screen($wide-l){
+        width: max-content;
+        max-width: unset;
+      }
 
       .prg1Cont {
         overflow: hidden;
+        @include screen($tablet){
+          margin-left: 15%;
+        }
 
         .prg1Block {
+          @include screen($tablet){
+            margin-top: 10px;
+
+          }
           .textLine {
             font-size: 24px;
             text-transform: uppercase;
             color: white;
             line-height: 100%;
             font-family: 'Trap-Bold', sans-serif;
+            @include screen($tablet){
+              font-size: 16px;
+            }
+            @include screen($mobile-l){
+              font-size: 14px;
+            }
           }
         }
 
@@ -281,6 +342,14 @@
           transform: translateX(-300px);
           opacity: 0;
           transition: 1s ease-in-out all;
+          @include screen($tablet){
+            transform: translateX(0);
+          }
+          @include screen($tablet-w){
+            &:nth-child(1){
+              display: none;
+            }
+          }
 
           .textLine {
             font-size: 24px;
@@ -288,6 +357,20 @@
             text-transform: uppercase;
             font-family: 'Trap-Bold', sans-serif;
             line-height: 100%;
+            @include screen(1600px){
+              font-size: 20px;
+            }
+            @include screen($tablet){
+              font-size: 16px;
+            }
+          }
+        }
+
+        .prg1BlockTablet{
+          display: none;
+          width: 100%;
+          @include screen($tablet-w){
+            display: block;
           }
         }
 

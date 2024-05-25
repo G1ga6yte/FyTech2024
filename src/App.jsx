@@ -10,7 +10,7 @@ import LoadingBlock from "./components/loadingBlock/loadingBlock";
 
 function App() {
   const lenis = new Lenis({
-    duration: 1.5,
+    duration: 1,
     wheelMultiplier: 0.2,
     
   })

@@ -54,59 +54,63 @@ function Main() {
     useEffect(() => {
       const handleScroll = (event) => {
         if (!scrolling) {
-          const delta = event.deltaY;
-          
-          
-          if (delta > 0) {
-            
-            if (scrollPaused1) {
-              if (step < 4) {
-                setTimeout(()=>{
-                  setStep(prev => prev + 1);
-                }, 200)
-              }
-            }
-            
-            
-          } else if (delta < 0) {
-            
-            if (scrollPaused1) {
-              if (visible2){
-                
-                
-                if (step > 2){
-                  setTimeout(()=>{
-                    setStep(prev => prev - 1);
-                  }, 200)
-                  setFixed(false)
-                  
-                } else if (step === 2) {
-                  setFixed(true)
-                  
-                  setTimeout(()=>{
-                    setStep(1)
-                  }, 200)
-                  setTimeout(()=>{
-                    window.scrollTo(0, headBlock)
-                  }, 200)
-                  
-                  
-                } else {
-                  setFixed(false)
+  
+          const deltaY = event.deltaY || (event.touches ? (event.touches[0] ? event.touches[0].clientY - (event.touches[1] ? event.touches[1].clientY : 0) : 0) : 0);
+  
+  
+          if (deltaY > 0) {
+    
+              if (scrollPaused1) {
+                if (step < 4) {
+                  setTimeout(() => {
+                    setStep(prev => prev + 1);
+                  }, 1000)
                 }
               }
-              
+    
+    
+            } else if (deltaY < 0) {
+    
+              if (scrollPaused1) {
+                if (visible2) {
+        
+        
+                  if (step > 2) {
+                    setTimeout(() => {
+                      setStep(prev => prev - 1);
+                    }, 1000)
+                    // setFixed(false)
+          
+                  } else if (step === 2) {
+                    setFixed(true)
+          
+                    setTimeout(() => {
+                      setStep(1)
+                    }, 1000)
+                    setTimeout(() => {
+                      window.scrollTo(0, headBlock)
+                    }, 1000)
+          
+          
+                  } else {
+                    setFixed(false)
+                  }
+                }
+      
+              }
+    
             }
-            
-          }
           setScrolling(true);
         }
-      };
+      }
       
       window.addEventListener("wheel", handleScroll);
-      
+      window.addEventListener("touchmove", handleScroll);
+  
       return () => {
         window.removeEventListener("wheel", handleScroll);
+        window.removeEventListener("touchmove", handleScroll);
+  
       };
     }, [scrolling]);
     
@@ -125,6 +129,8 @@ function Main() {
        <div className="content"></div>
     );
   }
+  
+  
   
   return (
      <div className="MainCont G-Container">
@@ -215,29 +221,24 @@ function Main() {
           </div>
        }
        
-       <div  className="secondContent" style={{minHeight: `100vh`, backgroundImage: `url("${backgroundImg}")`}}>
+       <div  className="secondContent" style={{ backgroundImage: `url("${backgroundImg}")`}}>
          <SecondBlock style={fixed} ref={secondBlockRef} step={step}/>
-       
+
        </div>
-       <div ref={myRef1}></div>
        
        
        <div style={{
          height: step === 4 ? "max-content" : "0px"
        }} className="thirdCont">
-         <div style={{height: `200px`}}></div>
+         <div className="height" ></div>
          <ThirdHeader/>
          <ThirdBlock/>
          <ThirdWhiteEnd/>
          <ButtonsBlock/>
          <div className="forthCont">
            <NexBotBlock />
-  
-  
            <AfterRobotMain/>
          </div>
-
-
        </div>
      
      

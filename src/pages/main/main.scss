@@ -26,13 +26,40 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 0 10px;
+  max-height: 100vh;
+  height: 100vh;
+  min-height: 100vh;
+  @include screen($tablet-w){
+    max-height: unset;
+    height: max-content;
+  }
+
+  .secondRef{
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include screen($tablet-w){
+      display: none;
+    }
+  }
+
 
 }
 
 .thirdCont {
   width: 100%;
   overflow: hidden;
+  @include screen($tablet-w){
+    height: max-content !important;
+  }
+
+  .height{
+    height: 100px;
+    @include screen($tablet-w){
+      height: 100px;
+    }
+  }
 }
 
 .forthCont{

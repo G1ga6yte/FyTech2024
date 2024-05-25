@@ -1,9 +1,9 @@
 .scene{
-  height: max-content;
   position: relative;
-  width: 100%;
+  width: 100% !important;
   z-index: 5;
   overflow: hidden;
+  height: 100%;
   canvas{
     opacity: 0.95;
   }

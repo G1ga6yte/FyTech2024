@@ -1,6 +1,8 @@
+@import "../../../source/styles/mixin.scss";
 .SecondBlock{
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
+  max-height: 100%;
   overflow: hidden;
   z-index: 150 !important;
   left: 0;
@@ -9,44 +11,59 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 40px 0 2.5%;
+
+  .secondRef{
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+  }
 
 
 
 
   .mainBlock{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 48px 0 16px;
+    overflow: hidden;
+    max-height: 100%;
 
     .headerBlock{
       margin-bottom: 24px;
       display: flex;
       width: 100%;
-
+      height: 10%;
+      max-height: 10%;
     }
 
     .circleCont{
-      max-width: 900px;
-      max-height: 900px;
-      width: 900px;
-      height: 900px;
+      height: 87.5%;
+      max-height: 85%;
+      min-height: 85%;
       position: relative;
-
+      @include screen($tablet-w){
+        display: none;
+      }
       .overImg{
-        width: 100%;
+        height: 100%;
         position: absolute;
-        left: 0;
+        left: 50%;
         top: 0;
+        transform: translateX(-50%);
       }
 
       .circleBlock{
-        height: 800px;
-        width: 800px;
+        height: 100%;
+        max-height: 100%;
+        margin: 0 auto;
         border: 1px solid #FF6C2C;
         border-radius: 50%;
         overflow: hidden;
@@ -64,6 +81,9 @@
           padding: 0 20px;
           top: 50%;
           transform: translateY(-50%);
+          @include screen(1600px){
+            height: 100%;
+          }
 
           .count{
             color: #6C6C6C;
@@ -113,16 +133,19 @@
           .contentBlock{
             display: flex;
             width: 50%;
-            padding: 20px;
             height: 50%;
             filter: blur(7.5px);
             transition: 0.5s ease-in-out all;
+
 
             .insideBlock{
               display: flex;
               flex-direction: column;
               width: max-content;
               height: max-content;
+              @include screen(1600px){
+                width: 70%;
+              }
 
               .contentHeader{
                 font-size: 18px;
@@ -131,6 +154,14 @@
                 text-transform: uppercase;
                 line-height: normal;
                 margin-bottom: 12px;
+                @include screen(1600px){
+                  font-size: 14px;
+                  margin-bottom: 6px;
+                }
+                @include screen($wide){
+                  font-size: 12px;
+                  margin-bottom: 5px;
+                }
               }
               .contentPrg{
                 padding-left: 15px;
@@ -140,6 +171,13 @@
                 line-height: 130%;
                 margin-bottom: 6px;
                 position: relative;
+                @include screen(1600px){
+                  font-size: 12px;
+                  margin-bottom: 4px;
+                }
+                @include screen($wide){
+                  font-size: 10px;
+                }
                 &:before{
                   content: '';
                   position: absolute;
@@ -161,24 +199,40 @@
               justify-content: end;
               align-items: center;
               padding: 50px 20px 0;
+              @include screen(1600px){
+                padding: 50px 10px 20px 20px;
+                align-items: end;
+
+              }
             }
             &:nth-child(2){
               justify-content: start;
               align-items: center;
               padding: 50px 20px 0;
-
+              @include screen(1600px){
+                padding: 50px 20px 10px 10px;
+                align-items: center;
+              }
             }
             &:nth-child(3){
               justify-content: end;
               align-items: center;
               padding:  0 20px 50px;
+              @include screen(1600px){
+                padding: 10px 10px 50px 20px;
+                align-items: start;
 
+              }
             }
             &:nth-child(4){
               justify-content: start;
               align-items: center;
               padding:  0 20px 50px;
+              @include screen(1600px){
+                padding: 10px 20px 50px 10px;
+                align-items: start;
 
+              }
             }
 
 
@@ -198,7 +252,7 @@
           left: 0;
           top: 0;
           .contentBlock{
-            width: 100% !important;
+            width: 80% !important;
             display: flex !important;
             justify-content: center !important;
             align-items: center !important;
@@ -233,6 +287,91 @@
       }
 
 
+    }
+
+    .infoBlockTablet{
+      width: 100%;
+      display: none;
+      position: relative;
+      @include screen($tablet-w){
+        display: block;
+      }
+
+      .overImg{
+        width: 100%;
+        position: absolute;
+        top: 20%;
+      }
+
+      .infoBlock{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        opacity: 0;
+        transition: 1s ease-in-out all;
+        &:nth-child(1){
+          transform: translateX(-150px);
+        }
+        &:nth-child(2){
+          transform: translateX(150px);
+        }
+        &:nth-child(3){
+          transform: translateX(-150px);
+        }
+        &:nth-child(4){
+          transform: translateX(150px);
+        }
+        .infoHeader{
+          font-size: 20px;
+          color: #FF6C2C;
+          font-family: 'Trap-SemiBold', sans-serif;
+          line-height: normal;
+          text-transform: uppercase;
+          margin: 35px 0 20px;
+          @include screen($tablet-m){
+            font-size: 18px;
+            text-align: start;
+          }
+        }
+
+        .contentItem{
+          font-size: 16px;
+          color: white;
+          line-height: 130%;
+          font-family: 'Trap-SemiBold', sans-serif;
+          margin-bottom: 8px;
+          padding-left: 15px;
+          position: relative;
+          max-width: 400px;
+          width: max-content;
+          text-align: center;
+          @include screen($tablet-m){
+            font-size: 15px;
+            text-align: start;
+            width: 100%;
+          }
+          &:before{
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            background-color: #FF6C2C;
+          }
+        }
+
+
+
+      }
+
+      .activeInfoBlock{
+        transform: translateX(0) !important;
+        opacity: 1;
+      }
     }
 
 

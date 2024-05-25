@@ -35,17 +35,17 @@ function LoadingBlock() {
     const timer3 = setTimeout(() => {
       setTextTransform(true);
     }, 5500);
-    
+
     return () => clearTimeout(timer3);
   }, [5000]);
-  
+
   useEffect(() => {
     const timer4 = setTimeout(() => {
       setTextSlide(true);
       setLoaderOpacity2(true);
       window.scrollTo(-100, 0)
     }, 6500);
-    
+
     return () => clearTimeout(timer4);
   }, [6500]);
   

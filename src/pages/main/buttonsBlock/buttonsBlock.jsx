@@ -101,6 +101,7 @@ function ButtonsBlock (){
     
     
            </div>
+           
            <div className="prgCont">
              <div className="prg1Cont">
         
@@ -121,7 +122,11 @@ function ButtonsBlock (){
                  <div className="textLine"><DubbleLetter text={"OF RAPID ITERATION AND COLLABORATIVE SPIRIT, WE"} state={visible6} trns={0.05} /></div>
                  <div className="textLine"><DubbleLetter text={"EMPOWER YOU TO RESHAPE YOUR DIGITAL NARRATIVE."} state={visible6} trns={0.1} /></div>
                </div>
+               <p ref={myRef6} className={`prg1Block prg1BlockTablet ${visible6 ? "fromLeftAnim" : ""}`}>
+                 <span className="textLine">every brand has a story, from, startups finding there voice to titans refining their legacy. we ensure that tale shines brilliantly. WITH A BLEND OF RAPID ITERATION AND COLLABORATIVE SPIRIT, WE EMPOWER YOU TO RESHAPE YOUR DIGITAL NARRATIVE.</span>
+               </p>
              </div>
+             
            </div>
          </div>
        </div>

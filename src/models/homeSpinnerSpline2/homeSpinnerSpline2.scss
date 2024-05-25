@@ -1,4 +1,4 @@
-
+@import "../../source/styles/mixin.scss";
 .HomeSpinnerSpline2{
   position: absolute;
   left: 0;
@@ -7,4 +7,12 @@
   height: 100%;
   opacity: 0.8;
   transform: translateX(55%);
+  @include screen($tablet-l){
+    width: 100%;
+    height: unset;
+    top: 50%;
+    canvas{
+      width: 100% !important;
+    }
+  }
 }

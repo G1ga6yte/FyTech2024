@@ -1,3 +1,4 @@
+@import "../../../source/styles/mixin.scss";
 .thirdWhiteEnd{
   width: 100%;
   background-color: white;
@@ -17,6 +18,15 @@
     position: absolute;
     padding-bottom: 450px;
     left: 0;
+    @include screen($wide){
+      transform: translateY(-100px);
+    }
+    @include screen($tablet-l){
+      transform: translateY(-120px);
+    }
+    @include screen($tablet){
+      transform: translateY(-140px);
+    }
 
     path {
       transition: 1.5s ease-in-out all;
