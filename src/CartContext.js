@@ -44,10 +44,12 @@ export const CartProvider = ({children}) => {
   const [forthBlock, setForthBlock] = useState(false)
   useEffect(()=>{
     if(visibleRobot){
-      setRobotAnim(true)
+      setTimeout(()=>{
+        setRobotAnim(true)
+      }, 1000)
       setTimeout(()=>{
         setForthBlock(true)
-      }, 5000)
+      }, 6000)
     }
   }, [visibleRobot])
   

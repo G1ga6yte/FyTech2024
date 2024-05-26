@@ -106,7 +106,7 @@ function AfterRobotFirst (){
           <div className="prgBlock">
             <p className="prg"><LettersScrolling text={"For all the time we"} state={"X"} visible={visible4}/></p>
             <p className="prg"><LettersScrolling text={"make more then"} state={"X"} visible={visible4}/></p>
-            <p className="prg"><LettersScrolling text={"700 projects"} state={"X"} visible={visible4}/></p>
+            <p className="prg prg2"><LettersScrolling text={"700 projects"} state={"X"} visible={visible4}/></p>
           </div>
         </div>
   
@@ -160,7 +160,7 @@ function AfterRobotFirst (){
          <div ref={myRef10} className={`paragraph ${visible10 ? "activeParagraph" : ""}`}>
            <LettersScrolling text={"Our team operates in more than 10 countries"} state={"X"} visible={visible10}/>
            <LettersScrolling text={"In 8 time zone"} state={"X"} visible={visible10}/>
-           <span>Our team operates in more than 10 countries. In 8 time zone</span>
+           <span className="tabletText">Our team operates in more than 10 countries. In 8 time zone</span>
          </div>
   
          <div ref={myRef11} className={`paragraph ${visible11 ? "activeParagraph" : ""}`}>

@@ -1,4 +1,4 @@
-
+@import "../../../../source/styles/mixin.scss";
 
 .AfterRobotThird{
   width: 100%;
@@ -7,6 +7,7 @@
   z-index: 6;
   background-color: #121212;
   overflow: hidden;
+  padding: 100px 0 0;
 
   .backgroundImage {
     position: absolute;
@@ -30,6 +31,12 @@
     padding-top: 30px;
     height: 150px;
 
+    @include screen($tablet){
+      justify-content: center;
+      .flexGrow{
+        display: none;
+      }
+    }
 
 
     .strokeText{
@@ -44,6 +51,19 @@
       color: rgba(0, 0, 0, 0.00);
       text-transform: uppercase;
       font-family: 'Trap-Regular', sans-serif;
+      @include screen($wide){
+        font-size: 80px;
+      }
+      @include screen($tablet-l){
+        font-size: 64px;
+        top: 10%;
+      }
+      @include screen($tablet){
+        left: 50%;
+        right: unset;
+        transform: translateX(-50%);
+        font-size: 40px;
+      }
     }
   }
 
@@ -53,6 +73,14 @@
     right: 0;
     width: 100%;
     height: 1200px;
+    @include screen($desktop){
+      height: 800px;
+      top: unset;
+      bottom: 0;
+    }
+    @include screen($tablet){
+      height: 600px;
+    }
   }
 
   .mone2{
@@ -69,12 +97,32 @@
     align-items: center;
     display: flex;
     position: relative;
+    @include screen($wide-l){
+      height: 900px;
+    }
+    @include screen($tablet){
+      align-items: start;
+      margin-top: 50px;
+    }
+    @include screen($tablet){
+      height: 800px;
+    }
+    @include screen($mobile-l){
+      height: 700px;
+    }
 
     .skillsBlock{
       position: absolute;
       left: 0;
       top: 50%;
       transform: translate(50px, -50%) !important;
+      @include screen($wide-l){
+        top: 10%;
+      }
+      @include screen($tablet){
+        top: unset;
+        bottom: 0;
+      }
 
       .skillPrg{
         font-size: 16px;
@@ -97,6 +145,13 @@
       color: #454545;
       text-transform: uppercase;
       line-height: normal;
+      @include screen($wide-l){
+        transform: translate(-50px, -50px);
+      }
+      @include screen($tablet){
+        transform: translate(-50px, -50px);
+
+      }
     }
 
 
@@ -104,6 +159,23 @@
       width: 676px;
       height: 676px;
       position: relative;
+      @include screen($tablet-l){
+        height: 500px;
+        width: 500px;
+        min-width: 500px;
+      }
+      @include screen($tablet){
+        scale: 0.75;
+        margin-top: -100px;
+      }
+      @include screen($mobile-l){
+        scale: 0.55;
+      }
+
+      .circleSVG{
+        width: 100%;
+        height: 100%;
+      }
 
       .circleImg{
         position: absolute;
@@ -131,6 +203,9 @@
             bottom: 50%;
             left: 40px;
             transform: translateY(60%);
+            @include screen($tablet-w){
+              transform: translate(-50px, 10px) rotate(90deg);
+            }
           }
         }
         &:nth-child(2){
@@ -168,6 +243,9 @@
             top: 50%;
             right: 40px;
             transform: translateY(-40%);
+            @include screen($tablet-w){
+              transform: translate(20px, -10px) rotate(-90deg);
+            }
           }
         }
 
@@ -186,6 +264,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include screen($tablet-l){
+          width: 300px;
+          height: 300px;
+        }
 
         .spline{
           position: absolute;
@@ -221,10 +303,10 @@
 
     .lentaLine{
       width: 110%;
-      min-width: 110%;
       display: flex;
       align-items: start;
       justify-content: space-around;
+      min-width: 1920px;
 
     }
     .line1{
@@ -271,6 +353,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .circleSVG{
+    rotate: -20deg;
   }
 
 

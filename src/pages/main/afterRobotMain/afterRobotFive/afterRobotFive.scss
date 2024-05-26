@@ -1,21 +1,21 @@
-
+@import "../../../../source/styles/mixin.scss";
 
 .AfterRobotFive{
   width: 100%;
   z-index: 15;
-  min-height: 100vh;
   background-color: white;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
+  padding: 0 10px 50px;
+
 
   .splineBlock{
     position: absolute !important;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     canvas{
       width: 100%;
@@ -39,12 +39,30 @@
     margin: 0 auto;
     width: 100%;
     pointer-events: none;
+    @include screen(1600px){
+      margin-bottom: 20px;
+    }
+    @include screen($wide-l){
+      max-width: unset !important;
+    }
     .text{
       font-family: 'Trap-Regular', sans-serif;
       color: black;
       text-transform: uppercase;
       font-size: 96px;
       line-height: 100%;
+      @include screen(1600px){
+        font-size: 80px;
+      }
+      @include screen($wide-l){
+        text-shadow: 0 0 5px white;
+      }
+      @include screen($tablet-l){
+        font-size: 64px;
+      }
+      @include screen($tablet){
+        font-size: 48px;
+      }
 
       .letter22{
         color: #FF6C2C;
@@ -79,36 +97,52 @@
 
 
 
-    .getInTouchBtn{
-      pointer-events: auto !important;
-      border-radius: 60px;
-      border: 1px solid #FF6429;
-      padding: 30px 50px;
-      height: max-content;
-      line-height: 100%;
-      font-size: 40px;
-      font-family: 'Trap-SemiBold', sans-serif;
-      text-transform: uppercase;
-      color: black;
-      background-color: transparent;
-      cursor: pointer;
-      transition: 0.8s ease-in-out all;
-      transform: translateY(-10px);
-      &:hover{
-        border: 1px solid black;
-      }
-      .word2{
-       margin-bottom: -5px;
-      }
 
-      .letter22{
-        color:  #FF6C2C;
-      }
-    }
 
 
   }
+  .getInTouchBtn{
+    pointer-events: auto !important;
+    border-radius: 60px;
+    border: 1px solid #FF6429;
+    padding: 30px 50px;
+    height: max-content;
+    line-height: 100%;
+    font-size: 40px;
+    font-family: 'Trap-SemiBold', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.8s ease-in-out all;
+    transform: translateY(-10px);
+    position: relative;
+    z-index: 10;
+    @include screen($desktop){
+      display: none;
+      padding: 20px 30px;
+      font-size: 32px;
+    }
+    &:hover{
+      border: 1px solid black;
+    }
+    .word2{
+      margin-bottom: -5px;
+    }
 
+    .letter22{
+      color:  #FF6C2C;
+    }
+  }
+  .tabletBtn{
+    display: none;
+    width: max-content;
+    margin: 40px 0;
+    box-shadow: 0 0 5px 1px #FF6C2C;
+    @include screen($desktop){
+      display: block !important;
+    }
+  }
   .textBetween{
     justify-content: space-between !important;
   }

@@ -58,6 +58,10 @@ function AfterRobotFive (){
            <p className="text"><DubbleLetter text={"together"} trns={0.2} state={visible8}/></p>
          </div>
   
+       <button onMouseLeave={()=>setBtn1(false)} onMouseOver={()=>setBtn1(true)} className="getInTouchBtn tabletBtn">
+         <DubbleLetter text={"get in touch"} state={btn1} trns={0.1}/>
+       </button>
+  
        <div className="splineBlock">
          <Spline scene={splineModel}/>
        </div>

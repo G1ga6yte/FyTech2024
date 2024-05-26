@@ -40,6 +40,10 @@ function Footer (){
               </button>
               WE WILL STUDY IT AND CONTACT YOU!
             </div>
+  
+            <button onMouseLeave={()=>setBtn1(false)} onMouseOver={()=>setBtn1(true)} className="getInTouchBtn tabletBtn">
+              <DubbleLetter text={"get in touch"} state={btn1} trns={0.1}/>
+            </button>
             
             <div className="LinksCont">
               

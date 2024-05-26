@@ -28,7 +28,7 @@ function AfterRobotThird (){
   
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if (currentState < 4) {
+      if (currentState < 5) {
         setCurrentState(prev => prev + 1);
       } else {
         setCurrentState(1);
@@ -79,13 +79,13 @@ function AfterRobotThird (){
            
            
            <div style={{backgroundImage: `url("${currentState === 2 ? Images.circleLight : Images.circle}")`}} className="circleImg"></div>
-           <div style={{backgroundImage: `url("${currentState === 1 ? Images.circleLight : Images.circle}")`}} className="circleImg"></div>
+           <div style={{backgroundImage: `url("${currentState === 1 ? Images.circleLight : currentState === 5 ? Images.circleLight : Images.circle}")`}} className="circleImg"></div>
            <div style={{backgroundImage: `url("${currentState === 3 ? Images.circleLight : Images.circle}")`}} className="circleImg"></div>
            <div style={{backgroundImage: `url("${currentState === 4 ? Images.circleLight : Images.circle}")`}} className="circleImg"></div>
   
            
   
-           <svg className={`circleSVG ${rotation ? "rotate" : "rotate"}`} width="676" height="676" viewBox="0 0 676 676" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <svg className={`circleSVG ${currentState <= 4 ? "rotate" : ""}`} width="676" height="676" viewBox="0 0 676 676" fill="none" xmlns="http://www.w3.org/2000/svg">
              <circle cx="338" cy="338" r="337.5" stroke="url(#paint0_linear_80_2206)"/>
              <defs>
                <linearGradient id="paint0_linear_80_2206" x1="119.5" y1="94.5" x2="262" y2="231" gradientUnits="userSpaceOnUse">
@@ -97,10 +97,10 @@ function AfterRobotThird (){
            
            <div className="insideCircle">
              <div style={{opacity: splineModel === 1 ? 0.8 : 0}} className="spline">
-               <Spline scene={"https://prod.spline.design/MENtgbdXHq0BhsKS/scene.splinecode"}/>
+               {/*<Spline scene={"https://prod.spline.design/MENtgbdXHq0BhsKS/scene.splinecode"}/>*/}
              </div>
              <div style={{opacity: splineModel === 2 ? 0.8 : 0}} className="spline">
-               <Spline scene={"https://prod.spline.design/5rmnAO5QfaBt4WAC/scene.splinecode"}/>
+               {/*<Spline scene={"https://prod.spline.design/5rmnAO5QfaBt4WAC/scene.splinecode"}/>*/}
              </div>
            </div>
            

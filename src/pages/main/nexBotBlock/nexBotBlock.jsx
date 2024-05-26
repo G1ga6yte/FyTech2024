@@ -19,12 +19,13 @@ function NexBotBlock() {
   return (
      <div style={{backgroundImage: `url("${background}")`}} className={`nexBotBlock`}>
        <div className="Cont">
+         <div ref={myRefRobot}></div>
+  
          {robotAnim &&
             <div style={{opacity: `${robotAnim ? "1" : "0"}`}} className="spline">
               <Spline scene={splineModel}/>
             </div>
          }
-         <div ref={myRefRobot}></div>
        </div>
      </div>
   );
