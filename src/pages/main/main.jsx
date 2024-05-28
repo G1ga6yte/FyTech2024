@@ -144,37 +144,60 @@ function Main() {
              <div className="line"></div>
            </button>
            
-           <div className="menu">
-             <svg xmlns="http://www.w3.org/2000/svg" width="86" height="93" viewBox="0 0 86 93" fill="none">
-               <path d="M12 82H4L5.5 75.5L12 82Z" fill="#FF662A"/>
-               <path d="M5.5 72H2L0.5 68.5H4L5.5 72Z" fill="#FF662A"/>
-               <path d="M38 68.5L45 79.5L57.5 72L38 68.5Z" fill="#FF662A"/>
-               <path d="M38.5 86L22.5 85.5V86L19.5 90.5L28.5 92.5L36 90.5L38.5 86Z" fill="#FF662A"/>
-               <path d="M69.5 66.5L57.5 60.5H74L69.5 66.5Z" fill="#FF662A"/>
-               <path d="M85.5 39.5L81 42.5L74 41L78.5 37L85.5 39.5Z" fill="#FF662A"/>
-               <path d="M68 34L61 38.5L69.5 42.5L68 34Z" fill="#FF662A"/>
-               <path d="M75.5 32.5V25L85.5 34L75.5 32.5Z" fill="#FF662A"/>
-               <path d="M68 18.5L69.5 11.5L75.5 13V18.5H68Z" fill="#FF662A"/>
-               <path d="M74 5L62.5 4L66.5 0L74 5Z" fill="#FF662A"/>
-               <path d="M66 12.5L61 11.5V9H66V12.5Z" fill="#FF662A"/>
-             </svg>
-             
-             <svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83" fill="none">
-               <path
-                  d="M13.5 81L0 56V0H48.5L61.5 9.5L51.5 16.5L66 19V30L57 31.5L58.5 38.5L40 36.5L82.5 56L47 60L28.5 58L33.5 83L13.5 81Z"
-                  fill="#FF662A"/>
-             </svg>
-             
+           <div onClick={()=>setActiveMenu(false)} className="menu">
+  
              <Link onMouseOver={() => setLink1(true)} onMouseLeave={() => setLink1(false)} to="/home"
-                   className="menuLink"><LettersScrolling text="home" visible={link1} state={"X"}/></Link>
+                   className="menuLink"><LettersScrolling text="home" visible={link1} state={"X"}/>
+               <div className="arrowBlock">
+                 <img src={Images.arrowImg} alt=""/>
+                 <img src={Images.arrowImg} alt=""/>
+               </div>
+             </Link>
              <Link onMouseOver={() => setLink2(true)} onMouseLeave={() => setLink2(false)} to="/aboutUs"
-                   className="menuLink"><LettersScrolling text={"about us"} visible={link2} state={"X"}/></Link>
+                   className="menuLink"><LettersScrolling text={"about us"} visible={link2} state={"X"}/>
+               <div className="arrowBlock">
+                 <img src={Images.arrowImg} alt=""/>
+                 <img src={Images.arrowImg} alt=""/>
+               </div>
+             </Link>
              <Link onMouseOver={() => setLink3(true)} onMouseLeave={() => setLink3(false)} to="/work"
-                   className="menuLink"><LettersScrolling text={"work"} visible={link3} state={"X"}/></Link>
+                   className="menuLink"><LettersScrolling text={"work"} visible={link3} state={"X"}/>
+               <div className="arrowBlock">
+                 <img src={Images.arrowImg} alt=""/>
+                 <img src={Images.arrowImg} alt=""/>
+               </div>
+             </Link>
              <Link onMouseOver={() => setLink4(true)} onMouseLeave={() => setLink4(false)} to="/services"
-                   className="menuLink"><LettersScrolling text={"services"} visible={link4} state={"X"}/></Link>
+                   className="menuLink"><LettersScrolling text={"services"} visible={link4} state={"X"}/>
+               <div className="arrowBlock">
+                 <img src={Images.arrowImg} alt=""/>
+                 <img src={Images.arrowImg} alt=""/>
+               </div>
+             </Link>
              <Link onMouseOver={() => setLink5(true)} onMouseLeave={() => setLink5(false)} to="/contact"
-                   className="menuLink"><LettersScrolling text={"contact"} visible={link5} state={"X"}/></Link>
+                   className="menuLink"><LettersScrolling text={"contact"} visible={link5} state={"X"}/>
+               <div className="arrowBlock">
+                 <img src={Images.arrowImg} alt=""/>
+                 <img src={Images.arrowImg} alt=""/>
+               </div>
+             </Link>
+  
+             <div className="termsCont">
+               <a onMouseOver={()=>setLink6(true)} onMouseLeave={()=>setLink6(false)} href="/" target="_blank" className="termsLink">
+                 <LettersScrolling text={"privacy"} visible={link6} state={"X"}/>
+                 <div className="arrowBlock">
+                   <img src={Images.grayArrow} alt=""/>
+                   <img src={Images.grayArrow} alt=""/>
+                 </div>
+               </a>
+               <a onMouseOver={()=>setLink7(true)} onMouseLeave={()=>setLink7(false)} href="/" target="_blank" className="termsLink">
+                 <LettersScrolling text={"careers"} visible={link7} state={"X"}/>
+                 <div className="arrowBlock">
+                   <img src={Images.grayArrow} alt=""/>
+                   <img src={Images.grayArrow} alt=""/>
+                 </div>
+               </a>
+             </div>
              
              <div className="socialMenuLinks">
                <a href="/" target="_blank" className="socialMenuLink">
@@ -193,14 +216,7 @@ function Main() {
              
              <div className="flexGrow"></div>
              
-             <div className="termsBlock">
-               <a onMouseOver={() => setLink6(true)} onMouseLeave={() => setLink6(false)} href="/" target="_blank"
-                  className="termsLink"><DubbleLetter text={"privacy"} state={link6} trns={0.15}/></a>
-               <a onMouseOver={() => setLink7(true)} onMouseLeave={() => setLink7(false)} href="/" target="_blank"
-                  className="termsLink"><DubbleLetter text={"fytechnology"} state={link7} trns={0.1}/></a>
-               <div></div>
              
-             </div>
            
            
            </div>

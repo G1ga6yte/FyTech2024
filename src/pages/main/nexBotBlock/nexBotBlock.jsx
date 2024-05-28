@@ -23,7 +23,7 @@ function NexBotBlock() {
   
          {robotAnim &&
             <div style={{opacity: `${robotAnim ? "1" : "0"}`}} className="spline">
-              <Spline scene={splineModel}/>
+              {/*<Spline scene={splineModel}/>*/}
             </div>
          }
        </div>

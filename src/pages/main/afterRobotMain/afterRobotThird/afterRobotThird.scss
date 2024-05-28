@@ -7,7 +7,7 @@
   z-index: 6;
   background-color: #121212;
   overflow: hidden;
-  padding: 100px 0 0;
+  padding: 100px 0 50px;
 
   .backgroundImage {
     position: absolute;
@@ -69,7 +69,7 @@
 
   .mone1{
     position: absolute;
-    top: 0;
+    bottom: 50px;
     right: 0;
     width: 100%;
     height: 1200px;
