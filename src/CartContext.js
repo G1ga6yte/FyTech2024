@@ -49,7 +49,7 @@ export const CartProvider = ({children}) => {
       }, 1000);
       setTimeout(() => {
         setForthBlock(true);
-      }, 6000);
+      }, 1000);
     }
   }, [visibleRobot]);
   

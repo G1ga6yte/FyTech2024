@@ -1,60 +1,219 @@
 @import "../../../../source/styles/mixin.scss";
 
-.Footer{
+.Footer {
   min-height: 430px;
   background-color: white;
-  @include screen($wide-l){
+  position: relative;
+  @include screen($wide-l) {
     min-height: 300px;
   }
 
-  .FooterBlock{
-    border-radius: 50px 50px 0 0;
-    background: #0E0E0E;
+  .headSVG {
+    width: 100%;
+  }
+
+  .bulletsSVG {
+    width: 100%;
+
+    transform: translateY(-20px);
+    height: 800px;
+    top: 0;
+    position: absolute;
+    padding-bottom: 400px;
+    left: 0;
+    @include screen($wide-l) {
+      transform: translateY(-50px);
+    }
+    @include screen($wide) {
+      transform: translateY(-70px);
+    }
+    @include screen($tablet-l) {
+      transform: translateY(-100px);
+    }
+    @include screen($tablet-w) {
+      transform: translateY(-110px);
+    }
+    @include screen($tablet) {
+      transform: translateY(-120px);
+    }
+    @include screen($tablet-m) {
+      transform: translateY(-130px);
+    }
+    @include screen($mobile-l) {
+      transform: translateY(-140px);
+    }
+
+    path {
+      transition: 1.5s ease-in-out all;
+      opacity: 1;
+    }
+  }
+
+  .activeSVG {
+    path {
+      opacity: 0;
+      display: block !important;
+
+      &:nth-child(1) {
+        transform: translate(-200px, 40px) rotate(20deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate(-430px, 50px) rotate(30deg);
+      }
+
+      &:nth-child(3) {
+        transform: translate(-550px, 160px) rotate(10deg);
+      }
+
+      &:nth-child(4) {
+        transform: translate(-340px, 260px) rotate(40deg);
+      }
+
+      &:nth-child(5) {
+        transform: translate(-750px, 140px) rotate(20deg);
+      }
+
+      &:nth-child(6) {
+        transform: translate(-1170px, 250px) rotate(30deg);
+      }
+
+      &:nth-child(7) {
+        transform: translate(-890px, 10px) rotate(10deg);
+      }
+
+      &:nth-child(8) {
+        transform: translate(-1000px, -5px) rotate(40deg);
+      }
+
+      &:nth-child(9) {
+        transform: translate(-1200px, -140px) rotate(20deg);
+      }
+
+      &:nth-child(10) {
+        transform: translate(-1300px, -240px) rotate(30deg);
+      }
+
+      &:nth-child(11) {
+        transform: translate(-1200px, -270px) rotate(10deg);
+      }
+
+      &:nth-child(12) {
+        transform: translate(1200px, 190px) rotate(40deg);
+      }
+
+      &:nth-child(13) {
+        transform: translate(-750px, -120px) rotate(20deg);
+      }
+
+      &:nth-child(14) {
+        transform: translate(600px, 250px) rotate(40deg);
+      }
+
+      &:nth-child(15) {
+        transform: translate(570px, 110px) rotate(10deg);
+      }
+
+      &:nth-child(16) {
+        transform: translate(450px, 240px) rotate(40deg);
+      }
+
+      &:nth-child(17) {
+        transform: translate(300px, 40px) rotate(20deg);
+      }
+
+      &:nth-child(18) {
+        transform: translate(200px, 40px) rotate(20deg);
+      }
+
+      &:nth-child(19) {
+        transform: translate(430px, 50px) rotate(30deg);
+      }
+
+      &:nth-child(20) {
+        transform: translate(550px, 160px) rotate(10deg);
+      }
+
+      &:nth-child(21) {
+        transform: translate(340px, 260px) rotate(40deg);
+      }
+
+      &:nth-child(22) {
+        transform: translate(750px, 140px) rotate(20deg);
+      }
+
+      &:nth-child(23) {
+        transform: translate(1170px, 250px) rotate(30deg);
+      }
+
+      &:nth-child(24) {
+        transform: translate(1200px, -190px) rotate(40deg);
+      }
+    }
+  }
+
+  .FooterBlock {
+    background: white;
     min-height: 430px;
     width: 100%;
-    @include screen($wide-l){
+    @include screen($wide-l) {
       min-height: 300px;
     }
   }
 
-  .flex{
+  .flex {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin: 0 auto;
     padding: 50px;
     max-width: 1600px;
-    margin: 0 auto;
-    @include screen($wide-l){
-     padding: 50px 20px;
+    align-items: center;
+    @include screen($wide-l) {
+      padding: 50px 20px;
     }
-    @include screen($tablet-l){
+    @include screen($tablet-l) {
       flex-direction: column;
     }
 
-    .mainText{
+    .mainText {
       max-width: 800px;
-      font-size: 64px;
+      font-size: 96px;
       line-height: 120%;
-      font-family: 'Trap-SemiBold', sans-serif;
-      color: white;
+      font-family: 'Trap-Regular', sans-serif;
+      color: black;
       text-transform: uppercase;
       transform: translateY(100px);
       opacity: 0;
       transition: 1s ease-in-out all;
-      @include screen($wide-l){
-        font-size: 48px;
+      @include screen($wide-l) {
+        font-size: 72px;
         max-width: 650px;
       }
-      @include screen($tablet-l){
+      @include screen($wide-s){
+        font-size: 64px;
+        max-width: 550px;
+      }
+      @include screen($tablet-l) {
         width: 100%;
         max-width: unset;
       }
-      @include screen($tablet){
+      @include screen($tablet) {
         font-size: 36px;
       }
 
+      span {
+        width: 100%;
+        max-width: 650px;
+        display: block;
+        @include screen($wide-s){
+          max-width: unset;
+        }
+      }
+
     }
-    .getInTouchBtn{
+
+    .getInTouchBtn {
       margin: 0 20px;
       pointer-events: auto !important;
       border-radius: 60px;
@@ -65,62 +224,70 @@
       font-size: 40px;
       font-family: 'Trap-SemiBold', sans-serif;
       text-transform: uppercase;
-      color: white;
+      color: black;
       background-color: transparent;
       cursor: pointer;
       transition: 1s ease-in-out all;
       transform: translate(100px, -10px);
-      @include screen($wide-l){
+      @include screen($wide-l) {
         font-size: 36px;
         padding: 20px 30px;
       }
-      @include screen($tablet-l){
+      @include screen($wide-s){
+        margin: 0 15px;
+      }
+      @include screen($tablet-l) {
         font-size: 32px;
         padding: 12px 24px;
       }
-      @include screen($tablet){
+      @include screen($tablet) {
         font-size: 28px;
         transform: translate(100px, 0);
         display: none;
       }
-      &:hover{
-        border: 1px solid white;
+
+      &:hover {
+        border: 1px solid black;
       }
-      .word2{
+
+      .word2 {
         margin-bottom: -5px;
       }
 
-      .letter22{
-        color:  #FF6C2C;
+      .letter22 {
+        color: #FF6C2C;
       }
     }
 
-    .tabletBtn{
+    .tabletBtn {
       display: none;
       transform: translate(0);
-      @include screen($tablet){
+      @include screen($tablet) {
         display: block;
         margin: 20px auto;
       }
     }
 
-    .mainTextActive{
+    .mainTextActive {
       transform: translateY(0);
       opacity: 1;
 
-      .getInTouchBtn{
+      .getInTouchBtn {
         transform: translate(0, -10px) !important;
-        @include screen($tablet){
+        @include screen($tablet) {
           transform: translate(0) !important;
         }
       }
     }
 
-    .LinksCont{
-      max-width: 350px;
+    .LinksCont {
+
       display: flex;
       gap: 50px;
-      @include screen($tablet-l){
+      @include screen($wide){
+        gap: 20px;
+      }
+      @include screen($tablet-l) {
         flex-direction: column-reverse;
         max-width: unset;
         gap: 20px;
@@ -128,22 +295,23 @@
       }
 
 
-      .linksBlock{
+      .linksBlock {
         display: flex;
         flex-direction: column;
-        @include screen($tablet-l){
+        @include screen($tablet-l) {
           flex-direction: row;
           width: 100%;
           gap: 50px;
         }
-        @include screen($tablet-w){
+        @include screen($tablet-w) {
           gap: 30px;
         }
-        @include screen($tablet){
+        @include screen($tablet) {
           flex-wrap: wrap;
           gap: 20px;
         }
-        .link{
+
+        .link {
           display: block;
           font-size: 32px;
           font-family: 'Trap-Regular', sans-serif;
@@ -153,26 +321,29 @@
           padding: 6px;
           text-decoration: none;
           transition: 1s ease-in-out all;
-          @include screen($wide-l){
+          @include screen($wide-l) {
             font-size: 28px;
           }
-          @include screen($tablet){
+          @include screen($tablet) {
             font-size: 20px;
           }
 
-          .letter22{
-            color: white;
+          .letter22 {
+            color: black;
           }
         }
-        .link1{
+
+        .link1 {
           transform: translateX(-100px);
           opacity: 0;
         }
-        .link2{
+
+        .link2 {
           transform: translateX(100px);
           opacity: 0;
         }
-        .activeLink{
+
+        .activeLink {
           transform: translateX(0);
           opacity: 1;
         }
@@ -181,40 +352,59 @@
 
   }
 
-  .termsCont{
+  .termsCont {
+    position: relative;
+    z-index: 15;
     width: 100%;
     max-width: 1600px;
+    margin: 0 auto;
     display: flex;
     justify-content: end;
     gap: 40px;
     align-items: center;
-padding: 0 10px 25px;
-    @include screen($tablet){
+    padding: 0 10px 25px;
+    @include screen($tablet-l) {
       flex-wrap: wrap;
       gap: 15px 30px;
       justify-content: center;
     }
-    @include screen($mobile-l){
+    @include screen($mobile-l) {
       gap: 15px;
     }
-    .termsText{
+
+    .termsText {
       font-size: 16px;
       color: #c2c2c2;
       font-family: 'Trap-Medium', sans-serif;
       line-height: normal;
       text-decoration: none;
-      display: block;
       white-space: nowrap;
-      &:nth-child(1){
+
+      &:nth-child(3) {
         white-space: normal;
         margin-right: 50px;
-        @include screen($tablet-w){
-          margin-right: 20px;
-        }
-        @include screen($tablet){
+
+        @include screen($tablet-l) {
           width: 100%;
+          margin: 0;
           text-align: center;
         }
+      }
+    }
+    a{
+      cursor: pointer;
+      white-space: nowrap !important;
+    }
+
+    .linkDesktop{
+      @include screen($tablet-l){
+        display: none;
+      }
+    }
+    .linkTablet{
+      display: none;
+      @include screen($tablet-l){
+        display: block;
       }
     }
 

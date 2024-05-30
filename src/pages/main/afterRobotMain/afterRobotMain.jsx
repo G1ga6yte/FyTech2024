@@ -19,7 +19,7 @@ function AfterRobotMain (){
        <AfterRobotSecond/>
        <AfterRobotThird/>
        {/*<AfterRobotForth/>*/}
-       <AfterRobotFive/>
+       {/*<AfterRobotFive/>*/}
        <Footer/>
        
      </div>
