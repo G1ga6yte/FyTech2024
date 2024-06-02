@@ -4,6 +4,8 @@
 .OrderProject{
   background-color: #030303;
   min-height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
 
   .headerBlock{
     width: 100%;
@@ -12,6 +14,15 @@
     padding: 100px 50px 150px;
     max-width: 1600px;
     margin: 0 auto;
+    @include screen($wide-l){
+      padding: 80px 40px 100px;
+    }
+    @include screen($tablet-w){
+      padding: 50px 20px 100px;
+    }
+    @include screen($mobile-l){
+      padding: 30px 10px 80px;
+    }
 
     svg{
       width: 40%;
@@ -48,6 +59,24 @@
 
     .header{
       max-width: 750px;
+      @include screen($wide-l){
+        max-width: 650px;
+      }
+      @include screen($wide-s){
+        max-width: 550px;
+      }
+      @include screen($tablet-l){
+        max-width: 500px;
+      }
+      @include screen($tablet-w){
+        max-width: 400px;
+      }
+      @include screen($tablet){
+        max-width: 260px;
+      }
+      @include screen($mobile-l){
+        max-width: 200px;
+      }
       .headerPrg{
         font-size: 96px;
         color: white;
@@ -58,6 +87,24 @@
         overflow: hidden;
         transition: 1s ease-in-out all;
         padding: 12px 12px 0;
+        @include screen($wide-l){
+          font-size: 80px;
+        }
+        @include screen($wide-s){
+          font-size: 72px;
+        }
+        @include screen($tablet-l){
+          font-size: 64px;
+        }
+        @include screen($tablet-w){
+          font-size: 48px;
+        }
+        @include screen($tablet){
+          font-size: 32px;
+        }
+        @include screen($mobile-l){
+          font-size: 24px;
+        }
         &:hover{
           text-shadow: 0 0 12px white;
         }
@@ -73,6 +120,24 @@
       .headerPrg{
         height: 260px;
         animation: lightningAnim 2s linear;
+        @include screen($wide-l){
+          height: 225px;
+        }
+        @include screen($wide-s){
+          height: 205px;
+        }
+        @include screen($tablet-l){
+          height: 180px;
+        }
+        @include screen($tablet-w){
+          height: 140px;
+        }
+        @include screen($tablet){
+          height: 95px;
+        }
+        @include screen($mobile-l){
+          height: 75px;
+        }
       }
     }
 
@@ -84,6 +149,12 @@
     background-color: #EFEFF1;
     padding: 150px 0 120px;
     border-radius: 50px 50px 0 0;
+    @include screen($wide){
+      padding: 100px 0;
+    }
+    @include screen($tablet-l){
+      padding: 80px 0 100px;
+    }
 
     .sectionHeader{
       width: max-content;
@@ -93,6 +164,12 @@
       font-family: 'Trap-SemiBold', sans-serif;
       text-transform: uppercase;
       color: #FF6C2C;
+      @include screen($tablet-l){
+        margin-bottom: 50px;
+      }
+      @include screen($tablet){
+        margin-bottom: 40px;
+      }
       .activeWord2{
         span{
           color: #1D1D1D !important;
@@ -105,6 +182,34 @@
       max-width: 1600px;
       margin: 0 auto 120px;
       padding: 0 50px;
+      @include screen($tablet-l){
+        margin: 0 auto 80px;
+      }
+      @include screen($tablet-w){
+        padding: 0 30px;
+      }
+      @include screen($tablet){
+        padding: 0 20px;
+        margin: 0 auto 60px;
+      }
+      @include screen($tablet-m){
+        padding: 0 10px;
+      }
+
+      .sectionHeader{
+        @include screen($tablet-w){
+          font-size: 32px;
+        }
+        @include screen($tablet-m){
+          font-size: 26px;
+        }
+        @include screen($mobile-l){
+          font-size: 20px;
+        }
+        @include screen($mobile-m){
+          font-size: 18px;
+        }
+      }
 
       .services{
         display: flex;
@@ -112,8 +217,17 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 60px 0;
+        @include screen($wide-l){
+          gap: 40px 0;
+        }
+        @include screen($tablet){
+          gap: 30px 0;
+        }
+        @include screen($mobile-l){
+          gap: 20px 0;
+        }
         .serviceBtn{
-          width: 330px;
+          width: 23%;
           padding: 30px;
           border-radius: 50px;
           display: flex;
@@ -128,6 +242,33 @@
           border: 3px solid #1D1D1D;
           cursor: pointer;
           transition: 0.3s ease-in-out all;
+          @include screen($wide-l){
+            width: 24%;
+          }
+          @include screen($wide){
+            width: 32%;
+          }
+          @include screen($tablet-l){
+            width: 45%;
+          }
+          @include screen($tablet-w){
+            width: 48%;
+          }
+          @include screen($tablet){
+            font-size: 20px;
+            padding: 20px;
+            width: 49%;
+          }
+          @include screen($tablet-m){
+            font-size: 18px;
+          }
+          @include screen($mobile-l){
+            width: 100%;
+            font-size: 16px;
+            padding: 15px;
+            border: 2px solid #1D1D1D;
+
+          }
           &:hover{
             box-shadow: 0 0 5px 0.5px #1D1D1D;
           }
@@ -145,13 +286,36 @@
       max-width: 1600px;
       margin: 0 auto 120px;
       padding: 0 50px;
-
+      @include screen($tablet-l){
+        margin: 0 auto 80px;
+      }
+      @include screen($tablet-w){
+        padding: 0 30px;
+      }
+      @include screen($tablet){
+        padding: 0 20px;
+        margin: 0 auto 60px;
+      }
+      @include screen($tablet-m){
+        padding: 0 10px;
+      }
       .sectionHeaderBlock{
         display: flex;
         align-items: end;
         margin-bottom: 60px;
+        flex-wrap: wrap;
+        gap: 20px 0;
         .sectionHeader{
           margin: 0 40px 0 0;
+          @include screen($tablet){
+            font-size: 40px;
+          }
+          @include screen($mobile-l){
+            font-size: 32px;
+          }
+          @include screen($mobile-m){
+            font-size: 28px;
+          }
         }
 
         .fileInput{
@@ -159,6 +323,11 @@
           align-items: end;
           cursor: pointer;
           margin-right: 40px;
+          img{
+            @include screen($tablet){
+              width: 30px;
+            }
+          }
           input{
             display: none;
           }
@@ -174,6 +343,7 @@
 
         .selectedFiles{
           display: flex;
+          justify-content: end;
           align-items: center;
           flex-wrap: wrap;
           flex-grow: 1;
@@ -228,17 +398,41 @@
       max-width: 1600px;
       margin: 0 auto 120px;
       padding: 0 50px;
+      @include screen($tablet-l){
+        margin: 0 auto 80px;
+      }
+      @include screen($tablet-w){
+        padding: 0 30px;
+      }
+      @include screen($tablet){
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        flex-direction: column;
+        gap: 30px 0;
+      }
+      @include screen($tablet-m){
+        padding: 0 10px;
+      }
       .infoBlock{
         width: 50%;
+        @include screen($tablet){
+          width: 100%;
+        }
 
         .sectionHeader{
           margin: 0;
+          @include screen($wide){
+            font-size: 40px;
+          }
+          @include screen($tablet-l){
+            font-size: 28px;
+          }
         }
 
 
         .infoInput{
           margin-top: 60px;
-          width: 100%;
+          width: 98%;
           max-width: 500px;
           padding: 34px 60px 32px;
           border-radius: 80px;
@@ -248,6 +442,19 @@
           font-family: 'Trap-SemiBold', sans-serif;
           font-size: 32px;
           line-height: normal;
+          @include screen($wide){
+            font-size: 26px;
+            max-width: 400px;
+            padding: 26px 40px 24px;
+          }
+          @include screen($tablet-l){
+            font-size: 20px;
+            padding: 20px 30px 18px;
+            margin-top: 40px;
+          }
+          @include screen($tablet){
+            margin-top: 20px;
+          }
           &::placeholder{
             color: #D8D8D8 !important;
           }
@@ -261,7 +468,21 @@
       max-width: 1600px;
       margin: 0 auto 120px;
       padding: 0 50px;
-
+      @include screen($tablet-l){
+        margin: 0 auto 80px;
+        flex-direction: column;
+      }
+      @include screen($tablet-w){
+        padding: 0 30px;
+      }
+      @include screen($tablet){
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        gap: 30px 0;
+      }
+      @include screen($tablet-m){
+        padding: 0 10px;
+      }
 
       .budgetBlock{
         background-color: #060608;
@@ -288,6 +509,9 @@
           position: relative;
           z-index: 15;
           margin: 0 auto 95px;
+          @include screen($tablet-l){
+            font-size: 40px;
+          }
 
           .activeWord2{
             span{
@@ -346,6 +570,12 @@
               border: none;
               cursor: pointer;
               position: relative;
+              @include screen($wide){
+                font-size: 20px;
+              }
+              @include screen($tablet-w){
+                font-size: 16px;
+              }
               span{
                 display: block;
                 position: absolute;
@@ -427,12 +657,46 @@
       max-width: 1600px;
       margin: 0 auto 120px;
       padding: 0 50px;
+      @include screen($tablet-l){
+        margin: 0 auto 80px;
+      }
+      @include screen($tablet-w){
+        padding: 0 30px;
+      }
+      @include screen($tablet){
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        flex-direction: column;
+        gap: 30px 0;
+      }
+      @include screen($tablet-m){
+        padding: 0 10px;
+      }
+
+      .sectionHeader{
+        @include screen($tablet-w){
+          font-size: 40px;
+        }
+        @include screen($tablet-m){
+          font-size: 30px;
+        }
+        @include screen($mobile-l){
+          font-size: 24px;
+        }
+        @include screen($mobile-m){
+          font-size: 20px;
+        }
+      }
 
       .buttonsBlock{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include screen($tablet){
+          flex-wrap: wrap;
+          gap: 20px;
+        }
 
         .deadLineBtn{
           width: 33%;
@@ -450,6 +714,16 @@
           border: 3px solid #1D1D1D;
           cursor: pointer;
           transition: 0.3s ease-in-out all;
+          @include screen($tablet-l){
+            font-size: 20px;
+            padding: 20px;
+          }
+          @include screen($tablet-w){
+            font-size: 16px;
+          }
+          @include screen($tablet){
+            width: 100%;
+          }
           &:hover{
             box-shadow: 0 0 10px 0.5px #1D1D1D;
           }
@@ -468,9 +742,57 @@
       padding: 0 50px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      @include screen($tablet-l){
+        margin: 0 auto 80px;
+        flex-direction: column;
+      }
+      @include screen($tablet-w){
+        padding: 0 30px;
+      }
+      @include screen($tablet){
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        gap: 30px 0;
+      }
+      @include screen($tablet-m){
+        padding: 0 10px;
+      }
 
       .inputsBlock{
         width: 45%;
+        @include screen($wide){
+          width: 40%;
+        }
+        @include screen($tablet-l){
+          width: 100%;
+          display: flex;
+          gap: 30px;
+          margin-bottom: 40px;
+        }
+        @include screen($tablet){
+          flex-direction: column;
+        }
+
+        .sectionHeader{
+          @include screen($wide-l){
+            font-size: 40px;
+          }
+          @include screen($wide){
+            font-size: 32px;
+            margin-bottom: 30px;
+          }
+          @include screen($tablet-w){
+            font-size: 26px;
+          }
+        }
+
+        .firstInputBlock{
+            margin-bottom: 120px;
+          @include screen($tablet-l){
+            margin-bottom: 0;
+          }
+        }
 
         .textInput{
           width: 100%;
@@ -484,12 +806,23 @@
           font-family: 'Trap-SemiBold', sans-serif;
           line-height: normal;
           color: #1D1D1D;
+          @include screen($wide-l){
+            font-size: 26px;
+            padding: 26px 40px 24px;
+          }
+          @include screen($wide){
+            max-width: 400px;
+            padding: 22px 40px 20px;
+          }
+          @include screen($tablet-w){
+            font-size: 20px;
+            padding: 16px 20px 14px;
+            border: 2px solid  #1D1D1D;
+          }
           &::placeholder{
             color: #D8D8D8;
           }
-          &:nth-child(2){
-            margin-bottom: 120px;
-          }
+
         }
 
       }
@@ -500,8 +833,26 @@
         box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.25) inset;
         background-color: #D8D8D8;
         padding: 60px;
+        @include screen($wide-l){
+          padding: 50px 30px;
+        }
+        @include screen($wide){
+          width: 55%;
+        }
+        @include screen($tablet-l){
+          width: 100%;
+        }
         .sectionHeader{
           margin: 0;
+          @include screen($wide-l){
+            font-size: 40px;
+          }
+          @include screen($tablet-l){
+            font-size: 32px;
+          }
+          @include screen($tablet){
+            font-size: 28px;
+          }
         }
 
         .buttonsBlock{
@@ -512,6 +863,9 @@
           justify-content: space-between;
           gap: 40px 2%;
           width: 100%;
+          @include screen($tablet){
+            gap: 20px 2%;
+          }
 
           .aboutUsBtn{
             width: 49%;
@@ -530,6 +884,16 @@
             line-height: normal;
             background-color: transparent;
             transition: 0.2s ease-in-out all;
+            @include screen($wide-l){
+              font-size: 16px;
+            }
+            @include screen($tablet-l){
+              padding: 25px 0;
+            }
+            @include screen($tablet){
+              padding: 20px 0;
+              width: 100%;
+            }
             &:hover{
               box-shadow: 0 0 10px 1px #1D1D1D;
             }
@@ -555,6 +919,21 @@
       max-width: 1600px;
       margin: 0 auto 120px;
       padding: 0 50px;
+      @include screen($tablet-l){
+        margin: 0 auto 80px;
+        flex-direction: column;
+      }
+      @include screen($tablet-w){
+        padding: 0 30px;
+      }
+      @include screen($tablet){
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        gap: 30px 0;
+      }
+      @include screen($tablet-m){
+        padding: 0 10px;
+      }
 
       .submitBtn{
         width: 100%;
@@ -571,6 +950,9 @@
         outline: none;
         cursor: pointer;
         transition: 0.2s ease-in-out all;
+        @include screen($tablet){
+          font-size: 28px;
+        }
         &:hover{
           filter: brightness(1.1);
         }

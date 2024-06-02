@@ -342,14 +342,18 @@ function OrderProject() {
          
          <div className="endInfoCont">
            <div className="inputsBlock">
-             <p ref={myRef7} className="sectionHeader"><DubbleLetter text={"What’s Your Name?"} state={loader ? false : visible7} trns={0.1}/></p>
+             <div className="firstInputBlock">
+               <p ref={myRef7} className="sectionHeader"><DubbleLetter text={"What’s Your Name?"} state={loader ? false : visible7} trns={0.1}/></p>
   
-             <input onChange={(e)=>setName(e.target.value)} type="text" className="textInput" placeholder="PIT MATTON"/>
+               <input onChange={(e)=>setName(e.target.value)} type="text" className="textInput" placeholder="PIT MATTON"/>
+             </div>
   
-             <p ref={myRef8} className="sectionHeader"><DubbleLetter text={"What’s Your Email?"} state={loader ? false : visible8} trns={0.1}/></p>
+             <div>
+               <p ref={myRef8} className="sectionHeader"><DubbleLetter text={"What’s Your Email?"} state={loader ? false : visible8} trns={0.1}/></p>
   
-             <input onChange={(e)=>setEmail(e.target.value)} type="email" className="textInput" placeholder="Your@email.com"/>
+               <input onChange={(e)=>setEmail(e.target.value)} type="email" className="textInput" placeholder="Your@email.com"/>
 
+             </div>
            </div>
            
            <div className="aboutUsBlock">

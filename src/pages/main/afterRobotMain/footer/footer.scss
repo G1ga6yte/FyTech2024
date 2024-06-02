@@ -14,18 +14,20 @@
 
   .bulletsSVG {
     width: 100%;
-
     transform: translateY(-20px);
     height: 800px;
     top: 0;
     position: absolute;
     padding-bottom: 400px;
     left: 0;
-    @include screen($wide-l) {
+    @include screen(1600px){
       transform: translateY(-50px);
     }
-    @include screen($wide) {
+    @include screen($wide-l) {
       transform: translateY(-70px);
+    }
+    @include screen($wide) {
+      transform: translateY(-80px);
     }
     @include screen($tablet-l) {
       transform: translateY(-100px);
@@ -34,14 +36,15 @@
       transform: translateY(-110px);
     }
     @include screen($tablet) {
-      transform: translateY(-120px);
-    }
-    @include screen($tablet-m) {
-      transform: translateY(-130px);
-    }
-    @include screen($mobile-l) {
       transform: translateY(-140px);
     }
+    @include screen($mobile-l) {
+      transform: translateY(-150px);
+    }
+    @include screen($tablet-m) {
+      transform: translateY(-160px);
+    }
+
 
     path {
       transition: 1.5s ease-in-out all;
