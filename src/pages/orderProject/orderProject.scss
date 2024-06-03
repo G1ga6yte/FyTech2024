@@ -492,6 +492,9 @@
         height: 416px;
         position: relative;
         padding-top: 60px;
+        @include screen($tablet){
+          display: none;
+        }
 
         .background{
           position: absolute;
@@ -649,6 +652,122 @@
 
 
       }
+      .budgetMobileBlock{
+        display: none;
+        width: 100%;
+        border-radius: 20px;
+        padding: 40px 25px;
+        transition: 0.5s ease-in-out all !important;
+        @include screen($tablet){
+          display: block;
+        }
+
+        .sectionHeader{
+          font-size: 32px;
+          @include screen($mobile-l){
+            font-size: 24px;
+          }
+          @include screen($mobile-m){
+            font-size: 20px;
+          }
+          span{
+            color: white !important;
+          }
+        }
+
+        .labelsBlock{
+          display: flex;
+          align-items: start;
+          gap: 60px;
+          justify-content: center;
+
+          @include screen($mobile-l){
+            gap: 40px;
+          }
+          .line{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .labelBtn{
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              .radio{
+                height: 14px;
+                width: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: #D9D9D9;
+                .radioBall{
+                  width: 10px;
+                  height: 10px;
+                  border-radius: 50%;
+                  background-color: #D9D9D9;
+                  stroke-width: 1px;
+                  stroke: #000;
+                  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                }
+              }
+              .labelText{
+                font-size: 12px;
+                font-family: 'Trap-SemiBold', sans-serif;
+                color: white;
+                text-transform: uppercase;
+                line-height: normal;
+              }
+              .budgetInput{
+                width: 75px;
+                padding: 4px 8px 2px;
+                border-radius: 32px;
+                border: 1px solid #BEBEBE;
+                background-color: white;
+                outline: none;
+                font-size: 10px;
+                font-family: 'Trap-Light', sans-serif;
+                line-height: normal;
+              }
+            }
+            .activeLabelBtn{
+              .radio{
+
+                .radioBall{
+                  background-color: #1D1D1D;
+                }
+              }
+            }
+          }
+        }
+
+
+
+
+      }
+
+      .active1{
+        background: linear-gradient(316deg, #060608 64.17%, #FF6C2C 78.12%);
+      }
+      .active2{
+        background: linear-gradient(319deg, #060608 46.71%, #FF6C2C 77.03%);
+      }
+      .active3{
+        background: linear-gradient(319deg, #060608 46.71%, #FF6C2C 77.03%);
+      }
+      .active4{
+        background: linear-gradient(26deg, #060608 47.02%, #FF6C2C 86.27%);
+      }
+      .active5{
+        background: linear-gradient(33deg, #060608 32.03%, #FF6C2C 83.75%);
+      }
+      .active6{
+        background: linear-gradient(62deg, #060608 25.93%, #FF6C2C 90.78%);
+      }
+
 
     }
 

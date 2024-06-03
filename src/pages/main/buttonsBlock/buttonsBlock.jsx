@@ -18,6 +18,8 @@ function ButtonsBlock (){
   const { ref: myRef6, inView: visible6 } = useInView();
   const { ref: myRef7, inView: visible7 } = useInView();
   const { ref: myRef8, inView: visible8 } = useInView();
+  const { ref: myRef9, inView: visible9 } = useInView();
+  
   const [changeView, setChangeView] = useState(false)
   const [availableBack, setAvailableBack] = useState(false)
   
@@ -115,12 +117,12 @@ function ButtonsBlock (){
              </div>
       
              <div className="prg2Cont">
-               <div ref={myRef6} className={`prg1Block ${visible6 ? "fromLeftAnim" : ""}`} >
-                 <div className="textLine"><DubbleLetter text={"every brand has a story, from, startups finding"} state={visible6} trns={0.1} /></div>
-                 <div className="textLine"><DubbleLetter text={"there voice to titans refining their legacy. "} state={visible6} trns={0.05} /></div>
-                 <div className="textLine"><DubbleLetter text={"we ensure that tale shines brilliantly. WITH A BLEND"} state={visible6} trns={0.1} /></div>
-                 <div className="textLine"><DubbleLetter text={"OF RAPID ITERATION AND COLLABORATIVE SPIRIT, WE"} state={visible6} trns={0.05} /></div>
-                 <div className="textLine"><DubbleLetter text={"EMPOWER YOU TO RESHAPE YOUR DIGITAL NARRATIVE."} state={visible6} trns={0.1} /></div>
+               <div ref={myRef9} className={`prg1Block ${visible9 ? "fromLeftAnim" : ""}`} >
+                 <div className="textLine"><DubbleLetter text={"every brand has a story, from, startups finding"} state={visible9} trns={0.1} /></div>
+                 <div className="textLine"><DubbleLetter text={"there voice to titans refining their legacy. "} state={visible9} trns={0.05} /></div>
+                 <div className="textLine"><DubbleLetter text={"we ensure that tale shines brilliantly. WITH A BLEND"} state={visible9} trns={0.1} /></div>
+                 <div className="textLine"><DubbleLetter text={"OF RAPID ITERATION AND COLLABORATIVE SPIRIT, WE"} state={visible9} trns={0.05} /></div>
+                 <div className="textLine"><DubbleLetter text={"EMPOWER YOU TO RESHAPE YOUR DIGITAL NARRATIVE."} state={visible9} trns={0.1} /></div>
                </div>
                <p ref={myRef6} className={`prg1Block prg1BlockTablet ${visible6 ? "fromLeftAnim" : ""}`}>
                  <span className="textLine">every brand has a story, from, startups finding there voice to titans refining their legacy. we ensure that tale shines brilliantly. WITH A BLEND OF RAPID ITERATION AND COLLABORATIVE SPIRIT, WE EMPOWER YOU TO RESHAPE YOUR DIGITAL NARRATIVE.</span>

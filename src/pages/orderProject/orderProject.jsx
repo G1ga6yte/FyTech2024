@@ -10,7 +10,7 @@ function OrderProject() {
   const {loader} = useCartContext();
   const services = ["PRODUCT DESIGN", "DESIGN", "DEVELOPMENT", "BRANDING", "OTHER", "CAMPAIGN", "WEBGL / VR",
                     "UX / UI / IA", "Analytics", "Advance Services", "IT Consulting", "Software Testing"];
-  const budgetDate = ["UNDER $10K", "$10-30K", "$30-60K", "$30-60K", "$100K+"];
+  const budgetDate = ["UNDER $10K", "$10-30K", "$30-60K", "$70-90K", "$100K+"];
   const fyTechInfo = [
      "CSS DESIGN AWARDS 1",
      "CSS DESIGN AWARDS 2",
@@ -94,6 +94,7 @@ function OrderProject() {
   const [rangeVal, setRangeVal] = useState(1);
   const [rangeMouseActive, setRangeMouseActive] = useState(false);
   const [transition, setTransition] = useState(false);
+  const [budgetTabletValue, setBudgetTabletValue] = useState("")
   const handleMouseUp = () => {
     setRangeMouseActive(false);
     setTransition(true);
@@ -215,8 +216,7 @@ function OrderProject() {
          <div className="briefCont">
            
            <div className="sectionHeaderBlock">
-             <p ref={myRef2} className="sectionHeader"><DubbleLetter text={"What’s YOUR BRIEF?"}
-                                                                     state={loader ? false : visible2} trns={0.1}/></p>
+             <p ref={myRef2} className="sectionHeader"><DubbleLetter text={"What’s YOUR BRIEF?"} state={loader ? false : visible2} trns={0.1}/></p>
              
              <label htmlFor="fileInput" className="fileInput">
                <input id="fileInput" type="file" multiple onChange={handleFileChange}/>
@@ -293,7 +293,7 @@ function OrderProject() {
                      transition: `${transition ? "0.5s ease-in-out" : "0s"}`, left: `${rangeVal / 10}%`,
                    }} className="rangeBall"><img src={Images.radioBall} alt=""/></div>
                  </label>
-                 <input onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} id="rangeInput" type="range"
+                 <input onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onTouchStartCapture={handleMouseDown} onTouchEndCapture={handleMouseUp} id="rangeInput" type="range"
                         defaultValue={1} min={1} max={1000} onChange={(event) => setRangeVal(event.target.value)}
                         className="rangeInput"/>
                
@@ -309,6 +309,74 @@ function OrderProject() {
                </div>
              </div>
            
+           </div>
+           <div className={`budgetMobileBlock ${
+             budget === budgetDate[0] ? "active1" :
+                budget === budgetDate[1] ? "active2" :
+                   budget === budgetDate[2] ? "active3" :
+                      budget === budgetDate[3] ? "active4" :
+                         budget === budgetDate[4] ? "active5" :
+                            budget === budgetTabletValue ? "active6" : ""
+           }`}>
+             <p ref={myRef2} className="sectionHeader"><DubbleLetter text={"WHAT IS YOUR BUDGET?"} state={loader ? false : visible2} trns={0.1}/></p>
+  
+             
+             <div className="labelsBlock">
+               <div className="line">
+                 {budgetDate.map((el, index)=>{
+                   if (index < 3){
+                     return(
+                        <button
+                           key={index}
+                           className={`labelBtn ${budget === el ? "activeLabelBtn" : ""}`}
+                           onClick={()=>setBudget(el)}
+                        >
+                          <div className="radio">
+                            <div className="radioBall"></div>
+                          </div>
+                          
+                          <p className="labelText">{el}</p>
+                        </button>
+                     )
+                   }
+                 })}
+               </div>
+  
+               <div className="line">
+                 {budgetDate.map((el, index)=>{
+                   if (index < 5 && index > 2){
+                     return(
+                        <button
+                           key={index}
+                           className={`labelBtn ${budget === el ? "activeLabelBtn" : ""}`}
+                           onClick={()=>setBudget(el)}
+                        >
+                          <div className="radio">
+                            <div className="radioBall"></div>
+                          </div>
+             
+                          <p className="labelText">{el}</p>
+                        </button>
+                     )
+                   }
+                 })}
+                 <button
+                    className={`labelBtn ${budget === budgetTabletValue ? "activeLabelBtn" : ""}`}
+                    onClick={()=>setBudget(budgetTabletValue)}
+                 >
+                   <div className="radio">
+                     <div className="radioBall"></div>
+                   </div>
+  
+                   <input type="text" className="budgetInput" value={budgetTabletValue} onChange={(e)=>{
+                     setBudgetTabletValue(e.target.value)
+                     setBudget(e.target.value)
+                   }}/>
+                 </button>
+               </div>
+             </div>
+  
+             
            </div>
          </div>
          

@@ -141,13 +141,6 @@ function ThirdBlock() {
   
   return (
      <div className="thirdBlock no-select">
-       
-       <div className="phoneLinks">
-         {PhoneLinks.map((el,index)=>{
-           return <PhoneLink text={el.name} count={el.count} index={index}/>
-         })}
-       </div>
-       
        <div className="firstBlock">
          
          <div ref={myRef1} className={`videoC ${visible1 ? "comeFromLeft" : ""}`}>
