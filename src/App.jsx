@@ -1,6 +1,6 @@
 import React, {Suspense, useEffect, useState} from "react";
 import './App.scss';
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, useLocation} from "react-router-dom";
 import Main from "./pages/main/main";
 import Lenis from "@studio-freight/lenis";
 import backgroundImage from "./background.png"
@@ -10,6 +10,7 @@ import LoadingBlock from "./components/loadingBlock/loadingBlock";
 import OrderProject from "./pages/orderProject/orderProject";
 import RouteLoader from "./components/routeLoader/routeLoader";
 import AboutUs from "./pages/aboutUs/aboutUs";
+import ProjectsBlock from "./pages/projectsBlock/projectsBlock";
 
 function App() {
   const lenis = new Lenis({
@@ -23,6 +24,11 @@ function App() {
     requestAnimationFrame(raf)
   }
   requestAnimationFrame(raf)
+  
+  const pathname = useLocation()
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  }, [pathname])
   
   
   
@@ -39,6 +45,7 @@ function App() {
         <Route path="/home" element={<Main/>}/>
         <Route path="/order" element={<OrderProject/>}/>
         <Route path="/aboutUs" element={<AboutUs/>}/>
+        <Route path="/projects" element={<ProjectsBlock/>}/>
       </Routes>
       
       

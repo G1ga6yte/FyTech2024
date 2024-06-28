@@ -315,6 +315,9 @@
         }
 
         .link {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
           display: block;
           font-size: 32px;
           font-family: 'Trap-Regular', sans-serif;

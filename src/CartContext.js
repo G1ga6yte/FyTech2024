@@ -69,6 +69,9 @@ export const CartProvider = ({children}) => {
   
   function RouteChange(link) {
     setRouteLoader(true)
+    window.scrollTo(0, 0)
+    setStep(1)
+    setScrollPaused1(false)
     setTimeout(() => {
       navigate(link);
     }, 600);

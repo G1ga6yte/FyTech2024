@@ -3,6 +3,7 @@ import "./footer.scss"
 import DubbleLetter from "../../../../components/dubbleLetter/dubbleLetter";
 import {useInView} from "react-intersection-observer";
 import {Link} from "react-router-dom";
+import {useCartContext} from "../../../../CartContext";
 
 function Footer (){
   const { ref: myRef1, inView: visible1 } = useInView();
@@ -30,7 +31,7 @@ function Footer (){
   const [btn8, setBtn8] = useState(false)
   const [btn10, setBtn10] = useState(false)
   
-  
+  const {RouteChange} = useCartContext()
   
   
   return(
@@ -96,9 +97,9 @@ function Footer (){
               </div>
               
               <div className="linksBlock">
-                <Link ref={myRef6} onMouseOver={()=>setBtn6(true)} onMouseLeave={()=>setBtn6(false)} to="/aboutUs" className={`link link2 ${visible6 ? "activeLink" : ""}`}><DubbleLetter text={"About us"} trns={0.1} state={btn6}/></Link>
-                <Link ref={myRef7} onMouseOver={()=>setBtn7(true)} onMouseLeave={()=>setBtn7(false)} to="/services" className={`link link2 ${visible7 ? "activeLink" : ""}`}><DubbleLetter text={"Services"} trns={0.1} state={btn7}/></Link>
-                <Link ref={myRef8} onMouseOver={()=>setBtn8(true)} onMouseLeave={()=>setBtn8(false)} to="/projects" className={`link link2 ${visible8 ? "activeLink" : ""}`}><DubbleLetter text={"Projects"} trns={0.1} state={btn8}/></Link>
+                <button ref={myRef6} onMouseOver={()=>setBtn6(true)} onMouseLeave={()=>setBtn6(false)} onClick={()=>RouteChange("/aboutUs")} className={`link link2 ${visible6 ? "activeLink" : ""}`}><DubbleLetter text={"About us"} trns={0.1} state={btn6}/></button>
+                <button ref={myRef7} onMouseOver={()=>setBtn7(true)} onMouseLeave={()=>setBtn7(false)} onClick={()=>RouteChange("/services")} className={`link link2 ${visible7 ? "activeLink" : ""}`}><DubbleLetter text={"Services"} trns={0.1} state={btn7}/></button>
+                <button ref={myRef8} onMouseOver={()=>setBtn8(true)} onMouseLeave={()=>setBtn8(false)} onClick={()=>RouteChange("/projects")} className={`link link2 ${visible8 ? "activeLink" : ""}`}><DubbleLetter text={"Projects"} trns={0.1} state={btn8}/></button>
               </div>
               
             </div>
