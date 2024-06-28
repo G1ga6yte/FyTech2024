@@ -9,6 +9,7 @@ import loaderImg from "./images/loadingImage.png"
 import LoadingBlock from "./components/loadingBlock/loadingBlock";
 import OrderProject from "./pages/orderProject/orderProject";
 import RouteLoader from "./components/routeLoader/routeLoader";
+import AboutUs from "./pages/aboutUs/aboutUs";
 
 function App() {
   const lenis = new Lenis({
@@ -37,6 +38,7 @@ function App() {
         <Route exact={true} path="/" element={<Main/>}/>
         <Route path="/home" element={<Main/>}/>
         <Route path="/order" element={<OrderProject/>}/>
+        <Route path="/aboutUs" element={<AboutUs/>}/>
       </Routes>
       
       

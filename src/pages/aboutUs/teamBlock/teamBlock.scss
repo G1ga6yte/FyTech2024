@@ -1,0 +1,247 @@
+@import "../../../source/styles/mixin.scss";
+
+.TemBlock {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1920px;
+  overflow: hidden;
+
+  .headerBlock{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+  }
+
+  .mainBlock{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+
+
+    .personImgBlock{
+      width: 750px;
+      min-width: 750px;
+      height: 850px;
+      position: relative;
+      .personImg{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.5s ease-in-out all;
+      }
+
+      .shadow{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(40%);
+        height: 125px;
+        border-radius: 40%;
+        filter: blur(30px);
+        background-color: black;
+      }
+    }
+
+    .infoBlock{
+      flex-grow: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      margin-top: 120px;
+      padding: 20px;
+      width: available;
+      .Gname{
+        font-size: 45px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        color: #EFEFF1;
+        line-height: 120%;
+        text-transform: uppercase;
+        transition: 0.8s ease-in-out all;
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      .Gprofession{
+        margin-bottom: 25px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        color: #A6A6A6;
+        line-height: 120%;
+        text-transform: uppercase;
+        font-size: 45px;
+        transition: 1.2s ease-in-out all;
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      .Ginfo{
+        margin-bottom: 8px;
+        height: 128px;
+        max-width: 650px;
+        font-size: 25px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        color: #A6A6A6;
+        line-height: 130%;
+        text-transform: uppercase;
+        transition: 1.6s ease-in-out all;
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      .activeText{
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+      }
+
+      .count{
+        font-size: 50px;
+        font-family: 'Trap-SemiBold', sans-serif;
+        color: #A6A6A6;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .sectionsBlock{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+
+        .line{
+          background-color: #2F2F2F;
+          height: 4px;
+          flex-grow: 1;
+          transition: 0.5s ease-in-out all;
+        }
+
+        .activeLine{
+          background-color: white;
+          box-shadow: 0 0 4px 0.5px white;
+        }
+
+      }
+      .personsCardCont{
+        width: 100%;
+        max-width: 100%;
+        overflow: auto;
+        margin-top: 45px;
+        position: relative;
+
+
+
+
+        .personsCardBlock{
+          width: available;
+          display: flex;
+          align-items: center;
+          gap: 25px;
+
+          .PersonCard{
+            padding: 0 20px 20px;
+            max-width: 310px;
+            min-width: 310px;
+            width: 310px;
+            border: 2px solid #2F2F2F;
+            border-radius: 20px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: 0.5s ease-in-out all;
+
+            .imgBlock{
+              width: 100%;
+              height: 280px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              position: relative;
+              .shadow{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 40%);
+                background-color: black;
+                height: 50px;
+                border-radius: 50%;
+                filter: blur(10px);
+                width: 150%;
+              }
+
+              .personInfoBlock{
+                position: absolute;
+                left: 10px;
+                bottom: -30px;
+
+                .name{
+                  font-size: 20px;
+                  font-family: 'Trap-SemiBold', sans-serif;
+                  color: #EFEFF1;
+                  line-height: 120%;
+                  text-transform: uppercase;
+                  transition: 0.5s ease-in-out all;
+                }
+                .profession{
+                  font-size: 20px;
+                  margin-bottom: 25px;
+                  font-family: 'Trap-SemiBold', sans-serif;
+                  color: #A6A6A6;
+                  line-height: 120%;
+                  text-transform: uppercase;
+                }
+
+              }
+            }
+          }
+          .activeCard{
+            border: 2px solid #FFF;
+          }
+
+        }
+      }
+
+      .buttonsCont{
+        width: 100%;
+        position: relative;
+        z-index: 8;
+        transform: translateY(-170px);
+
+        .slideBtn{
+          position: absolute;
+          border: 1px solid white;
+          padding: 8px;
+          border-radius: 50%;
+          z-index: 7;
+          cursor: pointer;
+          background-color: rgba(0, 0, 0, 0.6);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.5s ease-in-out all;
+          &:hover{
+            scale: 1.05;
+          }
+          img{
+            width: 32px;
+          }
+        }
+
+        .leftBtn{
+          left: 10px;
+          top: 50%;
+          img{
+            transform: rotate(180deg);
+          }
+        }
+        .rightBtn{
+          right: 10px;
+          top: 50%;
+        }
+
+      }
+
+    }
+
+  }
+
+}

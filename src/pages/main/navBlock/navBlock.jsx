@@ -80,41 +80,41 @@ function NavBlock() {
              
              <div className="menu">
                
-               <Link onMouseOver={() => setLink1(true)} onMouseLeave={() => setLink1(false)} to="/home"
+               <button onClick={()=>RouteChange("/")} onMouseOver={() => setLink1(true)} onMouseLeave={() => setLink1(false)}
                      className="menuLink"><LettersScrolling text="home" visible={link1} state={"X"}/>
                  <div className="arrowBlock">
                    <img src={Images.arrowImg} alt=""/>
                    <img src={Images.arrowImg} alt=""/>
                  </div>
-               </Link>
-               <Link onMouseOver={() => setLink2(true)} onMouseLeave={() => setLink2(false)} to="/aboutUs"
+               </button>
+               <button onClick={()=>RouteChange("/aboutUS")} onMouseOver={() => setLink2(true)} onMouseLeave={() => setLink2(false)}
                      className="menuLink"><LettersScrolling text={"about us"} visible={link2} state={"X"}/>
                  <div className="arrowBlock">
                    <img src={Images.arrowImg} alt=""/>
                    <img src={Images.arrowImg} alt=""/>
                  </div>
-               </Link>
-               <Link onMouseOver={() => setLink3(true)} onMouseLeave={() => setLink3(false)} to="/work"
+               </button>
+               <button onClick={()=>RouteChange("/work")} onMouseOver={() => setLink3(true)} onMouseLeave={() => setLink3(false)}
                      className="menuLink"><LettersScrolling text={"work"} visible={link3} state={"X"}/>
                  <div className="arrowBlock">
                    <img src={Images.arrowImg} alt=""/>
                    <img src={Images.arrowImg} alt=""/>
                  </div>
-               </Link>
-               <Link onMouseOver={() => setLink4(true)} onMouseLeave={() => setLink4(false)} to="/services"
+               </button>
+               <button onClick={()=>RouteChange("/services")} onMouseOver={() => setLink4(true)} onMouseLeave={() => setLink4(false)}
                      className="menuLink"><LettersScrolling text={"services"} visible={link4} state={"X"}/>
                  <div className="arrowBlock">
                    <img src={Images.arrowImg} alt=""/>
                    <img src={Images.arrowImg} alt=""/>
                  </div>
-               </Link>
-               <Link onMouseOver={() => setLink5(true)} onMouseLeave={() => setLink5(false)} to="/contact"
+               </button>
+               <button onClick={()=>RouteChange("/contact")} onMouseOver={() => setLink5(true)} onMouseLeave={() => setLink5(false)}
                      className="menuLink"><LettersScrolling text={"contact"} visible={link5} state={"X"}/>
                  <div className="arrowBlock">
                    <img src={Images.arrowImg} alt=""/>
                    <img src={Images.arrowImg} alt=""/>
                  </div>
-               </Link>
+               </button>
                
                <div className="termsCont">
                  <a onMouseOver={()=>setLink6(true)} onMouseLeave={()=>setLink6(false)} href="/" target="_blank" className="termsLink">

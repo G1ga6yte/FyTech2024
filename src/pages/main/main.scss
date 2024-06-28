@@ -159,6 +159,9 @@
         justify-content: space-between;
         padding: 5px 0;
         margin-bottom: 4px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
 
         &:before {
           content: '';
