@@ -180,8 +180,8 @@ function SecondBlock({step, ref, style}) {
   return (
      <div style={{backgroundImage: `url("${backgroundImg}")`, position: style ? "fixed" : "relative"}} ref={ref}
           id="secondBlock" className="SecondBlock no-select">
-       {/*<HomeSpinnerSpline1/>*/}
-       {/*<HomeSpinnerSpline2/>*/}
+       <HomeSpinnerSpline1/>
+       <HomeSpinnerSpline2/>
        <div ref={myRef2}></div>
        
        <div className="mainBlock">

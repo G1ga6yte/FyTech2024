@@ -15,7 +15,7 @@ import ProjectsBlock from "./pages/projectsBlock/projectsBlock";
 function App() {
   const lenis = new Lenis({
     duration: 1,
-    wheelMultiplier: 0.2,
+    wheelMultiplier: 0.4,
     
   })
   lenis.on('scroll', (e) => {})
