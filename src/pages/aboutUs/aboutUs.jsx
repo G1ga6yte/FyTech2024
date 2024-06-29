@@ -4,7 +4,7 @@ import HeadBlock from "./headBlock/headBlock";
 import SecondBlock from "./secondBlock/secondBlock";
 import TeamBlock from "./teamBlock/teamBlock";
 
-function AboutUs (){
+function  AboutUs (){
   
   
   

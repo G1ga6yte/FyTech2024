@@ -3,6 +3,7 @@ import "./thirdHeader.scss"
 import backgroundImg from "./overWhiteCover.png"
 import {useInView} from "react-intersection-observer";
 import LettersScrolling from "../../../components/lettersScrolling/lettersScrolling";
+import {useCartContext} from "../../../CartContext";
 
 function ThirdHeader (){
   const { ref: myRef1, inView: visible1 } = useInView();
@@ -10,6 +11,10 @@ function ThirdHeader (){
   const { ref: myRef3, inView: visible3 } = useInView();
   const { ref: myRef4, inView: visible4 } = useInView();
   const [btn1, setBtn1] = useState(false)
+  
+  const {RouteChange} = useCartContext()
+  
+  
   return(
      <div  className="ThirdHeader ">
        <img className="background" src={backgroundImg} alt=""/>
@@ -49,7 +54,7 @@ function ThirdHeader (){
                <div className="line"></div>
              </div>
     
-             <button onMouseLeave={()=>setBtn1(false)} onMouseOver={()=>setBtn1(true)} ref={myRef2} className={`seeMoreBtn ${visible2 ? "activeBtn" : ""}`}><LettersScrolling text={"see more"} state={"Y"} visible={btn1}/></button>
+             <button onClick={()=>RouteChange("/projects")} onMouseLeave={()=>setBtn1(false)} onMouseOver={()=>setBtn1(true)} ref={myRef2} className={`seeMoreBtn ${visible2 ? "activeBtn" : ""}`}><LettersScrolling text={"see more"} state={"Y"} visible={btn1}/></button>
   
            </div>
   

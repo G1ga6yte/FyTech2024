@@ -5,7 +5,7 @@ import {useCartContext} from "../../CartContext";
 import "./loadingBlock.scss";
 
 function LoadingBlock() {
-  const {setLoaded, setStep} = useCartContext();
+  const {setLoaded, setStep, setLoader} = useCartContext();
   const [showFullLoader, setShowFullLoader] = useState(false);
   const [loaderOpacity, setLoaderOpacity] = useState(false);
   const [textTransform, setTextTransform] = useState(false)

@@ -207,6 +207,7 @@ function TeamBlock() {
            </div>
            
            <div ref={divRef} className="personsCardCont" onScroll={handleScroll}>
+             
              <div ref={divRef2} className="personsCardBlock">
                {PersonalData.map((el, index)=>{
                  return(
@@ -224,7 +225,9 @@ function TeamBlock() {
                  )
                })}
              </div>
+             
            </div>
+           
            <div className="buttonsCont">
              <button onClick={scrollRightSmoothly} style={{transform: `translateX(${firstBtn ? "0" : "-50px"})`, opacity: `${firstBtn ? "1" : "0"}`}} className="leftBtn slideBtn"><img src={Images.arrowSvg} alt=""/></button>
   

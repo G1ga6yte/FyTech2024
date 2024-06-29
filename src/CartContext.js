@@ -31,6 +31,7 @@ export const CartProvider = ({children}) => {
   
   //////////////// loadingBlock
   const [loaded, setLoaded] = useState(false);
+  const [loader, setLoader] = useState(false)
   
   
   ///////////////// nav
@@ -55,7 +56,6 @@ export const CartProvider = ({children}) => {
   
   
   ///////////// location change
-  const [loader, setLoader] = useState(false)
   const [routeLoader, setRouteLoader] = useState(false);
   useEffect(() => {
     let timer;
@@ -69,11 +69,12 @@ export const CartProvider = ({children}) => {
   
   function RouteChange(link) {
     setRouteLoader(true)
-    window.scrollTo(0, 0)
-    setStep(1)
+    
     setScrollPaused1(false)
     setTimeout(() => {
       navigate(link);
+      window.scrollTo(0, 0)
+      setStep(1)
     }, 600);
   }
   
