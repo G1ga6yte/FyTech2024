@@ -11,6 +11,8 @@ import OrderProject from "./pages/orderProject/orderProject";
 import RouteLoader from "./components/routeLoader/routeLoader";
 import AboutUs from "./pages/aboutUs/aboutUs";
 import ProjectsBlock from "./pages/projectsBlock/projectsBlock";
+import Project_CarFy from "./pages/project_CarFy/project_CarFy";
+import ServicesBlock from "./pages/servicesBlock/servicesBlock";
 
 function App() {
   const lenis = new Lenis({
@@ -45,6 +47,8 @@ function App() {
         <Route path="/order" element={<OrderProject/>}/>
         <Route path="/aboutUs" element={<AboutUs/>}/>
         <Route path="/projects" element={<ProjectsBlock/>}/>
+        <Route path="/project=CarFy" element={<Project_CarFy/>}/>
+        <Route path="/services" element={<ServicesBlock/>}/>
       </Routes>
       
       

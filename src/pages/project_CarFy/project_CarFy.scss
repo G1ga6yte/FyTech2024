@@ -1,0 +1,27 @@
+@import "../../source/styles/mixin.scss";
+
+.ProjectBlock{
+  background-color: black;
+  min-height: 500vh;
+  width: 100%;
+  padding: 105px 10px;
+}
+
+.ActiveText{
+  transform: translate(0) scale(1) !important;
+  opacity: 1 !important;
+}
+
+
+.grayPrg32{
+  font-size: 32px;
+  font-family: 'Trap-SemiBold', sans-serif;
+  color: #A6A6A6;
+  line-height: normal;
+}
+.miniHeader{
+  font-family: 'Trap-Bold', sans-serif;
+  color: white;
+  line-height: normal;
+  font-size: 62px;
+}

@@ -1,0 +1,69 @@
+@import "../../../source/styles/mixin.scss";
+
+.EightBlock{
+  max-width: 1720px;
+  width: 100%;
+  margin: 160px auto 0;
+  position: relative;
+  padding: 0 10px;
+
+
+  .headerBlock{
+    max-width: 1000px;
+  }
+
+  .text1{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s ease-in-out all;
+    max-width: 1200px;
+  }
+
+  .grayPrg{
+    p{
+      margin-bottom: 70px;
+      position: relative;
+      line-height: 100%;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #FF6C2C;
+        border-radius: 50%;
+        left: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+
+      }
+    }
+  }
+
+  .ul1{
+    margin-top: 65px;
+    p{
+      transform: translateX(-30%);
+      opacity: 0;
+      &:nth-child(1){
+        transition: 1s ease-in-out all;
+        margin-left: 10%;
+      }
+      &:nth-child(2){
+        transition: 1.3s ease-in-out all;
+        margin-left: 20%;
+      }
+      &:nth-child(3){
+        transition: 1.6s ease-in-out all;
+        margin-left: 30%;
+      }
+    }
+  }
+
+  .bubbleImg{
+    left: 0;
+    top: 40%;
+    position: absolute;
+  }
+
+}

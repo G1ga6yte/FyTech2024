@@ -1,0 +1,40 @@
+@import "../../../source/styles/mixin.scss";
+
+.NinthBlock{
+  margin: 160px auto 0;
+  max-width: 1720px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .headerCont{
+    width: 100%;
+  }
+
+
+  .text1{
+    max-width: 1150px;
+    margin: 0 auto;
+    transition: 1s ease-in-out all;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .text2{
+    transition: 1.3s ease-in-out all;
+    margin: 70px 0 70px 10%;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .text3{
+    transition: 1.6s ease-in-out all;
+    margin-right: 10%;
+    opacity: 0;
+    transform: translateY(50px);
+    max-width: 1150px;
+  }
+
+
+}

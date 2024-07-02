@@ -97,10 +97,10 @@ function AfterRobotThird (){
            
            <div className="insideCircle">
              <div style={{opacity: splineModel === 1 ? 0.8 : 0}} className="spline">
-               <Spline scene={"https://prod.spline.design/MENtgbdXHq0BhsKS/scene.splinecode"}/>
+               {/*<Spline scene={"https://prod.spline.design/MENtgbdXHq0BhsKS/scene.splinecode"}/>*/}
              </div>
              <div style={{opacity: splineModel === 2 ? 0.8 : 0}} className="spline">
-               <Spline scene={"https://prod.spline.design/5rmnAO5QfaBt4WAC/scene.splinecode"}/>
+               {/*<Spline scene={"https://prod.spline.design/5rmnAO5QfaBt4WAC/scene.splinecode"}/>*/}
              </div>
            </div>
            

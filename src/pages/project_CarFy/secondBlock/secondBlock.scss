@@ -1,0 +1,40 @@
+@import "../../../source/styles/mixin.scss";
+
+
+.SecondBlockProject{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto 240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .textBlock{
+    flex-grow: 1;
+    .miniHeader{
+      margin-bottom: 45px;
+      transition: 1s ease-in-out all;
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    .grayPrg32{
+      text-align: right;
+      transition: 1.5s ease-in-out all;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+
+  .imgBlock{
+    min-width: 60%;
+    height: 600px;
+    margin-left: 60px;
+    transform: translateY(100px) scale(0.8);
+    transition: 1.5s ease-in-out all;
+    opacity: 0;
+  }
+
+
+
+}

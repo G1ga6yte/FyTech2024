@@ -1,0 +1,65 @@
+@import "../../../source/styles/mixin.scss";
+
+
+.TenthBlock{
+  max-width: 1720px;
+  margin: 160px auto 0;
+  width: 100%;
+
+  .text1{
+    max-width: 1260px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s ease-in-out all;
+    margin-bottom: 90px;
+  }
+
+  .ul1{
+    display: flex;
+    flex-direction: column;
+    p{
+
+      &:nth-child(1){
+        margin-left: 40%;
+        transition: 1s ease-in-out all;
+      }
+      &:nth-child(2){
+        margin-left: 30%;
+        transition: 1.3s ease-in-out all;
+      }
+      &:nth-child(3){
+        margin-left: 20%;
+        transition: 1.6s ease-in-out all;
+      }
+      &:nth-child(4){
+        margin-left: 10%;
+        transition: 1.9s ease-in-out all;
+      }
+    }
+  }
+
+  .grayPrg{
+    p{
+      transform: translateX(-50%);
+      opacity: 0;
+      margin-bottom: 70px;
+      position: relative;
+      line-height: 100%;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #FF6C2C;
+        border-radius: 50%;
+        left: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+
+      }
+    }
+  }
+
+
+}
