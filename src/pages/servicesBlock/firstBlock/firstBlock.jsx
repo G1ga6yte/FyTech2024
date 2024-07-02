@@ -58,7 +58,7 @@ function FirstBlock (){
   
        <div ref={myRef1} className="headerBlock">
          <div className={`underLinedText ${!loader && visible1 ?  "underLinedTextAnim" : ""}`}>
-           <p>srvices</p>
+           <p>services</p>
            <div className="line"></div>
          </div>
          <div className="flexGrow"></div>

@@ -87,7 +87,7 @@ function NavBlock() {
                    <img src={Images.arrowImg} alt=""/>
                  </div>
                </button>
-               <button onClick={()=>RouteChange("/aboutUS")} onMouseOver={() => setLink2(true)} onMouseLeave={() => setLink2(false)}
+               <button onClick={()=>RouteChange("/aboutUs")} onMouseOver={() => setLink2(true)} onMouseLeave={() => setLink2(false)}
                      className="menuLink"><LettersScrolling text={"about us"} visible={link2} state={"X"}/>
                  <div className="arrowBlock">
                    <img src={Images.arrowImg} alt=""/>
