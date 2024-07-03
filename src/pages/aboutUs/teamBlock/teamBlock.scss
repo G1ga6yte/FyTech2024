@@ -2,9 +2,12 @@
 
 .TemBlock {
   width: 100%;
-  min-height: 100vh;
   max-width: 1920px;
   overflow: hidden;
+  padding: 0 20px;
+  @include screen($tablet){
+    padding: 0 10px;
+  }
 
   .headerBlock{
     width: 100%;
@@ -18,6 +21,9 @@
     display: flex;
     width: 100%;
     max-width: 100%;
+    @include screen(1600px){
+      align-items: end;
+    }
 
 
     .personImgBlock{
@@ -25,6 +31,19 @@
       min-width: 750px;
       height: 850px;
       position: relative;
+      @include screen(1600px){
+        width: 600px;
+        min-width: 600px;
+        height: 700px;
+      }
+      @include screen($wide){
+        width: 450px;
+        min-width: 450px;
+        height: 550px;
+      }
+      @include screen($tablet-l){
+        display: none;
+      }
       .personImg{
         height: 100%;
         width: 100%;
@@ -47,6 +66,63 @@
       }
     }
 
+    .headCont{
+      display: flex;
+      align-items: end;
+
+      @include screen($tablet-m){
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .personImgBlockInside{
+        display: none;
+        width: 350px;
+        height: 400px;
+        min-width: 350px;
+        position: relative;
+        @include screen($tablet-l){
+          display: block;
+          margin-right: 20px;
+        }
+        @include screen($tablet-w){
+          width: 300px;
+          height: 350px;
+          min-width: 300px;
+        }
+        @include screen($tablet-m){
+          margin-bottom: 20px;
+        }
+
+
+
+        .personImg{
+          width: 100%;
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .shadow{
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transform: translateY(40%);
+          height: 80px;
+          border-radius: 40%;
+          filter: blur(20px);
+          background-color: black;
+          z-index: 2;
+        }
+
+
+
+      }
+
+    }
+
     .infoBlock{
       flex-grow: 1;
       overflow: hidden;
@@ -55,6 +131,15 @@
       margin-top: 120px;
       padding: 20px;
       width: available;
+      @include screen($tablet-l){
+        margin: 0;
+      }
+      @include screen($tablet){
+        padding: 10px;
+      }
+      @include screen($tablet-m){
+        padding: 0 0 20px;
+      }
       .Gname{
         font-size: 45px;
         font-family: 'Trap-SemiBold', sans-serif;
@@ -64,6 +149,9 @@
         transition: 0.8s ease-in-out all;
         transform: translateY(50px);
         opacity: 0;
+        @include screen($wide-l){
+          font-size: 30px;
+        }
       }
       .Gprofession{
         margin-bottom: 25px;
@@ -75,6 +163,9 @@
         transition: 1.2s ease-in-out all;
         transform: translateY(50px);
         opacity: 0;
+        @include screen($wide-l){
+          font-size: 30px;
+        }
       }
       .Ginfo{
         margin-bottom: 8px;
@@ -88,6 +179,13 @@
         transition: 1.6s ease-in-out all;
         transform: translateY(50px);
         opacity: 0;
+        @include screen($wide-l){
+          font-size: 15px;
+          height: 80px;
+        }
+        @include screen($tablet-w){
+          height: 120px;
+        }
       }
       .activeText{
         transform: translateY(0) !important;
@@ -101,6 +199,9 @@
         line-height: 120%;
         text-transform: uppercase;
         margin-bottom: 16px;
+        @include screen($wide-l){
+          font-size: 40px;
+        }
       }
 
       .sectionsBlock{
@@ -137,6 +238,9 @@
           display: flex;
           align-items: center;
           gap: 25px;
+          @include screen($wide-l){
+            gap: 20px;
+          }
 
           .PersonCard{
             padding: 0 20px 20px;
@@ -149,6 +253,25 @@
             overflow: hidden;
             transition: 0.5s ease-in-out all;
 
+            @include screen($wide-l){
+              max-width: 225px;
+              height: 225px;
+              min-width: 225px;
+            }
+            @include screen($tablet){
+              padding: 0 0 20px;
+            }
+            @include screen($tablet-m){
+              min-width: 180px;
+              max-width: 180px;
+              height: 200px;
+            }
+            @include screen($mobile-l){
+              min-width: 160px;
+              max-width: 160px;
+              height: 180px;
+            }
+
             .imgBlock{
               width: 100%;
               height: 280px;
@@ -156,6 +279,15 @@
               background-repeat: no-repeat;
               background-size: cover;
               position: relative;
+              @include screen($wide-l){
+                height: 200px;
+              }
+              @include screen($tablet-m){
+                height: 180px;
+              }
+              @include screen($mobile-l){
+                height: 160px;
+              }
               .shadow{
                 position: absolute;
                 bottom: 0;
@@ -205,6 +337,12 @@
         position: relative;
         z-index: 8;
         transform: translateY(-170px);
+        @include screen($wide-l){
+          transform: translateY(-130px);
+        }
+        @include screen($tablet){
+          display: none;
+        }
 
         .slideBtn{
           position: absolute;

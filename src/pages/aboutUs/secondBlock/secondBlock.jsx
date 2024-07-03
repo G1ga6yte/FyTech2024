@@ -18,7 +18,7 @@ function SecondBlock() {
   
   
   return (
-     <div className="secondBlock">
+     <div className="secondBlockA">
        
        <img src={Images.vector} className="vectorImg" alt=""/>
        

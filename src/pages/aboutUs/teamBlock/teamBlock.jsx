@@ -193,17 +193,26 @@ function TeamBlock() {
          </div>
          
          <div className="infoBlock">
-           <p ref={myRef2} className={`Gname ${visible2 ? "activeText" : ""}`}>{activePerson.name}</p>
-           <p ref={myRef3} className={`Gprofession ${visible3 ? "activeText" : ""}`}>{activePerson.profession}</p>
-           <p ref={myRef4} className={`Ginfo ${visible4 ? "activeText" : ""}`}>{activePerson.info}</p>
-           
-           <p className="count">{activePerson.id < 10 ? `0${activePerson.id}` : `${activePerson.id}`}/{PersonalData.length}</p>
-           <div className="sectionsBlock">
-             {PersonalData.map((el, index)=>{
-               return(
-                  <div className={`line ${activePerson.id === el.id ? "activeLine" : ""}`} key={index}></div>
-               )
-             })}
+           <div className="headCont">
+             <div className="personImgBlockInside">
+               <div style={{backgroundImage: `url("${activePerson.img}")`}} className="personImg"></div>
+               <div className="shadow"></div>
+             </div>
+             
+             <div className="textCont">
+               <p ref={myRef2} className={`Gname ${visible2 ? "activeText" : ""}`}>{activePerson.name}</p>
+               <p ref={myRef3} className={`Gprofession ${visible3 ? "activeText" : ""}`}>{activePerson.profession}</p>
+               <p ref={myRef4} className={`Ginfo ${visible4 ? "activeText" : ""}`}>{activePerson.info}</p>
+  
+               <p className="count">{activePerson.id < 10 ? `0${activePerson.id}` : `${activePerson.id}`}/{PersonalData.length}</p>
+               <div className="sectionsBlock">
+                 {PersonalData.map((el, index)=>{
+                   return(
+                      <div className={`line ${activePerson.id === el.id ? "activeLine" : ""}`} key={index}></div>
+                   )
+                 })}
+               </div>
+             </div>
            </div>
            
            <div ref={divRef} className="personsCardCont" onScroll={handleScroll}>

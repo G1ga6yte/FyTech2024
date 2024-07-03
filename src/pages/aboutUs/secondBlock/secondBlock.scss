@@ -1,9 +1,11 @@
 @import "../../../source/styles/mixin.scss";
 
 
-.secondBlock{
+.secondBlockA{
   width: 100%;
   position: relative;
+  padding: 0 20px;
+  height: max-content;
 
   .vectorImg{
     position: absolute;
@@ -19,9 +21,16 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include screen($tablet-l){
+      flex-direction: column;
+      align-items: end;
+    }
 
 
     .textBlock{
+      @include screen($tablet-l){
+        width: 100%;
+      }
       .miniHeader{
         color: white;
         font-size: 42px;
@@ -29,6 +38,13 @@
         font-family: 'Trap-Bold', sans-serif;
         text-transform: uppercase;
         line-height: 120%;
+        @include screen($wide-l){
+          font-size: 32px;
+        }
+        @include screen($tablet-m){
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
 
       }
 
@@ -42,6 +58,15 @@
         line-height: 130%;
         text-transform: uppercase;
         max-width: 450px;
+        @include screen($wide-l){
+          font-size: 25px;
+        }
+        @include screen($wide){
+          font-size: 21px;
+        }
+        @include screen($tablet-m){
+          font-size: 15px;
+        }
       }
 
       .verticalTextLines{
@@ -52,6 +77,13 @@
         transform: translateY(100px);
         opacity: 0;
         transition: 1s ease-in-out all;
+        @include screen($wide){
+          gap: 50px;
+        }
+        @include screen($tablet-m){
+          gap: 25px;
+          margin-bottom: 20px;
+        }
         .leftLine{
           max-width: 120px;
         }
@@ -67,6 +99,12 @@
         opacity: 0;
         transition: 1.2s ease-in-out all;
         transform: translateY(100px);
+        @include screen($wide){
+          margin-left: 50px;
+        }
+        @include screen($tablet-m){
+          max-width: 300px;
+        }
       }
 
       .activeUnderPrg{
@@ -93,6 +131,27 @@
       opacity: 0;
       overflow: hidden;
       margin-bottom: 300px;
+      @include screen($wide-l){
+        margin-right: 50px;
+        padding: 50px 50px 30px;
+        margin-bottom: 250px;
+      }
+      @include screen($wide){
+        padding: 40px 30px 30px;
+        margin-bottom: 200px;
+      }
+      @include screen($tablet-l){
+        margin-top: 20px;
+        padding: 50px 50px 30px;
+        margin-bottom: 100px;
+      }
+      @include screen($tablet-m){
+        padding: 30px;
+        margin-bottom: 60px;
+      }
+      @include screen($mobile-l){
+        margin-right: 0;
+      }
 
       .count{
         font-size: 65px;
@@ -105,6 +164,12 @@
         transition: 2s ease-in-out all;
         transform: translateY(50px);
         opacity: 0;
+        @include screen($wide-l){
+          font-size: 55px;
+        }
+        @include screen($tablet-m){
+          font-size: 36px;
+        }
       }
       .activeCount{
         transform: translateY(0);
@@ -122,6 +187,17 @@
         transition: 2.5s ease-in-out all;
         transform: translateY(50px);
         opacity: 0;
+        @include screen($wide-l){
+          font-size: 30px;
+          white-space: nowrap;
+        }
+        @include screen($wide){
+          font-size: 25px;
+        }
+        @include screen($tablet-m){
+          font-size: 22px;
+          margin-bottom: 30px;
+        }
       }
 
       .activeMiniHeader{
@@ -141,6 +217,15 @@
         cursor: pointer;
         transition: 0.5s ease-in-out all;
         border: 1px solid #FF6C2C;
+        @include screen($tablet-m){
+          width: 65px;
+          min-width: 65px;
+          height: 65px;
+          padding: 15px;
+          img{
+            width: 100%;
+          }
+        }
         &:hover{
           background-color: #1D1D1D;
         }

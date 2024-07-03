@@ -9,7 +9,7 @@ function HeadBlock (){
   const {loader} = useCartContext();
   
   return(
-     <div className="headBlock no-select G-Container">
+     <div className="headBlockA no-select G-Container">
   
          <div className="headerBlock">
            <div className={`underLinedText no-select ${loader  ? "underLinedTextAnim" : ""}`}>
@@ -20,7 +20,7 @@ function HeadBlock (){
          </div>
   
        <div className="buttonsTextCont">
-         <div className="buttonsBlock">
+         <div className="buttonsBlockA">
     
            <div className="flex center">
              <div style={{backgroundImage: `url("${hashBackground}")`}} className={`block1 ${ !loader ? "block1Fall" : ""}`}>strategy</div>
