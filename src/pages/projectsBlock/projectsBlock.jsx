@@ -62,26 +62,28 @@ function ProjectsBlock (){
        
        
        <div className="sectionBlock">
-         <div ref={myRef1} className={`videoCont ${visible1 && !loader ? "activeVideoCont" : ""}`}>
-           {showVideo1 ? (
-              <video ref={videoRef1} className="video-player" loop muted>
-                <source src={Videos.video1} type="video/mp4"/>
-                ...
-              </video>
-           ) : (
-              <img src={Images.img2} alt="Video Poster" className="video-poster"/>
-           )}
+         <div className="videoContC">
+           <div ref={myRef1} className={`videoCont ${visible1 && !loader ? "activeVideoCont" : ""}`}>
+             {showVideo1 ? (
+                <video ref={videoRef1} className="video-player" loop muted>
+                  <source src={Videos.video1} type="video/mp4"/>
+                  ...
+                </video>
+             ) : (
+                <img src={Images.img2} alt="Video Poster" className="video-poster"/>
+             )}
+           </div>
+           <p ref={myRef3} className={`projectName ${visible3 ? "fromDownText" : ""}`}>Business Design Studio</p>
          </div>
          
          <p ref={myRef2} className={`videoPrg ${visible2 && !loader ? "fromRightText" : ""}`}>
            there should be a description of the project
          </p>
          
-         <p ref={myRef3} className={`projectName ${visible3 ? "fromDownText" : ""}`}>Business Design Studio</p>
          
        </div>
        
-       <div className="sectionBlock">
+       <div className="sectionBlock imgSection">
   
          <svg className={`bulletsSvg ${visible4 ? "activeSvg" : ""}`} xmlns="http://www.w3.org/2000/svg"  fill="none">
            <path d="M1042.24 272.747L1191.84 209.06L1267.14 272.747H1042.24Z" fill="#FF6C2C"/>
@@ -106,31 +108,32 @@ function ProjectsBlock (){
            <p ref={myRef6} className={`projectName ${visible6 ? "fromDownText" : ""}`}>Business Design Studio</p>
          </div>
   
-  
-
        </div>
   
        <div className="sectionBlock">
-         <div ref={myRef6} className={`videoCont ${visible6 ? "activeVideoCont" : ""}`}>
-           {showVideo2 ? (
-              <video ref={videoRef2} className="video-player" loop muted>
-                <source src={Videos.video1} type="video/mp4"/>
-                ...
-              </video>
-           ) : (
-              <img src={Images.img2} alt="Video Poster" className="video-poster"/>
-           )}
+         <div className="videoContC">
+           <div ref={myRef6} className={`videoCont ${visible6 ? "activeVideoCont" : ""}`}>
+             {showVideo2 ? (
+                <video ref={videoRef2} className="video-player" loop muted>
+                  <source src={Videos.video1} type="video/mp4"/>
+                  ...
+                </video>
+             ) : (
+                <img src={Images.img2} alt="Video Poster" className="video-poster"/>
+             )}
+           </div>
+           <p ref={myRef8} className={`projectName ${visible8 ? "fromDownText" : ""}`}>Business Design Studio</p>
+
          </div>
     
          <p ref={myRef7} className={`videoPrg ${visible7 ? "fromRightText" : ""}`}>
            there should be a description of the project
          </p>
     
-         <p ref={myRef8} className={`projectName ${visible8 ? "fromDownText" : ""}`}>Business Design Studio</p>
   
        </div>
   
-       <div className="sectionBlock">
+       <div className="sectionBlock imgSection">
          
          <p ref={myRef10} className={`videoPrg textAlignLeft ${visible10 && !loader ? "fromRightText" : ""}`}>
            there should be a description of the project

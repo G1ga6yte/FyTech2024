@@ -1,9 +1,17 @@
 @import "../../source/styles/mixin.scss";
 
 .ProjectsBlock{
-  min-height: 300vh;
   background-color: black;
-  padding: 100px 10px 200px;
+  padding: 100px 20px 200px;
+  max-width: 100%;
+  overflow: hidden;
+
+  @include screen($wide){
+    padding: 60px 10px 150px;
+  }
+  @include screen($tablet){
+    padding: 40px 10px 100px;
+  }
 
 
   .headerBlock{
@@ -22,20 +30,53 @@
     max-width: 1720px;
     margin: 200px auto 0;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     position: relative;
+    @include screen($wide-l){
+      margin: 50px auto 0;
+    }
+    @include screen($tablet-m){
+      flex-direction: column;
+      width: 100%;
+      align-items: start;
+    }
     &:nth-child(2){
       margin: 100px auto 0;
+      @include screen($wide-l){
+        margin: 50px auto 0;
+      }
     }
   }
 
+  .videoContC{
+    min-width: 70%;
+    margin-right: 20px;
+    @include screen($wide-l){
+      min-width: 65%;
+      max-width: 65%;
+    }
+    @include screen($tablet-m){
+      width: 100%;
+      margin: 0;
+      max-width: unset;
+      min-width: unset;
+    }
+
+  }
+
+
   .videoCont{
-    max-width: 70%;
+    max-width: 100%;
     margin-bottom: 36px;
     transform: translateY(200px) scale(0.8);
     transition: 1.5s ease-in-out all;
     opacity: 0;
+    @include screen($wide-l){
+      margin-bottom: 20px ;
+    }
+    @include screen($tablet-m){
+      margin-bottom: 10px;
+    }
 
     .video-player{
       width: 100%;
@@ -45,6 +86,15 @@
     width: 65%;
     position: relative;
     z-index: 2;
+    @include screen($tablet-w){
+      min-width: 65%;
+    }
+    @include screen($tablet-m){
+      width: 100%;
+    }
+  }
+  .imgSection{
+    flex-direction: column-reverse !important;
   }
 
   .videoPrg{
@@ -59,7 +109,24 @@
     opacity: 0;
     transition: 1.5s ease-in-out all;
     position: relative;
-    z-index: 2;&:hover{
+    z-index: 2;
+    @include screen($wide-l){
+      font-size: 40px;
+    }
+    @include screen($wide){
+      font-size: 30px;
+    }
+    @include screen($tablet-l){
+      font-size: 20px;
+    }
+    @include screen($tablet-m){
+      text-align: start !important;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+
+    &:hover{
       scale: 1.05;
     }
   }
@@ -74,6 +141,22 @@
     transform: translateY(200px) scale(0.8);
     transition: 1.5s ease-in-out all;
     opacity: 0;
+    @include screen($wide){
+      height: 450px;
+    }
+    @include screen($tablet-l){
+      margin-bottom: 20px;
+    }
+    @include screen($tablet-w){
+      height: 300px;
+      margin-bottom: 10px;
+    }
+    @include screen($tablet-m){
+      height: 250px;
+    }
+    @include screen($mobile-m){
+      height: 200px;
+    }
   }
 
   .projectName{
@@ -87,6 +170,15 @@
     opacity: 0;
     position: relative;
     z-index: 2;
+    @include screen($wide-l){
+      font-size: 40px;
+    }
+    @include screen($wide){
+      font-size: 25px;
+    }
+    @include screen($tablet-l){
+      font-size: 18px;
+    }
     &:hover{
       scale: 1.05;
     }
@@ -99,6 +191,11 @@
     top: -200px;
     width: 100%;
     height: 1300px;
+    @include screen($wide-l){
+      top: -50px;
+      height: 1000px;
+    }
+
 
     path{
       transition: 2s ease-in-out all;
