@@ -17,7 +17,7 @@ function FooterBlock (){
      <div className="FooterBlockS">
        <img ref={myRef1} src={Images.vector} className={`vectorImg ${visible1 ? "ActiveBlock" : ""}`} alt=""/>
        
-       <button ref={myRef3} onClick={()=>RouteChange("/contact")} onMouseOver={()=>setBtn1(true)} onMouseLeave={()=>setBtn1(false)} className={`contactBtn ${visible3 ? "ActiveBlock" : ""}`}>
+       <button ref={myRef3} onClick={()=>RouteChange("/order")} onMouseOver={()=>setBtn1(true)} onMouseLeave={()=>setBtn1(false)} className={`contactBtn ${visible3 ? "ActiveBlock" : ""}`}>
          <svg xmlns="http://www.w3.org/2000/svg" width="456" height="100" viewBox="0 0 456 100" fill="none">
            <path d="M0 0L396.648 20.6667L456 100L49.9429 94.6667L0 0Z" fill="#FF6C2C"/>
          </svg>
