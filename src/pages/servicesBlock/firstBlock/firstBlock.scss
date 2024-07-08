@@ -1,7 +1,13 @@
 @import "../../../source/styles/mixin.scss";
 
-.FirstBlock{
+.FirstBlockS{
   padding: 85px 10px 200px;
+  @include screen($wide-l){
+    padding: 60px 0 50px;
+  }
+  @include screen($tablet){
+    padding: 30px 0 0;
+  }
 
   .headerBlock{
     max-width: 1440px;
@@ -13,25 +19,49 @@
     display: flex;
     max-width: 1720px;
     margin: 120px auto 0;
+    @include screen($wide-l){
+      margin: 80px auto 0;
+    }
+    @include screen($wide){
+      margin: 40px auto 0;
+    }
+    @include screen($tablet-l){
+      flex-direction: column;
+    }
+    @include screen($tablet){
+      margin: 30px auto 0;
+    }
 
     .textBlock{
       position: relative;
-      .prg{
-        font-size: 30px;
-        font-family: 'Trap-SemiBold', sans-serif;
-        color: #A6A6A6;
-        line-height: 130%;
-        text-transform: uppercase;
+      .grayPrg{
         max-width: 720px;
         transform: translateY(100px);
         opacity: 0;
         transition: 1s ease-in-out all;
+        @include screen($tablet-l){
+          max-width: 500px;
+          margin-bottom: 30px;
+        }
       }
 
       .img{
         position: absolute;
         left: -10%;
         top: -10%;
+        @include screen($wide-l){
+          width: 100%;
+          left: 0;
+          top: 0;
+        }
+        @include screen($wide){
+          width: 120%;
+          top: -5%;
+        }
+        @include screen($tablet-l){
+          top: 0;
+          width: 50%;
+        }
       }
     }
 
@@ -40,9 +70,26 @@
       display: flex;
       flex-direction: column;
       align-items: end;
-      .servicesLine{
+      padding-right: 40px;
+      @include screen($wide){
+        padding-right: 0 !important;
+      }
+
+
+
+
+      .servicesLineS{
         display: flex;
         justify-content: end;
+        @include screen($wide-l){
+          margin-bottom: 40px !important;
+        }
+        @include screen($tablet){
+          margin-bottom: 30px !important;
+        }
+        @include screen($tablet-m){
+          margin-bottom: 20px !important;
+        }
 
         .serviceBlock{
           border-left: 1px solid white;
@@ -53,6 +100,24 @@
           justify-content: space-between;
           align-items: start;
           opacity: 0;
+          @include screen($wide-l){
+            padding: 0 20px;
+            height: 160px;
+          }
+          @include screen($wide){
+            height: 140px;
+          }
+          @include screen($tablet){
+            padding: 0 12px;
+            height: 120px;
+          }
+          @include screen($tablet-m){
+            padding: 0 8px;
+            height: 110px;
+          }
+          @include screen($mobile-l){
+            height: 90px;
+          }
           &:nth-child(1){
             transform: translateX(300%);
             transition: 2s;
@@ -70,6 +135,16 @@
             font-family: 'Trap-SemiBold', sans-serif;
             color: #FF6C2C;
             line-height: 120%;
+            @include screen($wide-l){
+              font-size: 45px;
+            }
+            @include screen($wide){
+              font-size: 35px;
+            }
+            @include screen($tablet){
+              font-size: 25px;
+            }
+
             span{
               color: white;
             }
@@ -82,7 +157,31 @@
             color: white;
             line-height: 130%;
             text-transform: uppercase;
-
+            @include screen($wide-l){
+              font-size: 18px;
+              min-width: 160px;
+              max-width: 160px;
+            }
+            @include screen($wide){
+              font-size: 16px;
+              min-width: 140px;
+              max-width: 140px;
+            }
+            @include screen($tablet){
+              font-size: 14px;
+              min-width: 130px;
+              max-width: 130px;
+            }
+            @include screen($tablet-m){
+              font-size: 12px;
+              min-width: 100px;
+              max-width: 100px;
+            }
+            @include screen($mobile-l){
+              font-size: 10px;
+              min-width: 80px;
+              max-width: 80px;
+            }
           }
 
         }

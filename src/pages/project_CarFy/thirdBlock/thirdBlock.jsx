@@ -53,7 +53,7 @@ function ThirdBlock (){
        </div>
        
        <div className="SplineCont">
-        {/*<HomeSpinnerSpline1/>*/}
+        <HomeSpinnerSpline1/>
        </div>
        
      </div>

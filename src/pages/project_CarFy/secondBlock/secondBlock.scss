@@ -8,14 +8,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include screen($wide){
+    margin-bottom: 200px;
+  }
+  @include screen($tablet-l){
+    margin: 0 auto 150px;
+  }
+  @include screen($tablet){
+    flex-direction: column-reverse;
+    margin: 0 auto 100px;
+  }
 
   .textBlock{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     .miniHeader{
       margin-bottom: 45px;
       transition: 1s ease-in-out all;
       transform: translateY(50px);
       opacity: 0;
+      @include screen($wide){
+        margin-bottom: 30px;
+        max-width: 500px;
+      }
+      @include screen($tablet){
+        margin-bottom: 25px;
+      }
     }
 
     .grayPrg32{
@@ -33,6 +53,30 @@
     transform: translateY(100px) scale(0.8);
     transition: 1.5s ease-in-out all;
     opacity: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include screen($wide-l){
+      height: 450px;
+      min-width: 50%;
+    }
+    @include screen($wide){
+      height: 350px;
+      margin-left: 30px;
+    }
+    @include screen($tablet-w){
+      height: 300px;
+      margin-left: 20px;
+    }
+    @include screen($tablet){
+      width: 100%;
+      height: 380px;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+    @include screen($tablet-m){
+      height: 300px;
+    }
   }
 
 

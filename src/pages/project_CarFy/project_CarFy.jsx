@@ -12,7 +12,7 @@ function Project_CarFy (){
   const {ref: myRef1, inView: visible1} = useInView();
   
   return(
-     <div className="ProjectBlock">
+     <div className="ProjectBlock no-select">
      
        <HeadBlock/>
        <SecondBlock/>

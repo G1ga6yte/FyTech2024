@@ -1,16 +1,38 @@
-
+@import "../../../source/styles/mixin.scss";
 
 .SecondBlockS{
   max-width: 1720px;
   margin: 160px auto 0;
   position: relative;
-  padding: 0 10px;
+  @include screen($wide-l){
+    margin: 100px auto 0;
+  }
 
+  .headerBlock{
+    @include screen($wide-l){
+      width: 60%;
+    }
+    @include screen($tablet-w){
+      width: 75%;
+      padding-left: 15px;
+    }
+    @include screen($mobile-l){
+      width: 100%;
+    }
+  }
 
 
 
   .textBlock1{
     display: flex;
+    position: relative;
+    @include screen($tablet-l){
+      margin-bottom: 200px;
+    }
+    @include screen($tablet){
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
 
     .text1{
       min-width: 620px;
@@ -19,16 +41,49 @@
       transition: 1s ease-in-out all;
       transform: translateY(100px);
       opacity: 0;
+      @include screen($wide-l){
+        min-width: 500px;
+      }
+      @include screen($tablet-l){
+        width: 50%;
+        min-width: 50%;
+      }
+      @include screen($tablet){
+        min-width: 80%;
+        width: 80%;
+      }
+
     }
 
     .text2{
       flex-grow: 1;
+      @include screen($tablet-l){
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        top: -50px;
+      }
+      @include screen($tablet){
+        position: relative;
+        top: 0;
+      }
 
       .ul{
         margin: 150px 0 120px;
         transform: translateY(50px);
         opacity: 0;
         transition: 1s ease-in-out all;
+        @include screen($wide-l){
+          margin: 100px 0 60px;
+        }
+        @include screen($tablet-l){
+          max-width: 45%;
+        }
+        @include screen($tablet){
+          margin: 30px 0;
+          max-width: 90%;
+        }
       }
 
       .text3{
@@ -48,12 +103,27 @@
     margin: 100px 0 160px 150px;
     position: relative;
     z-index: 2;
-
+    @include screen($wide-l){
+      margin: 50px 0 100px 100px;
+    }
+    @include screen($tablet-w){
+      margin: 50px 0 20px 60px;
+    }
+    @include screen($tablet){
+      margin: 0 0 30px 60px;
+      flex-direction: column;
+    }
     .grayPrg{
       p{
         margin-bottom: 70px;
         position: relative;
         line-height: 100%;
+        @include screen($wide-l){
+          margin-bottom: 50px;
+        }
+        @include screen($tablet){
+          margin-bottom: 20px;
+        }
         &:before{
           content: '';
           position: absolute;
@@ -86,6 +156,12 @@
 
     .text6{
       margin: 70px 0 0 150px;
+      @include screen($wide-l){
+        margin: 50px 0 0 100px;
+      }
+      @include screen($tablet){
+        margin: 20px 0 0 100px;
+      }
       p{
         transform: translateX(100%);
         opacity: 0;
@@ -113,6 +189,9 @@
     position: absolute;
     bottom: -10%;
     right: -5%;
+    @include screen($tablet){
+      width: 100%;
+    }
   }
 
 

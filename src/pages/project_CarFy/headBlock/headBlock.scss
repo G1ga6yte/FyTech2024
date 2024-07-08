@@ -1,4 +1,4 @@
-
+@import "../../../source/styles/mixin.scss";
 
 .HeadBlockProject{
   width: 100%;
@@ -8,12 +8,29 @@
   flex-direction: column;
   align-items: start;
   height: max-content;
+  @include screen($wide-l){
+    margin: 0 0 250px;
+  }
+  @include screen($wide){
+    margin: 0 0 200px;
+  }
+  @include screen($tablet-w){
+    margin: 0 0 150px;
+  }
+  @include screen($tablet){
+    margin: 0 0 100px;
+  }
+  @include screen($tablet-m){
+    margin: 0 0 50px;
+  }
 
 
   .textBlock{
     max-width: 1720px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
   }
   .header{
     margin-bottom: 45px;
@@ -25,12 +42,40 @@
     transform: translateY(50px);
     opacity: 0;
     transition: 1s ease-in-out all;
+    @include screen($wide-l){
+      font-size: 80px;
+    }
+    @include screen($wide){
+      font-size: 60px;
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+    @include screen($tablet-w){
+      font-size: 40px;
+    }
+    @include screen($tablet-m){
+      font-size: 30px;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
   }
   .grayPrg32{
     max-width: 1200px;
     transform: translateY(100px);
     opacity: 0;
     transition: 1.5s ease-in-out all;
+    @include screen($wide-l){
+      max-width: 900px;
+    }
+    @include screen($wide){
+      max-width: 800px;
+    }
+    @include screen($tablet-w){
+      max-width: 80%;
+    }
+    @include screen($tablet-m){
+      max-width: 90%;
+    }
   }
 
   .splineBlock{
@@ -39,6 +84,22 @@
     position: absolute;
     right: -150px;
     top: 140px;
+    @include screen($wide){
+      width: 400px;
+      height: 400px;
+      top: 50px;
+      right: -100px;
+    }
+    @include screen($tablet-w){
+      width: 300px;
+      height: 300px;
+    }
+    @include screen($tablet-m){
+      width: 200px;
+      height: 200px;
+      top: 0;
+      right: -50px;
+    }
 
     .HomeSpinnerSpline1{
       transform: translate(0);

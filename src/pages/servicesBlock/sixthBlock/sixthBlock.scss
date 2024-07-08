@@ -8,6 +8,12 @@
 
   .headerBlock{
     width: 400px;
+    @include screen($wide-l){
+      width: 300px;
+    }
+    @include screen($tablet){
+      width: 200px;
+    }
   }
 
   .text1{
@@ -16,15 +22,34 @@
     transform: translateY(100px);
     opacity: 0;
     transition: 1s ease-in-out all;
+    @include screen($wide-l){
+      margin-bottom: 80px;
+    }
+    @include screen($wide){
+      margin-bottom: 70px;
+    }
+    @include screen($tablet-l){
+      margin-bottom: 60px;
+    }
+    @include screen($tablet){
+      margin-bottom: 30px;
+    }
   }
 
   .ulCont{
     display: flex;
     justify-content: space-between;
+    padding-left: 30px;
+    @include screen($tablet){
+      flex-direction: column;
+    }
 
 
     .ul1{
       width: 49%;
+      @include screen($tablet){
+        width: 100%;
+      }
       p{
         transform: translateX(-100%);
         opacity: 0;
@@ -50,6 +75,12 @@
         margin-bottom: 70px;
         position: relative;
         line-height: 100%;
+        @include screen($tablet){
+          margin-bottom: 30px;
+        }
+        @include screen($mobile-l){
+          margin-bottom: 20px;
+        }
         &:before{
           content: '';
           display: block;
@@ -66,6 +97,11 @@
       }
     }
     .fromRight{
+      margin-top: 30px;
+      @include screen($tablet){
+        margin-top: 15px;
+        margin-left: 30px;
+      }
       p{
         transform: translateX(100%);
         opacity: 0;

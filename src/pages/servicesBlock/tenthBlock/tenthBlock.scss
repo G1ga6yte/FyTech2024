@@ -5,6 +5,34 @@
   max-width: 1720px;
   margin: 160px auto 0;
   width: 100%;
+  @include screen($wide-l){
+    margin: 120px auto 0;
+  }
+  @include screen($wide){
+    margin: 80px auto 0;
+  }
+  @include screen($tablet){
+    margin: 60px auto 0;
+  }
+  @include screen($tablet-m){
+    margin: 40px auto 0;
+  }
+
+  .headerBlock{
+    max-width: 700px !important;
+    @include screen($wide-l){
+      max-width: 550px !important;
+    }
+    @include screen($wide){
+      max-width: 450px !important;
+    }
+    @include screen($tablet){
+      max-width: 350px !important;
+    }
+    @include screen($tablet-m){
+      max-width: 300px !important;
+    }
+  }
 
   .text1{
     max-width: 1260px;
@@ -12,6 +40,21 @@
     opacity: 0;
     transition: 1s ease-in-out all;
     margin-bottom: 90px;
+    @include screen($wide-l){
+      margin-bottom: 80px;
+    }
+    @include screen($wide){
+      margin-bottom: 70px;
+    }
+    @include screen($tablet-l){
+      margin-bottom: 60px;
+    }
+    @include screen($tablet){
+      margin-bottom: 50px;
+    }
+    @include screen($tablet-m){
+      margin-bottom: 30px;
+    }
   }
 
   .ul1{
@@ -22,18 +65,30 @@
       &:nth-child(1){
         margin-left: 40%;
         transition: 1s ease-in-out all;
+        @include screen($tablet){
+          margin-left: 20%;
+        }
       }
       &:nth-child(2){
         margin-left: 30%;
         transition: 1.3s ease-in-out all;
+        @include screen($tablet) {
+          margin-left: 15%;
+        }
       }
       &:nth-child(3){
         margin-left: 20%;
         transition: 1.6s ease-in-out all;
+        @include screen($tablet){
+          margin-left: 10%;
+        }
       }
       &:nth-child(4){
         margin-left: 10%;
         transition: 1.9s ease-in-out all;
+        @include screen($tablet){
+          margin-left: 5%;
+        }
       }
     }
   }
@@ -45,6 +100,15 @@
       margin-bottom: 70px;
       position: relative;
       line-height: 100%;
+      @include screen($wide-l){
+        margin-bottom: 50px;
+      }
+      @include screen($tablet-l){
+        margin-bottom: 30px;
+      }
+      @include screen($tablet){
+        margin-bottom: 20px;
+      }
       &:before{
         content: '';
         display: block;

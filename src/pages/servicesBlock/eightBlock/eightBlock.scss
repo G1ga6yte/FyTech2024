@@ -5,11 +5,30 @@
   width: 100%;
   margin: 160px auto 0;
   position: relative;
-  padding: 0 10px;
-
+  @include screen($wide-l){
+    margin: 120px auto 0;
+  }
+  @include screen($wide){
+    margin: 80px auto 0;
+  }
+  @include screen($tablet){
+    margin: 60px auto 0;
+  }
+  @include screen($tablet-m){
+    margin: 40px auto 0;
+  }
 
   .headerBlock{
     max-width: 1000px;
+    @include screen($wide-l){
+      max-width: 800px;
+    }
+    @include screen($wide){
+      max-width: 700px;
+    }
+    @include screen($mobile-l){
+      font-size: 15px;
+    }
   }
 
   .text1{
@@ -24,6 +43,12 @@
       margin-bottom: 70px;
       position: relative;
       line-height: 100%;
+      @include screen($tablet-l){
+        margin-bottom: 50px;
+      }
+      @include screen($tablet){
+        margin-bottom: 30px;
+      }
       &:before{
         content: '';
         display: block;
@@ -42,9 +67,15 @@
 
   .ul1{
     margin-top: 65px;
+    @include screen($tablet){
+      margin-top: 30px;
+    }
     p{
       transform: translateX(-30%);
       opacity: 0;
+      @include screen($tablet){
+        margin-left: 40px !important;
+      }
       &:nth-child(1){
         transition: 1s ease-in-out all;
         margin-left: 10%;
@@ -62,8 +93,15 @@
 
   .bubbleImg{
     left: 0;
-    top: 40%;
+    top: 30%;
     position: absolute;
+    @include screen($tablet-l){
+      top: 0;
+    }
+    @include screen($tablet){
+      width: 75%;
+      top: 30%;
+    }
   }
 
 }

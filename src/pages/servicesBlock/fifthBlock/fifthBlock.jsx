@@ -25,7 +25,8 @@ function FifthBlock (){
   
        <div className="textCont">
          <p ref={myRef2} className={`grayPrg text1 ${visible2 ? "ActiveBlock" : ""}`}>
-           We turn your data into valuable insights with our big data processing, business analytics, and data visualization services. Our expertise in handling large datasets ensures you can make informed decisions based on accurate data analysis.         </p>
+           We turn your data into valuable insights with our big data processing, business analytics, and data visualization services. Our expertise in handling large datasets ensures you can make informed decisions based on accurate data analysis.
+         </p>
     
          <div ref={myRef3} className="ul1 grayPrg">
            <p className={visible3 ? "ActiveBlock" : ""}>Big data processing and analysis</p>

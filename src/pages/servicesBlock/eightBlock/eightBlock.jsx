@@ -10,7 +10,6 @@ function EightBlock (){
   const {ref: myRef1, inView: visible1} = useInView();
   const {ref: myRef2, inView: visible2} = useInView();
   const {ref: myRef3, inView: visible3} = useInView();
-  const {ref: myRef4, inView: visible4} = useInView();
   
   
   return(

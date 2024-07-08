@@ -54,7 +54,7 @@ function FirstBlock (){
   
   
   return(
-     <div className="FirstBlock">
+     <div className="FirstBlockS">
   
        <div ref={myRef1} className="headerBlock">
          <div className={`underLinedText ${!loader && visible1 ?  "underLinedTextAnim" : ""}`}>
@@ -68,13 +68,13 @@ function FirstBlock (){
        <div className="mainCont">
          
          <div className="textBlock">
-           <p ref={myRef2} className={`prg ${!loader && visible2 ? "ActiveBlock" : ""}`}>At our company, we offer a comprehensive suite of services designed to meet all your technology and design needs. Here’s an overview of what we provide</p>
+           <p ref={myRef2} className={`grayPrg ${!loader && visible2 ? "ActiveBlock" : ""}`}>At our company, we offer a comprehensive suite of services designed to meet all your technology and design needs. Here’s an overview of what we provide</p>
            <img className="img" src={Images.img1} alt=""/>
          </div>
          
          <div  className={`servicesCont`}>
            
-           <div ref={myRef3} style={{marginBottom: `75px`}} className="servicesLine">
+           <div ref={myRef3} style={{marginBottom: `75px`}} className="servicesLineS">
              {ServicesDate.map((el, index)=>{
                if (index < 3){
                  return(
@@ -87,7 +87,7 @@ function FirstBlock (){
              })}
            </div>
   
-           <div style={{marginBottom: `50px`, marginRight: `60px`}} ref={myRef4} className={`servicesLine`}>
+           <div style={{marginBottom: `50px`, marginRight: `60px`}} ref={myRef4} className={`servicesLineS`}>
              {ServicesDate.map((el, index)=>{
                if (index > 2 && index <6){
                  return(
@@ -100,7 +100,7 @@ function FirstBlock (){
              })}
            </div>
   
-           <div style={{ marginRight: `-40px`}} ref={myRef5} className={`servicesLine`}>
+           <div style={{ marginRight: `-40px`}} ref={myRef5} className={`servicesLineS`}>
              {ServicesDate.map((el, index)=>{
                if (index > 5 && index <10){
                  return(

@@ -18,7 +18,7 @@ function HeadBlock (){
         </div>
        
        <div className="splineBlock">
-         {/*<HomeSpinnerSpline1/>*/}
+         <HomeSpinnerSpline1/>
        </div>
      </div>
   )

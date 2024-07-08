@@ -2,9 +2,18 @@
 
 .ProjectBlock{
   background-color: black;
-  min-height: 500vh;
   width: 100%;
-  padding: 105px 10px;
+  padding: 105px 30px;
+  overflow: hidden;
+  @include screen($wide){
+    padding: 80px 30px;
+  }
+  @include screen($tablet-l){
+    padding: 60px 20px;
+  }
+  @include screen($tablet-m){
+    padding: 50px 10px;
+  }
 }
 
 .ActiveText{
@@ -18,10 +27,34 @@
   font-family: 'Trap-SemiBold', sans-serif;
   color: #A6A6A6;
   line-height: normal;
+  @include screen($wide-l){
+    font-size: 28px;
+  }
+  @include screen($wide){
+    font-size: 22px;
+  }
+  @include screen($tablet-w){
+    font-size: 19px;
+  }
+  @include screen($tablet-m){
+    font-size: 17px;
+  }
 }
 .miniHeader{
   font-family: 'Trap-Bold', sans-serif;
   color: white;
   line-height: normal;
   font-size: 62px;
+  @include screen($wide-l){
+    font-size: 56px;
+  }
+  @include screen($wide){
+    font-size: 45px;
+  }
+  @include screen($tablet-w){
+    font-size: 35px;
+  }
+  @include screen($tablet-m){
+    font-size: 25px;
+  }
 }

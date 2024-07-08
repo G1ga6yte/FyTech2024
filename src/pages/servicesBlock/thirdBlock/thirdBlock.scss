@@ -2,7 +2,6 @@
 
 .ThirdBlockS{
   width: 100%;
-  padding: 0 10px;
 
 
   .text1{
@@ -12,6 +11,25 @@
     transform: translateY(100px);
     opacity: 0;
     transition: 1s ease-in-out all;
+    @include screen($wide-l){
+      margin: 0 0 120px;
+    }
+    @include screen($tablet-l){
+      margin-bottom: 80px;
+    }
+    @include screen($tablet){
+      margin-bottom: 40px;
+    }
+  }
+
+  .headerBlock{
+    background-position: left !important;
+    @include screen($wide-l){
+      max-width: 600px !important;
+    }
+    @include screen($tablet-l){
+      max-width: 450px !important;
+    }
   }
 
   .ulCont{
@@ -19,8 +37,23 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    padding-left: 50px;
+    @include screen($tablet-l){
+      padding-left: 30px;
+    }
+    @include screen($tablet){
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
 
     .ul1{
+      @include screen($tablet){
+        margin-left: 40px;
+      }
+      @include screen($mobile-l){
+        margin-left: 20px;
+      }
       p{
         transform: translateX(-100%);
         opacity: 0;
@@ -53,7 +86,15 @@
     .ul2{
       position: absolute;
       right: 50px;
-      top: -70px;
+      top: -50px;
+      @include screen($tablet-l){
+        right: 20px;
+      }
+      @include screen($tablet){
+        top: 0;
+        right: unset;
+        position: relative;
+      }
       p{
         transform: translateX(100%);
         opacity: 0;
@@ -83,6 +124,9 @@
         margin-bottom: 70px;
         position: relative;
         line-height: 100%;
+        @include screen($tablet){
+          margin-bottom: 20px;
+        }
         &:before{
           content: '';
           display: block;
@@ -107,8 +151,4 @@
     transition: 2s ease-in-out all;
 
   }
-
-
-
-
 }

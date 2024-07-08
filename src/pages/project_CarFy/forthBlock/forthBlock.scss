@@ -2,38 +2,165 @@
 
 .ForthBlockProject{
   width: 100%;
-  padding: 0 10px 300px;
+  padding: 0 0 300px;
   max-width: 1720px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  @include screen($wide-l){
+    padding: 0 0 250px;
+  }
+  @include screen($wide){
+    padding: 0 0 200px;
+  }
+  @include screen($tablet-l){
+    padding: 0 0 150px;
+  }
+  @include screen($tablet){
+    flex-direction: column;
+    padding: 0 0 100px;
+  }
 
 
   .lineBlock{
     display: flex;
     flex-direction: column;
     width: 42%;
+    @include screen($wide-l){
+      width: 45%;
+    }
+    @include screen($tablet){
+      width: 100%;
+    }
     &:nth-child(1){
+      @include screen($tablet){
+        flex-direction: column-reverse;
+      }
       .grayPrg32{
         margin-bottom: 60px;
+        @include screen($wide-l){
+          margin-bottom: 40px;
+        }
       }
     }
     &:nth-child(3){
       .imgBlock{
         margin-bottom: 120px;
+        @include screen($wide-l){
+          margin-bottom: 80px;
+        }
+        @include screen($tablet-l){
+          margin-bottom: 50px;
+        }
       }
     }
+
+    .textBlock{
+      width: 100%;
+      position: relative;
+      @include screen($tablet){
+        min-height: 290px;
+      }
+      &:nth-child(2){
+        @include screen($tablet){
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          text-align: end;
+        }
+
+        .lineBlock{
+          left: -9px !important;
+        }
+      }
+
+      .lineBlock{
+        display: none;
+        height: 280px;
+        position: absolute;
+        width: 2px;
+        background-color: #FF6C2C;
+        right: -9px;
+        top: 0;
+        @include screen($tablet){
+          display: block;
+        }
+        .point{
+          width: 6px;
+          height: 6px;
+          background-color: #FF6C2C;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, -50%);
+          &:nth-child(1){
+            top: 0;
+          }
+          &:nth-child(2){
+            top: 25%;
+          }
+          &:nth-child(3){
+            top: 50%;
+          }
+          &:nth-child(4){
+            top: 75%;
+          }
+          &:nth-child(5){
+            top: 100%;
+          }
+        }
+        .circle{
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, -50%);
+          border: 1px solid #FF6C2C;
+          &:nth-child(1){
+            top: 0;
+          }
+          &:nth-child(2){
+            top: 25%;
+          }
+          &:nth-child(3){
+            top: 50%;
+          }
+          &:nth-child(4){
+            top: 75%;
+          }
+          &:nth-child(5){
+            top: 100%;
+          }
+        }
+      }
+
+    }
+
+
+
     .miniHeader{
       margin-bottom: 45px;
       transform: translateY(50px);
       transition: 1s ease-in-out all;
       opacity: 0;
+      @include screen($tablet-l){
+        margin-bottom: 30px;
+      }
+      @include screen($tablet){
+        width: 90%;
+      }
     }
 
     .grayPrg32{
       transform: translateY(100px);
       transition: 1s ease-in-out all;
       opacity: 0;
+      @include screen($tablet){
+        width: 90%;
+      }
     }
 
     .imgBlock{
@@ -42,6 +169,25 @@
       transform: translateY(100px) scale(0.8);
       transition: 1s ease-in-out all;
       opacity: 0;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include screen($wide-l){
+        height: 400px;
+      }
+      @include screen($tablet-l){
+        height: 300px;
+      }
+      @include screen($tablet){
+        height: 400px;
+        margin-bottom: 30px;
+      }
+      @include screen($tablet-m){
+        height: 300px;
+      }
+      @include screen($mobile-l){
+        height: 250px;
+      }
     }
 
   }
@@ -50,6 +196,9 @@
     width: 2px;
     background-color: #FF6C2C;
     position: relative;
+    @include screen($tablet){
+      display: none;
+    }
 
     .point{
       position: absolute;
@@ -85,6 +234,10 @@
       width: 65px;
       height: 51px;
       border-radius: 50%;
+      @include screen($wide){
+        width: 40px;
+        height: 32px;
+      }
       &:nth-child(2){
         top: 17%;
       }

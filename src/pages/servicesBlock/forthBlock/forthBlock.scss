@@ -7,17 +7,48 @@
   width: 100%;
   position: relative;
   padding: 0 10px;
+  @include screen($wide-l){
+    margin: 80px auto 0;
+  }
 
   .bubbleImg{
     position: absolute;
     right: -50px;
     top: 0;
+    @include screen($wide-l){
+      width: 50%;
+      top: 50%;
+      transform: translateY(-30%);
+    }
+    @include screen($tablet){
+      width: 75%;
+    }
+  }
+
+  .headerBlock{
+    @include screen($wide-l){
+      margin-bottom: 40px;
+    }
+    @include screen($tablet-l){
+      max-width: 600px;
+    }
+    @include screen($mobile-l){
+      font-size: 18px;
+    }
   }
 
 
   .textCont{
     max-width: 1280px;
     width: 100%;
+    position: relative;
+    z-index: 2;
+    @include screen($wide-l){
+      max-width: 900px;
+    }
+    @include screen($tablet-l){
+      max-width: 90%;
+    }
     .text1{
       opacity: 0;
       transition: 1s ease-in-out all;
@@ -26,6 +57,15 @@
     .ul1{
       width: max-content;
       margin: 100px auto 0;
+      @include screen($wide-l){
+        margin: 80px auto 0;
+      }
+      @include screen($tablet-l){
+        margin: 60px auto 0;
+      }
+      @include screen($mobile-l){
+        margin: 50px auto 0 20px;
+      }
       p{
         transform: translateX(-100%);
         opacity: 0;
@@ -49,6 +89,12 @@
         margin-bottom: 70px;
         position: relative;
         line-height: 100%;
+        @include screen($tablet-l){
+          margin-bottom: 50px;
+        }
+        @include screen($tablet){
+          margin-bottom: 30px;
+        }
         &:before{
           content: '';
           display: block;

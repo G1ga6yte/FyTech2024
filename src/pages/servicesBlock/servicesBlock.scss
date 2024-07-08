@@ -3,7 +3,10 @@
 .ServicesBlock{
   background-color: black;
   min-height: 200vh;
-  padding-bottom: 200px;
+  padding: 0 10px 200px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 
 
   .ActiveBlock{
@@ -17,6 +20,18 @@
     line-height: 130%;
     text-transform: uppercase;
     color: #A6A6A6;
+    @include screen($wide-l){
+      font-size: 25px;
+    }
+    @include screen($wide){
+      font-size: 20px;
+    }
+    @include screen($tablet-l){
+      font-size: 18px;
+    }
+    @include screen($tablet-w){
+      font-size: 16px;
+    }
   }
 
   .headerBlock{
@@ -35,6 +50,30 @@
     background-repeat: no-repeat;
     background-position: right;
     padding-left: 30px;
+    @include screen($wide-l){
+      font-size: 40px;
+      height: 80px;
+      margin-bottom: 60px;
+    }
+    @include screen($wide){
+      font-size: 35px;
+      height: 70px;
+      margin-bottom: 50px;
+    }
+    @include screen($tablet-l){
+      font-size: 30px;
+      height: 60px;
+      margin-bottom: 40px;
+    }
+    @include screen($tablet){
+      font-size: 25px;
+      height: 50px;
+      margin-bottom: 30px;
+    }
+    @include screen($tablet-m){
+      font-size: 20px;
+      height: 40px;
+    }
     .letter22{
       color: #FF6C2C !important;
     }
@@ -62,7 +101,30 @@
       background-repeat: no-repeat;
       background-position: right;
       padding-right: 30px;
-
+      @include screen($wide-l){
+        font-size: 40px;
+        height: 80px;
+        margin-bottom: 60px;
+      }
+      @include screen($wide){
+        font-size: 35px;
+        height: 70px;
+        margin-bottom: 50px;
+      }
+      @include screen($tablet-l){
+        font-size: 30px;
+        height: 60px;
+        margin-bottom: 40px;
+      }
+      @include screen($tablet){
+        font-size: 25px;
+        height: 50px;
+        margin-bottom: 30px;
+      }
+      @include screen($tablet-m){
+        font-size: 20px;
+        height: 40px;
+      }
       .letter22{
         color: #FF6C2C !important;
       }
